@@ -1,0 +1,574 @@
+[
+   {
+      "pk":1,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011abc123fg",
+         "name":"LUTUS Bootcut Jeans",
+         "description":"Classic Comfort: Our bootcut jeans blend timeless style with ultimate comfort. Crafted from premium denim, these jeans offer a flattering fit with a slight flare at the hem, perfect for any casual or semi-formal occasion.",
+         "price":55.99,
+         "category":1,
+         "rating":4.5,
+         "image":"jeans1"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011wx567ij",
+         "name":"Exile Bootcut Jeans",
+         "description":"Versatile Chic: Elevate your wardrobe with our versatile bootcut jeans. Designed to hug your curves in all the right places and elongate your silhouette, these jeans are a must-have staple for every fashion-forward individual.",
+         "price":40.99,
+         "category":1,
+         "rating":4.1,
+         "image":"jeans2.jpg"
+      }
+   },
+   {
+      "pk":3,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011wxyz567",
+         "name":"Royal Academy Bootcut Jeans",
+         "description":"Effortless Style: Make a statement with our effortlessly stylish bootcut jeans. Whether you're dressing up for a night out or keeping it casual on the weekends, these jeans add a touch of flair to any ensemble, ensuring you look and feel confident all day long.",
+         "price":50.99,
+         "category":1,
+         "rating":4.5,
+         "image":"jeans3.jpg"
+      }
+   },
+   {
+      "pk":4,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011lmno901",
+         "name":"Girbana Bootcut Jeans",
+         "description":"Timeless Elegance: Embrace timeless elegance with our collection of bootcut jeans. With a classic silhouette and high-quality construction, these jeans offer a sophisticated look that never goes out of style, perfect for creating polished and put-together outfits.",
+         "price":80.99,
+         "category":1,
+         "rating":4.0,
+         "image":"jeans4.jpg"
+      }
+   },
+   {
+      "pk":5,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011efgh345",
+         "name":"Canary Bootcut Jeans",
+         "description":"All-Day Comfort: Experience unbeatable comfort with our range of bootcut jeans. Crafted from soft and stretchy denim, these jeans move with your body for all-day wearability, while the flattering bootcut design adds a trendy twist to your everyday wardrobe.",
+         "price":75.99,
+         "category":1,
+         "rating":5.0,
+         "image":"jeans5.jpg"
+      }
+   },
+   {
+      "pk":6,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011qrst789",
+         "name":"Zentro Blended Cotton T-Shirts",
+         "description":"Retro Charm: Embrace vintage vibes with our collection of cotton short-sleeve shirts. Featuring nostalgic prints and a classic silhouette, these shirts effortlessly capture the essence of yesteryear, adding a touch of retro charm to your wardrobe.",
+         "price":35.99,
+         "category":2,
+         "rating":4.9,
+         "image":"shirt1.jpg"
+      }
+   },
+   {
+      "pk":7,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0111234yui",
+         "name":"DrixFit Cotton T-Shirts Shor Sleeves",
+         "description":"Timeless Appeal: Elevate your casual look with our timeless cotton short-sleeve vintage shirts. Crafted from soft and breathable cotton fabric, these shirts offer all-day comfort, while the vintage-inspired designs ensure you stand out with effortless style.",
+         "price":40.0,
+         "category":2,
+         "rating":4.4,
+         "image":"shirt2.jpg"
+      }
+   },
+   {
+      "pk":8,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0115678jkl",
+         "name":"AeroVogue T-Shirt",
+         "description":"Old-School Cool: Channel old-school cool with our curated selection of vintage cotton short-sleeve shirts. From bold patterns to faded graphics, each shirt tells a story of bygone eras, making it a unique and stylish addition to your collection.",
+         "price":38.99,
+         "category":2,
+         "rating":4.5,
+         "image":"shirt3.jpg"
+      }
+   },
+   {
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0119012mnzk",
+         "name":"FlexAura Cotton Crewneck TShirts",
+         "description":"Vintage Revival: Add a dose of vintage revival to your wardrobe with our cotton short-sleeve shirts. Featuring retro-inspired prints and a relaxed fit, these shirts exude laid-back vibes and timeless appeal, perfect for creating effortlessly cool looks.",
+         "price":55.99,
+         "category":2,
+         "rating":4.7,
+         "image":"shirt4.jpg"
+      }
+   },
+   {
+      "pk":10,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0113456rstu",
+         "name":"NovaThread Soft Cotton T-Shirt",
+         "description":"Classic Comfort: Experience the perfect blend of style and comfort with our cotton short-sleeve vintage shirts. Made from premium cotton fabric, these shirts offer a soft feel against the skin, while the vintage designs add a touch of nostalgia to your everyday attire.",
+         "price":39.99,
+         "category":2,
+         "rating":4.4,
+         "image":"shirt5.jpg"
+      }
+   },
+   {
+      "pk":11,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0117890xyz",
+         "name":"Golden Grooves Collection",
+         "description":"Dive into a treasure trove of musical nostalgia with our 'Golden Grooves Collection' of vintage LP records. From iconic classics to hidden gems, each record tells a story of a bygone era, transporting you to a world of timeless melodies and unforgettable rhythms. Whether you're a seasoned collector or a music enthusiast looking to discover something new, these vintage vinyls are sure to strike a chord with your soul.",
+         "price":15.99,
+         "category":3,
+         "rating":4.4,
+         "image":"lps"
+      }
+   },
+   {
+      "pk":12,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011yuiopfgh",
+         "name":"Retro Resonance Vinyl Vault",
+         "description":"Step back in time and explore the rich tapestry of sounds from decades past with our 'Retro Resonance Vinyl Vault'. Each LP in this carefully curated collection captures the essence of its era, from the soulful tunes of the 60s to the electrifying beats of the 80s. Whether you're searching for a beloved classic or a rare gem, our vintage records promise to add a touch of nostalgia and warmth to your listening experience.",
+         "price":10.0,
+         "category":3,
+         "rating":4.2,
+         "image":"lp1"
+      }
+   },
+   {
+      "pk":13,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011abcdlmno",
+         "name":"Echoes of Decades Past",
+         "description":"Immerse yourself in the echoes of decades past with our eclectic selection of vintage LP records. From jazz legends to rock pioneers, each record in this collection serves as a musical time capsule, preserving the spirit of its era for generations to come. Whether you're reliving cherished memories or embarking on a journey of musical discovery, our vintage vinyls offer a window into the past that's waiting to be explored.",
+         "price":12.99,
+         "category":3,
+         "rating":4.8,
+         "image":"lp2"
+      }
+   },
+   {
+      "pk":14,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011efgh9012",
+         "name":"Melodies of Memory Lane",
+         "description":"Take a stroll down memory lane with our 'Melodies of Memory Lane' collection of vintage LP records. Bursting with nostalgia and nostalgia-inducing tunes, each record is a testament to the enduring power of music to evoke emotions and stir the soul. Whether you're seeking the soundtrack to your youth or uncovering hidden gems from years gone by, our vintage vinyls promise to transport you to a time when the world was set to music.",
+         "price":8.99,
+         "category":3,
+         "rating":4.7,
+         "image":"lp3"
+      }
+   },
+   {
+      "pk":15,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011qrst3456",
+         "name":"Timeless Vinyl Treasures",
+         "description":" Discover the magic of timeless vinyl treasures with our collection of vintage LP records. From the crackle of the needle to the warmth of the sound, each record offers a tactile and immersive listening experience that's impossible to replicate in the digital age. Whether you're a seasoned audiophile or a casual listener, our vintage vinyls are sure to captivate your senses and reignite your passion for music.",
+         "price":15.99,
+         "category":3,
+         "rating":4.3,
+         "image":"lp4"
+      }
+   },
+   {
+      "pk":16,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0111234zabz",
+         "name":"Groovy Revival Collection",
+         "description":"Step into the retro groove with our 'Groovy Cassette Revival' collection of vintage tapes. Overflowing with nostalgic vibes and dynamic energy, each cassette captures the essence of its era, from the funky rhythms of the 70s to the psychedelic tunes of the 60s. Whether you're an avid collector or simply seeking a taste of musical history, our vintage cassettes promise a groovy journey through the golden age of music, sure to ignite your passion and keep you jamming along.",
+         "price":12.99,
+         "category":3,
+         "rating":4.5,
+         "image":"cassette.jpg"
+      }
+   },
+   {
+      "pk":17,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0115678ghij",
+         "name":"RetroTone Turntable LP-Player",
+         "description":"Immerse yourself in the warm, authentic sound of vinyl with our 'RetroTone Turntable LP-Player'. This vintage-inspired LP player combines classic aesthetics with modern functionality, featuring a belt-driven turntable, adjustable tonearm, and built-in speakers for an immersive listening experience. Whether you're rediscovering your favorite records or exploring new musical horizons, the RetroTone Turntable brings the timeless charm of vinyl to your home audio setup.",
+         "price":100.99,
+         "category":4,
+         "rating":5.0,
+         "image":"lp_player1.jpg"
+      }
+   },
+   {
+      "pk":18,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0119012nopq",
+         "name":"EchoDeck Vintage Vinyl Player",
+         "description":"Experience the magic of analog music with the 'EchoDeck Vintage Vinyl Player'. Crafted with a sleek retro design and premium components, this LP player delivers crystal-clear sound and smooth playback, allowing you to savor every note and nuance of your favorite records. With its versatile connectivity options and intuitive controls, the EchoDeck Vintage Vinyl Player is the perfect centerpiece for any audiophile's listening room.",
+         "price":120.99,
+         "category":4,
+         "rating":4.7,
+         "image":"lp_player2.jpg"
+      }
+   },
+   {
+      "pk":19,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0113456uvwx",
+         "name":"NostalGrove LP Turntable",
+         "description":"Journey back in time and rediscover the joy of vinyl with the 'NostalGrove LP Turntable'. This beautifully crafted turntable combines vintage aesthetics with modern technology, featuring a direct-drive motor, precision stylus, and adjustable counterweight for optimal performance. Whether you're spinning your cherished classics or building your vinyl collection anew, the NostalGrove LP Turntable promises a nostalgic audio experience that's second to none.",
+         "price":160.99,
+         "category":4,
+         "rating":4.3,
+         "image":"lp_player3.jpg"
+      }
+   },
+   {
+      "pk":20,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0117890mnop",
+         "name":"Crown CS-550 Ghettoblaster Stereo Cassette Radio Recorder Vintage",
+         "description":"Step back in time with the 'Crown CS-550 Ghettoblaster Stereo Cassette Radio Recorder Vintage'. This iconic piece of audio history combines retro flair with powerful performance, allowing you to experience music in all its vintage glory. With its sleek design and eye-catching aesthetics, the Crown CS-550 adds a touch of nostalgia to any space. Equipped with stereo cassette playback, radio reception, and recording capabilities, this Ghettoblaster offers versatile entertainment options. Whether you're reliving your favorite mixtapes or discovering new sounds on the airwaves, the Crown CS-550 delivers crisp and clear audio quality that will transport you back to the golden age of cassette culture. Perfect for music enthusiasts, collectors, or anyone looking to add a retro vibe to their home, the Crown CS-550 Ghettoblaster Stereo Cassette Radio Recorder Vintage is more than just a piece of audio equipment – it's a testament to the enduring appeal of vintage technology.",
+         "price":60.99,
+         "category":4,
+         "rating":4.3,
+         "image":"radio.jpg"
+      }
+   },
+   {
+      "pk":21,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0117890bcde",
+         "name":"Classic Chevrolet Blue Sedan",
+         "description":"Step into the past with our meticulously restored 'Classic Chevrolet Blue Sedan'. This iconic vintage automobile embodies the timeless elegance and enduring craftsmanship of a bygone era. With its sleek lines, chrome accents, and vibrant blue exterior, this sedan exudes retro charm and nostalgic appeal at every turn. Whether you're cruising down city streets or embarking on a scenic road trip, the Classic Chevrolet Blue Sedan promises a journey filled with memories and unforgettable moments. Own a piece of automotive history and make a statement wherever you go with this timeless classic.",
+         "price":5000.99,
+         "category":5,
+         "rating":5.0,
+         "image":"auto_green.jpg"
+      }
+   },
+   {
+      "pk":22,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011jklm1234",
+         "name":"Colby Cruise Classic",
+         "description":"Introducing the 'Colby Cruise Classic' a timeless marvel in red and white. This vintage automobile embodies the spirit of nostalgia and adventure with its iconic color scheme and retro design. Picture yourself cruising down scenic routes, wind in your hair, as onlookers admire the classic lines and chrome accents of this beauty. Whether you're reliving cherished memories or creating new ones, the Colby Cruise Classic promises an unforgettable journey filled with vintage charm and timeless style. Own a piece of automotive history and let the adventures begin with this beloved classic cruiser.",
+         "price":10000.99,
+         "category":5,
+         "rating":4.8,
+         "image":"auto_red.jpg"
+      }
+   },
+   {
+      "pk":23,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011pqrst5678",
+         "name":"Sunbeam Nissan Classic 1970",
+         "description":"Bask in the golden glow of nostalgia with our 'Sunbeam Nissan Classic'. This vintage automobile captures the essence of a bygone era with its radiant yellow hue and timeless design. From its sleek curves to its distinctive Nissan emblem, every detail of this classic car exudes retro charm and enduring style. Whether you're cruising along coastal highways or meandering through countryside roads, the Sunbeam Nissan Classic promises a journey filled with sunshine and memories. Embrace the spirit of adventure and make a statement on the road with this beloved 1970's gem.",
+         "price":8000.0,
+         "category":5,
+         "rating":4.5,
+         "image":"auto_yellow.jpg"
+      }
+   },
+   {
+      "pk":24,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011uvwxy901",
+         "name":"Retro Glide Scooter",
+         "description":"Introducing the 'Retro Glide Scooter' a timeless icon of urban mobility. This vintage scooter harkens back to a simpler time, evoking memories of carefree rides through bustling city streets and quaint coastal towns. With its sleek lines, chrome accents, and vibrant color options, the Retro Glide Scooter is more than just a mode of transportation; it's a statement of style and individuality. Whether you're zipping through traffic or leisurely exploring scenic neighborhoods, this classic scooter promises an unforgettable ride filled with nostalgia and adventure. Rediscover the joy of the open road and embrace the spirit of vintage cool with the Retro Glide Scooter from our online vintage store.",
+         "price":105.99,
+         "category":6,
+         "rating":4.0,
+         "image":"scooter.jpg"
+      }
+   },
+   {
+      "pk":25,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0113456fghi",
+         "name":"Aqua Dream VW Vintage Van",
+         "description":"Embark on a journey of nostalgia and freedom with our 'Aqua Dream VW Vintage Van'. This iconic vehicle is a symbol of wanderlust and adventure, boasting a charming aqua green exterior that turns heads wherever it goes. Whether you're road tripping along scenic coastlines or camping under the stars, the Aqua Dream VW Vintage Van offers a cozy and stylish retreat. With its spacious interior, iconic design, and legendary reliability, this classic Volkswagen van is ready to accompany you on countless unforgettable journeys. Experience the magic of the open road and create memories that will last a lifetime with the Aqua Dream VW Vintage Van from our online vintage store.",
+         "price":24000.99,
+         "category":7,
+         "rating":4.4,
+         "image":"van.jpg"
+      }
+   },
+   {
+      "pk":26,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0117890mnop",
+         "name":"ShutterFlash Classic",
+         "description":"Capture moments in time with the timeless elegance of the 'ShutterFlash Classic' vintage camera. Crafted with precision and style, this iconic camera embodies the essence of vintage photography. With its sturdy construction, manual controls, and crisp lens, the ShutterFlash Classic allows you to unleash your creativity and capture stunning images that stand the test of time. Whether you're a seasoned photographer or an aspiring artist, this vintage camera is sure to inspire and delight.",
+         "price":80.99,
+         "category":8,
+         "rating":5.0,
+         "image":"camera_1.jpg"
+      }
+   },
+   {
+      "pk":27,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011qrstu567",
+         "name":"FocalVision Retro",
+         "description":"Rediscover the art of photography with the 'FocalVision Retro' vintage camera. This beautifully designed camera combines nostalgia with modern functionality, offering a seamless blend of vintage charm and contemporary features. With its compact size, easy-to-use controls, and high-quality optics, the FocalVision Retro is the perfect companion for capturing life's precious moments in stunning detail. Whether you're exploring new landscapes or documenting everyday adventures, this vintage camera promises to be your trusted companion on every photographic journey.",
+         "price":75.99,
+         "category":8,
+         "rating":4.3,
+         "image":"camera_2.jpg"
+      }
+   },
+   {
+      "pk":28,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011wxyz8901",
+         "name":"TweenTime Classic Bell Alarm Clock",
+         "description":"Wake up in style with the 'TweenTime Classic Bell Alarm Clock'. This vintage-inspired timepiece combines retro charm with modern functionality, featuring a classic design reminiscent of bygone eras. With its twin bell alarm and loud, unmistakable ring, this clock ensures you never oversleep again. Perfect for tweens looking to add a touch of vintage flair to their bedroom decor, the TweenTime Classic Bell Alarm Clock is a timeless accessory that's as practical as it is stylish.",
+         "price":15.99,
+         "category":8,
+         "rating":4.6,
+         "image":"clock.jpg"
+      }
+   },
+   {
+      "pk":29,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0112345zabc",
+         "name":"RetroRise Tween Bell Alarm Clock",
+         "description":"Rise and shine with the 'RetroRise Tween Bell Alarm Clock'. This iconic alarm clock captures the essence of vintage design with its sleek lines and twin bell mechanism. The loud, traditional ring ensures you start your day on time, while the retro-inspired aesthetic adds a nostalgic touch to any bedside table. Whether you're a seasoned collector or simply seeking a timeless alarm clock with a unique twist, the RetroRise Tween Bell Alarm Clock is the perfect choice for tweens with an eye for vintage style.",
+         "price":12.99,
+         "category":8,
+         "rating":5.0,
+         "image":"clock2.jpg"
+      }
+   },
+   {
+      "pk":30,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0112345zabc",
+         "name":"Golden Glow Vintage TV",
+         "description":"Bring a touch of vintage elegance to your living space with the 'Golden Glow Vintage TV'. This old yellow television set features a distinctive retro design that adds a pop of color and personality to any room. With its vintage-inspired knobs and dials, the Golden Glow Vintage TV captures the essence of a bygone era, transporting you back to a time when television was a cherished centerpiece of family gatherings. Whether you're watching classic films or streaming your favorite shows, this vintage TV offers a unique viewing experience that's sure to delight nostalgia enthusiasts and design aficionados alike.",
+         "price":69.99,
+         "category":8,
+         "rating":4.0,
+         "image":"tv_retro.jpg"
+      }
+   },
+   {
+      "pk":31,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg0116789efgh",
+         "name":"Vintage Poster Bonanza: Choose Your Retro Masterpiece!",
+         "description":"With our Vintage Poster Bonanza, the choice is yours. Select your favorite poster to adorn your walls and infuse your space with vintage charm and personality. Whether you're a collector, a design aficionado, or simply seeking to add a touch of retro flair to your home, our collection of vintage posters is sure to captivate and inspire. Explore the possibilities and make a statement with a piece of history from our online vintage store.",
+         "price":35.99,
+         "category":8,
+         "rating":4.8,
+         "image":"posters.jpg"
+      }
+   },
+   {
+      "pk":32,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011mnop1234",
+         "name":"Victorian Elegance Pendant Watch",
+         "description":"Adorn yourself with timeless elegance with our 'Victorian Elegance Pendant Watch'. This exquisite vintage timepiece combines classic design with intricate detailing, evoking the opulence of the Victorian era. Suspended from a delicate chain, this pendant watch features a beautifully crafted case adorned with ornate filigree patterns and embellishments. With its mechanical movement and roman numeral dial, the Victorian Elegance Pendant Watch is not just a stylish accessory, but a functional piece of history that captures the essence of vintage sophistication.",
+         "price":25.99,
+         "category":9,
+         "rating":4.5,
+         "image":"watch.jpg"
+      }
+   },
+   {
+      "pk":33,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011tuvw5678",
+         "name":"Art Deco Glamour Pendant Watch",
+         "description":"Channel the glamour of the roaring twenties with our 'Art Deco Glamour Pendant Watch'. This stunning vintage timepiece showcases the iconic Art Deco aesthetic, characterized by geometric shapes, bold lines, and luxurious materials. Encased in a sleek pendant, this watch features a striking dial adorned with Art Deco motifs and luminous accents. Whether worn as a statement piece or as a cherished heirloom, the Art Deco Glamour Pendant Watch adds a touch of vintage flair to any ensemble, transporting you to an era of jazz, flappers, and timeless style.",
+         "price":18.99,
+         "category":9,
+         "rating":4.5,
+         "image":"watch2.jpg"
+      }
+   },
+   {
+      "pk":34,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011qrstuv23",
+         "name":"Midnight Sapphire Duo Mini Purses",
+         "description":"Introducing the 'Midnight Sapphire Duo Mini Purses' - a pair of vintage treasures in timeless black and deep blue hues. The choice is yours. Crafted from high-quality materials, these compact purses are perfect for carrying your essentials with elegance and style. The black purse exudes sophistication, while the blue adds a touch of subtle glamour. Whether you're attending a soirée or running errands, the Midnight Sapphire Duo Mini Purses are the epitome of vintage chic, offering versatility and sophistication in every stitch.",
+         "price":50.99,
+         "category":9,
+         "rating":4.7,
+         "image":"purse.jpg"
+      }
+   },
+   {
+      "pk":35,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011wxyza789",
+         "name":"Hollywood Glamour Sunnies",
+         "description":"Channel the elegance of old Hollywood with these oversized sunglasses, featuring bold frames and tinted lenses that exude star-studded glamour.",
+         "price":23.99,
+         "category":10,
+         "rating":4.6,
+         "image":"sunglass.jpg"
+      }
+   },
+   {
+      "pk":36,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011bcdlmno12",
+         "name":"Round Retro Revival Glasses",
+         "description":"Embrace vintage vibes with these round sunglasses, reminiscent of the 1960s counterculture scene. With their circular frames and tinted lenses, they add a touch of retro flair to your ensemble.",
+         "price":25.99,
+         "category":10,
+         "rating":4.6,
+         "image":"sunglass2.jpg"
+      }
+   },
+   {
+      "pk":37,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011efghijk45",
+         "name":"Vintage Blue Sky Cap",
+         "description":"Introducing our 'Vintage Blue Sky Cap', a timeless accessory that exudes retro charm and casual elegance. Crafted from premium denim in a captivating shade of blue reminiscent of clear skies, this vintage cap features a classic six-panel design with a gently curved brim. The adjustable strap ensures a comfortable fit for all head sizes. Whether you're strolling through city streets or attending a laid-back outdoor event, the Vintage Blue Sky Cap adds a touch of nostalgic style to any ensemble, making it a must-have accessory for vintage enthusiasts and fashion-forward individuals alike.",
+         "price":20.99,
+         "category":10,
+         "rating":4.6,
+         "image":"vintage_cap1.jpg"
+      }
+   },
+   {
+      "pk":38,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011lmnopqr78",
+         "name":"Retro Refined Fedora",
+         "description":"Step back in time with our 'Retro Refined Fedora', a vintage hat that exudes sophistication and timeless style. Crafted from high-quality wool felt in a rich, earthy tone, this fedora features a classic teardrop crown and a wide brim, accented with a contrasting ribbon band for a touch of elegance. Whether you're channeling old Hollywood glamour or adding a vintage twist to your everyday look, the Retro Refined Fedora is the perfect accessory to elevate your style with effortless flair.",
+         "price":28.99,
+         "category":10,
+         "rating":4.6,
+         "image":"vintage_hat1.jpg"
+      }
+   },
+   {
+      "pk":39,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011stuv234",
+         "name":"Old World Charm Cloche",
+         "description":"Embrace the elegance of a bygone era with our 'Old World Charm Cloche', a vintage hat that captures the essence of vintage femininity and grace. Made from soft wool felt in a deep, jewel-toned hue, this cloche hat features a rounded crown and a downturned brim, adorned with a delicate bow for added charm. Perfect for adding a touch of vintage flair to your winter wardrobe or accessorizing a retro-inspired ensemble, the Old World Charm Cloche is sure to turn heads wherever you go.",
+         "price":28.99,
+         "category":10,
+         "rating":4.0,
+         "image":"vintage_hat2.jpg"
+      }
+   },
+   {
+      "pk":40,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011dfws5778",
+         "name":"Sunset Serenity Vintage Tee",
+         "description":"Transport yourself to a state of tranquil nostalgia with our 'Sunset Serenity Vintage Tee'. Crafted from soft, worn-in cotton and adorned with a retro-inspired sunset graphic, this t-shirt exudes laid-back charm and timeless style. With its relaxed fit and faded colors, it feels like a cherished favorite from the moment you put it on. Whether you're lounging at home or exploring the great outdoors, the Sunset Serenity Vintage Tee promises comfort and cool vibes all day long.",
+         "price":28.99,
+         "category":11,
+         "rating":4.0,
+         "image":"shirt6.jpg"
+      }
+   },
+   {
+      "pk":41,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011kjiu453",
+         "name":"Groovy Vibes Retro Tee",
+         "description":"Embrace the spirit of the 70s with our 'Groovy Vibes Retro Tee'. Made from lightweight cotton and featuring a vibrant psychedelic print, this t-shirt is a nod to the era of peace, love, and rock 'n' roll. With its bold colors and funky design, it's sure to make a statement wherever you go. Whether you're heading to a music festival or just hanging out with friends, the Groovy Vibes Retro Tee is the perfect way to add some vintage flair to your wardrobe.",
+         "price":28.99,
+         "category":11,
+         "rating":4.0,
+         "image":"shirt7.jpg"
+      }
+   },
+   {
+      "pk":42,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011yter255",
+         "name":"Classic Caravan Adventure Tee",
+         "description":"Hit the open road in style with our 'Classic Caravan Adventure Tee'. Featuring a vintage-inspired graphic of a retro camper van and the open road, this t-shirt captures the spirit of adventure and exploration. Made from soft, breathable cotton and finished with distressed detailing for a lived-in feel, it's perfect for road trips, camping excursions, or just daydreaming about your next getaway. Pack your bags, grab your map, and let the Classic Caravan Adventure Tee be your companion on the journey ahead.",
+         "price":28.99,
+         "category":11,
+         "rating":4.0,
+         "image":"shirt8.jpg"
+      }
+   },
+   {
+      "pk":43,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011gtop518",
+         "name":"Clubmaster Classic Shades",
+         "description":"Capture the essence of mid-century style with these clubmaster sunglasses, featuring a fusion of metal and acetate frames for a look that's both sophisticated and sleek.",
+         "price":28.99,
+         "category":11,
+         "rating":4.0,
+         "image":"sunglass3.jpg"
+      }
+   },
+   {
+      "pk":44,
+      "model":"products.product",
+      "fields":{
+         "sku":"zg011jtkl785",
+         "name":"Denim Dreams Vintage Cap",
+         "description":"Step back in time with our 'Denim Dreams Vintage Cap', a classic accessory that embodies the essence of retro cool. Crafted from durable denim in a timeless shade of blue, this cap features a structured crown and a curved brim for a traditional silhouette. The adjustable strap ensures a comfortable fit for all head sizes. Whether you're running errands, lounging in the sun, or adding a vintage twist to your everyday ensemble, the Denim Dreams Vintage Cap is the perfect accessory to complete your look with effortless style and timeless appeal.",
+         "price":28.99,
+         "category":11,
+         "rating":4.0,
+         "image":"vintage_cap2.jpg"
+      }
+   }
+]
