@@ -9,7 +9,7 @@
          "price":55.99,
          "category":1,
          "rating":4.5,
-         "image":"jeans1"
+         "image":"jeans1.jpg"
       }
    },
    {
@@ -139,7 +139,7 @@
          "price":15.99,
          "category":3,
          "rating":4.4,
-         "image":"lps"
+         "image":"lps.jpg"
       }
    },
    {
@@ -152,7 +152,7 @@
          "price":10.0,
          "category":3,
          "rating":4.2,
-         "image":"lp1"
+         "image":"lp1.jpg"
       }
    },
    {
@@ -165,7 +165,7 @@
          "price":12.99,
          "category":3,
          "rating":4.8,
-         "image":"lp2"
+         "image":"lp2.jpg"
       }
    },
    {
@@ -178,7 +178,7 @@
          "price":8.99,
          "category":3,
          "rating":4.7,
-         "image":"lp3"
+         "image":"lp3.jpg"
       }
    },
    {
@@ -191,7 +191,7 @@
          "price":15.99,
          "category":3,
          "rating":4.3,
-         "image":"lp4"
+         "image":"lp4.jpg"
       }
    },
    {
