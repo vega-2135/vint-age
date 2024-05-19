@@ -1,6 +1,8 @@
 from django.contrib import messages
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import render
+
 from contact.models import Contact
+
 from .forms import ReachOutForm
 
 
@@ -13,19 +15,17 @@ def contact(request):
         if reachout_form.is_valid():
             reachout_form.save()
             messages.add_message(
-                request, messages.SUCCESS,
+                request,
+                messages.SUCCESS,
                 "Thank you for reaching out, I endeavour to respond within"
-                "2-3 working days.")
+                "2-3 working days.",
+            )
 
-    queryset = Contact.objects.all()
-    contact = get_object_or_404(queryset)
+    contact = Contact.objects.all().order_by("-updated_on").first()
     reachout_form = ReachOutForm()
 
     return render(
         request,
-        "contact.html",
-        {
-            "contact": contact,
-            "reachout_form": reachout_form
-        },
+        "contact/contact.html",
+        {"contact": contact, "reachout_form": reachout_form},
     )
