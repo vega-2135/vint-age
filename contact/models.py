@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Contact(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
@@ -11,9 +12,9 @@ class Contact(models.Model):
 
 class ReachOut(models.Model):
     ABOUT_CHOICES = [
-        ('general', 'General Question'),
-        ('order', 'About an order'),
-        ('other', 'Something else'),
+        ("general", "General Question"),
+        ("order", "About an order"),
+        ("other", "Something else"),
     ]
     name = models.CharField(max_length=200)
     email = models.EmailField()
