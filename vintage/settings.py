@@ -15,7 +15,7 @@ import os
 import dj_database_url
 
 if os.path.isfile("env.py"):
-    pass
+    import env  # noqa
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,7 +31,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.environ.get("DEVELOPMENT") else False
 
-ALLOWED_HOSTS = ["vint-age-f72b1a14d20f.herokuapp.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = [
+    "vint-age-f72b1a14d20f.herokuapp.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
@@ -126,7 +130,9 @@ WSGI_APPLICATION = "vintage.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 if "DATABASE_URL" in os.environ:
-    DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
+    DATABASES = {
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
 else:
     DATABASES = {
         "default": {
