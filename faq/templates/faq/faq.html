@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center mt-5">FAQs</h2>
+                <p class="mt-5 mb-5">
+                    Welcome to our Frequently Asked Questions (FAQs) page. Here, you'll find answers 
+                    to common queries about our vintage products, purchasing process, and policies. 
+                    We aim to provide all the information you need to make your shopping experience 
+                    seamless and enjoyable. If you have any additional questions, please don't hesitate 
+                    to contact our customer service team.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul>
+                {% for question in questions %}
+                <li><strong>{{ question.question_text }}</strong></li>
+                <ul>
+                {% for answer in question.answer_set.all %}
+                <li>{{ answer.answer_text }}</li>
+                {% endfor %}
+                </ul>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>    
+{% endblock %}
