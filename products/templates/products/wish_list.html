@@ -1,15 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
 {% block content %}
-<h2>Your Wishlist</h2>
-<ul>
-{% for item in wishlist_items %}
-    <li>
-        <h3>{{ item.name }}</h3>
-        <img src="{{ item.image.url }}" alt="{{ item.name }}">
-        <p>{{ item.description }}</p>
-        <p>Price: {{ item.price }}</p>
-    </li>
-{% empty %}
-    <p>No items in your wishlist.</p>
-{% endfor %}
-</ul>
+    {% include 'products/base_products_display.html' %}
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}
