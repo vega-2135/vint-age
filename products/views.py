@@ -69,23 +69,11 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    if request.method == "POST":
-        form = AddToWishlistForm(request.POST)
-        if form.is_valid():
-            if request.user.is_authenticated:
-                wishlist = Wishlist.objects.get(user=request.user)
-                wishlist.items.add(product)
-                return redirect("product_detail", product_id=product.id)
-            else:
-                return redirect("/login")
-    else:
-        form = AddToWishlistForm()
+    context = {
+        "product": product,
+    }
 
-    return render(
-        request,
-        "products/product_detail.html",
-        {"product": product, "form": form},
-    )
+    return render(request, "products/product_detail.html", context)
 
 
 @login_required
@@ -171,6 +159,35 @@ def remove_from_wishlist(request, product_id):
 
 
 @login_required
+def add_to_wishlist(request, product_id):
+    product = Product.objects.get(pk=product_id)
+    if request.method == "POST":
+        form = AddToWishlistForm(request.POST)
+        if form.is_valid():
+            if Wishlist.objects.filter(
+                user=request.user, items__pk=product.pk
+            ).exists():
+                messages.warning(
+                    request,
+                    f"{product.name} is already added to your Wish List.",
+                )
+            else:
+                wishlist = Wishlist.objects.get(user=request.user)
+                wishlist.items.add(product)
+                messages.success(
+                    request, f"Added {product.name} to your Wish List"
+                )
+    else:
+        form = AddToWishlistForm()  # Initialize the form for GET requests
+
+    return render(
+        request,
+        "products/product_detail.html",
+        {"form": form, "product": product},
+    )
+
+
+@login_required
 def wishlist(request):
     try:
         # Attempt to get the existing Wishlist instance for the user
@@ -181,5 +198,5 @@ def wishlist(request):
 
     wishlist_items = wishlist.items.all()
     return render(
-        request, "products/wish_list.html", {"wishlist_items": wishlist_items}
+        request, "products/wish_list.html", {"products": wishlist_items}
     )

@@ -10,5 +10,10 @@ urlpatterns = [
     path(
         "delete/<int:product_id>/", views.delete_product, name="delete_product"
     ),
-    path('wishlist/', views.wishlist, name='wishlist'),
+    path("wishlist/", views.wishlist, name="wishlist"),
+    path(
+        "addwishlist/<int:product_id>/",
+        views.add_to_wishlist,
+        name="add_to_wishlist",
+    ),
 ]
