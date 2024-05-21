@@ -1,16 +1,11 @@
 from django.contrib import admin
-from django_summernote.admin import SummernoteModelAdmin
 
 from .models import Contact, ReachOut
 
 
 @admin.register(Contact)
-class ContactAdmin(SummernoteModelAdmin):
-    """
-    Adds rich-text editing of content in admin
-    """
-
-    summernote_fields = ("content",)
+class ContactAdmin(admin.ModelAdmin):
+    pass
 
 
 @admin.register(ReachOut)
