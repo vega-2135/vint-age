@@ -4,24 +4,58 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col-7 col-md-6 my-auto">
+                <img class="home-img" src="media/homepage.jpg" alt="Image with vintage things">
+                <h1 class="display-4 logo-font text-black">
+                    The new collections are here
+                </h1>
+                <div class="my-5">
+                    <h4>
+                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                    </h4>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
+    <div class="container">
+        <div class="row">
             <div class="col-7 col-md-6 my-auto">
-                <div class="collections">
-                    <h1 class="display-4 logo-font2 text-white">
-                        The new collections are here
-                    </h1>
-                    <h4 class="my-5">
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            About Us
+                        </h2>
+                        <p class="card-text">
+                            At Vint-Age, we believe in the beauty of the past. 
+                            Founded out of a passion for timeless fashion and unique treasures, 
+                            we curate the finest vintage items that tell a story. Each piece in 
+                            our collection is carefully selected for its quality, history, and charm. 
+                            Whether you're a vintage enthusiast or a curious newcomer, we invite you 
+                            to explore our selection and find something truly special. Join us on this 
+                            journey through time and discover the magic of vintage.
+                        </p>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-7 col-md-6 my-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            Loved Our Products?
+                        </h2>
+                        <p class="card-text">
+                            Get our latest arrivals, offers tips and much more. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         </div>
     </div>
 {% endblock %}
