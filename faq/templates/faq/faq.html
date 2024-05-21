@@ -19,16 +19,14 @@
 
 
     <div class="container">
-        <div class="row">
-            <div class="col">
+        <div class="row card">
+            <div class="col card-body">
                 <ul>
                 {% for question in questions %}
                 <li><strong>{{ question.question_text }}</strong></li>
-                <ul>
                 {% for answer in question.answer_set.all %}
-                <li>{{ answer.answer_text }}</li>
+                <li class="answers ml-3 mb-3">{{ answer.answer_text }}</li>
                 {% endfor %}
-                </ul>
                 {% endfor %}
                 </ul>
             </div>

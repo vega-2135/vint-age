@@ -31,6 +31,11 @@ i {
     color: white;
 }
 
+/* FAQs page */
+.answers {
+    list-style-type: none;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
