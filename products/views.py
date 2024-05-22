@@ -151,11 +151,20 @@ def delete_product(request, product_id):
 
 
 @login_required
-def remove_from_wishlist(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    wishlist = request.user.wishlist
-    wishlist.items.remove(product)
-    return redirect("wishlist_view")
+def wishlist(request):
+    try:
+        # Attempt to get the existing Wishlist instance for the user
+        wishlist = Wishlist.objects.get(user=request.user)
+    except Wishlist.DoesNotExist:
+        # If no Wishlist exists, create one
+        wishlist = Wishlist.objects.create(user=request.user)
+
+    wishlist_items = wishlist.items.all()
+    return render(
+        request,
+        "products/wish_list.html",
+        {"products": wishlist_items, "is_wishlist": True},
+    )
 
 
 @login_required
@@ -188,15 +197,9 @@ def add_to_wishlist(request, product_id):
 
 
 @login_required
-def wishlist(request):
-    try:
-        # Attempt to get the existing Wishlist instance for the user
-        wishlist = Wishlist.objects.get(user=request.user)
-    except Wishlist.DoesNotExist:
-        # If no Wishlist exists, create one
-        wishlist = Wishlist.objects.create(user=request.user)
-
-    wishlist_items = wishlist.items.all()
-    return render(
-        request, "products/wish_list.html", {"products": wishlist_items}
-    )
+def remove_from_wishlist(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist = request.user.wishlist
+    wishlist.items.remove(product)
+    messages.success(request, "Product deleted from Wish List!")
+    return redirect(reverse("wishlist"))

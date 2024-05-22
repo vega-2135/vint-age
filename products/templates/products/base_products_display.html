@@ -90,6 +90,15 @@
                                         </div>
                                     </div>
                                 </div>
+                                {% if is_wishlist %}
+                                    <form method="post" action="{% url 'remove_from_wishlist' product.id %}">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="product_id" value="{{ product.id }}">
+                                        <button type="submit" class="btn btn-danger btn-sm ml-3">
+                                            Remove from Wishlist
+                                        </button>
+                                    </form>
+                                {% endif %}
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
