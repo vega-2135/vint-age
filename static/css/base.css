@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    /*background: url('/media/homepage.jpg') no-repeat center center fixed;*/
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -11,8 +10,9 @@ body {
 }
 
 main {
-    min-height: 100vh;
-    margin-top: 165px;
+    position: relative;
+    margin-bottom: 1rem;
+    min-height: 72vh;
 }
 
 footer {
