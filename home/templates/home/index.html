@@ -4,14 +4,14 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col-7 col-md-6 my-auto">
-                <img class="home-img" src="media/homepage.jpg" alt="Image with vintage things">
-                <h1 class="display-4 logo-font text-black">
-                    The new collections are here
+            <div class="col-12 my-auto d-flex">
+                <img class="home-img d-flex" src="media/homepage.jpg" alt="Image with vintage things">
+                <h1 class="display-4 logo-font text-black shop-bg mb-0">
+                    The new accessories are here
                 </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                <div class="shop-now shop-bg">
+                    <h4 class="mb-0">
+                        <a href="{% url 'products' %}" class="shop-now-btn btn btn-lg btn-black rounded-0 text-uppercase py-3 d-flex mb-0">Shop Now</a>
                     </h4>
                 </div>
             </div>
