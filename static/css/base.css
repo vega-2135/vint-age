@@ -74,16 +74,24 @@ i {
     margin-bottom: 0 !important;
 }
 
+.about-us {
+    font-weight: bolder;
+}
+
+.about-usp {
+    padding: 0;
+}
+
 .about-reg {
     text-align: justify;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .subscribe-header {
     margin-left: 18px;
 }
 
-. subscribe {
+.subscribe {
     width: 100%;
 }
 
@@ -98,14 +106,23 @@ i {
 }
 
 .homepic2 {
-    width: 75%;
+    width: 100%;
     height: auto;
 
 }
 
 .advantage {
-    font-size: larger;
+    font-size: 25px;
 }
+
+#mc_embed_signup {
+    background: #fff;
+      background-color: rgb(255, 255, 255);
+      background-image: none;
+    clear: left;
+    font: 1rem Open Sans, sans-serif;
+    max-width: 600px;
+  }
 
 /* FAQs page */
 .answers {
@@ -451,3 +468,5 @@ input[name='q']::placeholder {
         padding: 20px;
     }
 }
+
+
