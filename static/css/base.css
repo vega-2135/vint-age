@@ -461,6 +461,21 @@ input[name='q']::placeholder {
     }
 }
 
+
+@media screen and (min-width: 992px) {
+    .sub-col {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .sub-card {
+        width: 40%;
+        margin-bottom: 100px;
+        border: 0.5rem solid rgb(109, 154, 156) !important;
+    }
+}
+
 /* Media query: laptops (1024px and up) */
 @media screen and (min-width: 1024px) {
     .logo-font2 {

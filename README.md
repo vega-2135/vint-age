@@ -1,39 +1,31 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# VintAge
+Welcome to VintAge, your ultimate destination for unique and timeless vintage products. Our online store offers a curated selection of high-quality vintage items, ranging from clothing and accessories to home decor and collectibles. Each piece is handpicked for its authenticity, charm, and character, ensuring that our customers receive only the finest vintage treasures.
 
-Welcome,
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Mockup Screenshots](docs_readme/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
 
-## Codeanywhere Reminders
+[The deployed website can be found here](https://vint-age-f72b1a14d20f.herokuapp.com/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Contents
 
-`python3 -m http.server`
+1. [About](#1-about)
+2. [User Experience (UX)](#1-user-experience-ux)
+3. [Agile Development](#2-agile-development)
+4. [Design](#3-design)
+5. [Features](#4-features)
+6. [Technologies Used](#5-technologies-used)
+7. [Local Development and Deployment](#6-local-development-and-deployment)
+8. [Testing](#7-testing)
+9. [Credits](#8-credits)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## 1. About
+VintAge is an e-commerce platform dedicated to providing a seamless shopping experience for vintage enthusiasts. Our collection features a diverse array of products that celebrate the elegance and nostalgia of bygone eras. Whether you're looking for a statement piece to add to your wardrobe, a unique item to decorate your home, or a rare collectible to complete your collection, you'll find it at VintAge.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+### Key Features:
 
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+- Curated Selection: Each item in our store is carefully chosen for its quality, authenticity, and unique appeal.
+- User-Friendly Interface: Our website is designed to offer a smooth and enjoyable shopping experience, with easy navigation and a clean, aesthetic layout.
+- Detailed Descriptions: We provide comprehensive descriptions and high-resolution images for all products, so you can make informed purchasing decisions.
+- Secure Transactions: Our platform ensures the safety and security of your personal and payment information with state-of-the-art encryption technology.
+- Excellent Customer Service: Our dedicated customer support team is always ready to assist you with any questions or concerns.
