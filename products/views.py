@@ -178,13 +178,13 @@ def add_to_wishlist(request, product_id):
             ).exists():
                 messages.warning(
                     request,
-                    f"{product.name} is already added to your Wish List.",
+                    f"{product.name} is already added to your Wishlist.",
                 )
             else:
                 wishlist = Wishlist.objects.get(user=request.user)
                 wishlist.items.add(product)
                 messages.success(
-                    request, f"Added {product.name} to your Wish List"
+                    request, f"Added {product.name} to your Wishlist"
                 )
     else:
         form = AddToWishlistForm()  # Initialize the form for GET requests
