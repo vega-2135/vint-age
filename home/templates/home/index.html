@@ -5,102 +5,148 @@
     <div class="container header-container">
         <div class="row">
             <div class="col-12 my-auto d-flex">
-                <img class="home-img d-flex" src="{% static 'images/homepage.jpg' %}" alt="Image with vintage things">
-                <h1 class="display-4 logo-font text-black shop-bg mb-0">
-                    The new accessories are here
-                </h1>
-                <div class="shop-now shop-bg">
-                    <h4 class="mb-0">
-                        <a href="{% url 'products' %}" class="shop-now-btn btn btn-lg btn-black rounded-0 text-uppercase py-3 d-flex mb-0">Shop Now</a>
-                    </h4>
-                </div>
+                    <div class="row">
+                        <div class="col-md-6 img-col">
+                            <img class="home-img d-flex" src="{% static 'images/homepage.jpg' %}" alt="Image with vintage things">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row shop-bg">
+                                <div class="col-md-8">
+                                    <h1 class="display-4 logo-font text-black mb-0">
+                                        The new accessories are here
+                                    </h1>
+                                </div>
+                                <div class="col-md-4 shop-now">
+                                    <h4 class="mb-0">
+                                        <a href="{% url 'products' %}" class="shop-now-btn btn btn-lg btn-black rounded-0 text-uppercase py-3 d-flex mb-0">Shop Now</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
-        <div class="car-deck row">
-            <div class="col-md-6 my-auto">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">
-                            About Us
-                        </h2>
-                        <p class="card-text">
-                            At Vint-Age, we believe in the beauty of the past. 
-                            Founded out of a passion for timeless fashion and unique treasures, 
-                            we curate the finest vintage items that tell a story. Each piece in 
-                            our collection is carefully selected for its quality, history, and charm. 
-                            Whether you're a vintage enthusiast or a curious newcomer, we invite you 
-                            to explore our selection and find something truly special. Join us on this 
-                            journey through time and discover the magic of vintage.
-                        </p>
+    <!-- About and subscription section -->
+    <section id="about-subscription">
+        <div class="container">
+            <div class="car-deck row">
+                <div class="col-md-6 my-auto about">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                About Us
+                            </h2>
+                            <p class="card-text about-reg">
+                                At Vint-Age, we believe in the beauty of the past. 
+                                Founded out of a passion for timeless fashion and unique treasures, 
+                                we curate the finest vintage items that tell a story. Each piece in 
+                                our collection is carefully selected for its quality, history, and charm. 
+                                Whether you're a vintage enthusiast or a curious newcomer, we invite you 
+                                to explore our selection and find something truly special. Join us on this 
+                                journey through time and discover the magic of vintage.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 my-auto">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">
-                            Loved Our Products?
-                        </h2>
-                        <p class="card-text">
-                            Get our latest arrivals, offers tips and much more. 
-                        </p>
-                    </div>
-                    <div id="mc_embed_shell">
-                        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-                        <style type="text/css">
-                                #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
-                                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                                We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                        </style>
-                        <div id="mc_embed_signup">
-                            <form action="https://herokuapp.us17.list-manage.com/subscribe/post?u=7719ad4a05a4dcedbd48b3364&amp;id=be208aabce&amp;f_id=00b088e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                                <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
-                                    <div class="indicates-required">
-                                        <span class="asterisk">*</span> indicates required
-                                    </div>
-                                    <div class="mc-field-group">
-                                        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
-                                    </div>
-                                    <div id="mce-responses" class="clear foot">
-                                        <div class="response" id="mce-error-response" style="display: none;"></div>
-                                        <div class="response" id="mce-success-response" style="display: none;"></div>
-                                    </div>
-                                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-                                        <input type="text" name="b_7719ad4a05a4dcedbd48b3364_be208aabce" tabindex="-1" value="">
-                                    </div>
-                                    <div class="optionalParent">
-                                        <div class="clear foot">
-                                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                                            <p style="margin: 0px auto;"><a href="http://eepurl.com/iQt5FM" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                <div class="col-md-6 my-auto">
+                    <div class="card">
+                        <div class="card-body subscribe" id="mc_embed_shell">
+                            <div class="subscribe-header">
+                                <h2 class="card-title">
+                                    Loved Our Products?
+                                </h2>
+                                <p class="card-text">
+                                    Get our latest arrivals, offers tips and much more. 
+                                </p>
+                            </div>
+                            <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                            <style type="text/css">
+                                    #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
+                                    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                                    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                            </style>
+                            <div id="mc_embed_signup">
+                                <form action="https://herokuapp.us17.list-manage.com/subscribe/post?u=7719ad4a05a4dcedbd48b3364&amp;id=be208aabce&amp;f_id=00b088e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                                    <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
+                                        <div class="indicates-required">
+                                            <span class="asterisk">*</span> indicates required
+                                        </div>
+                                        <div class="mc-field-group">
+                                            <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                                        </div>
+                                        <div id="mce-responses" class="clear foot">
+                                            <div class="response" id="mce-error-response" style="display: none;"></div>
+                                            <div class="response" id="mce-success-response" style="display: none;"></div>
+                                        </div>
+                                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                            /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                                            <input type="text" name="b_7719ad4a05a4dcedbd48b3364_be208aabce" tabindex="-1" value="">
+                                        </div>
+                                        <div class="optionalParent">
+                                            <div class="clear foot">
+                                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                                                <p style="margin: 0px auto;"><a href="http://eepurl.com/iQt5FM" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
+                            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                            <script type="text/javascript">
+                            (function($) {
+                                window.fnames = new Array(); 
+                                window.ftypes = new Array();
+                                fnames[0]='EMAIL';ftypes[0]='email';
+                                fnames[1]='FNAME';ftypes[1]='text';
+                                fnames[2]='LNAME';ftypes[2]='text';
+                                fnames[3]='ADDRESS';ftypes[3]='address';
+                                fnames[4]='PHONE';ftypes[4]='phone';
+                                fnames[5]='BIRTHDAY';
+                                ftypes[5]='birthday';
+                                }(jQuery));
+                                var $mcj = jQuery.noConflict(true);
+                            </script>
                         </div>
-                        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-                        <script type="text/javascript">
-                        (function($) {
-                            window.fnames = new Array(); 
-                            window.ftypes = new Array();
-                            fnames[0]='EMAIL';ftypes[0]='email';
-                            fnames[1]='FNAME';ftypes[1]='text';
-                            fnames[2]='LNAME';ftypes[2]='text';
-                            fnames[3]='ADDRESS';ftypes[3]='address';
-                            fnames[4]='PHONE';ftypes[4]='phone';
-                            fnames[5]='BIRTHDAY';
-                            ftypes[5]='birthday';
-                            }(jQuery));
-                            var $mcj = jQuery.noConflict(true);
-                        </script>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- Second page theme section -->
+    <section id="second-home-image">
+        <div class="container">
+            <div class="row second-section">
+                <div class="col-md-6 homeimg2">
+                    <img class="homepic2" src="{% static 'images/vintage-home.webp' %}" alt="Girl holding an old camera">
+                </div>
+                <div class="col-md-6">
+                    <p class="ml-3 advantage">
+                        <strong>In Order to Take Full Advantage of Our Site, Register Today and Enjoy These Exclusive Benefits:</strong>
+                    </p>
+                    <ul class="about-reg">
+                        <li>Special Offers:
+                            Gain access to exclusive special offers, including early bird discounts, flash sales, and unique deals that are not available to the general public.
+                        </li>
+                        <li>Personalized Discounts:
+                            Receive personalized discount codes and promotional offers tailored to your shopping habits, helping you save more on the items you love most.
+                        </li>
+                        <li>First Look at New Arrivals:
+                            Be the first to know about our latest products and get early access to new arrivals, ensuring you stay ahead of the trends.
+                        </li>
+                        <li>Reward Points Program:
+                            Earn points every time you shop, leave a review, or refer a friend. Redeem these points for discounts on future purchases, giving you more reasons to shop with us.
+                        </li>
+                        <li>Hassle-Free Checkout:
+                            Save your shipping and payment information for a quicker, easier checkout experience. Additionally, track your orders and view your purchase history all in one convenient place.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}

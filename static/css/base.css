@@ -35,10 +35,76 @@ i {
 
 /* Home page */
 .home-img {
-    width: 75%;
+    width: 100%;
     height: auto;
     align-items: center;
     justify-content: center;
+}
+
+.img-col {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.shop-now {
+    align-content: flex-end;
+    padding-right: 0;
+}
+
+.shop-now-btn {
+    color: white;
+    min-width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.shop-bg {
+    background-color: rgb(201, 237, 241); 
+    height: 100%;
+}
+
+.card {
+    border: none !important;
+    margin-top: 50px;
+}
+
+.about {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.about-reg {
+    text-align: justify;
+    font-size: 20px;
+}
+
+.subscribe-header {
+    margin-left: 18px;
+}
+
+. subscribe {
+    width: 100%;
+}
+
+.second-section{
+    margin-top: 50px;
+}
+
+.homeimg2 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.homepic2 {
+    width: 75%;
+    height: auto;
+
+}
+
+.advantage {
+    font-size: larger;
 }
 
 /* FAQs page */
@@ -78,22 +144,6 @@ i {
 
 .main-logo-link {
     width: fit-content;
-}
-
-.shop-now {
-    align-content: flex-end;
-}
-
-.shop-now-btn {
-    color: white;
-    min-width: 260px;
-    align-items: flex-end;
-    justify-content: center;
-
-}
-
-.shop-bg {
-    background-color: rgb(201, 237, 241); 
 }
 
 .btn-black {
