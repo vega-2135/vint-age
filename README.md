@@ -14,11 +14,13 @@ Welcome to VintAge, your ultimate destination for unique and timeless vintage pr
 3. [Agile Development](#3-agile-development)
 4. [Design](#4-design)
 5. [Database Design](#5-database-design)
-6. [Technologies Used](#6-technologies-used)
-7. [Local Development and Deployment](#7-local-development-and-deployment)
-8. [Testing](#8-testing)
-9. [Credits](#9-credits)
-10. [Acknowledgement](#10-acknowledgement)
+6. [features](#6-features)
+7. [Technologies Used](#6-technologies-used)
+8. [Search Engine Optimization and Web Marketing](#6-search-engine-optimization-and-web-marketing)
+9. [Local Development and Deployment](#7-local-development-and-deployment)
+10. [Testing](#8-testing)
+11. [Credits](#9-credits)
+12. [Acknowledgement](#10-acknowledgement)
 
 ## 1. About
 VintAge is an e-commerce platform dedicated to providing a seamless shopping experience for vintage enthusiasts. Our collection features a diverse array of products that celebrate the elegance and nostalgia of bygone eras. Whether you're looking for a statement piece to add to your wardrobe, a unique item to decorate your home, or a rare collectible to complete your collection, you'll find it at VintAge.
@@ -90,12 +92,57 @@ The logo of the website was taken from [flaticon.com](https://www.flaticon.com/)
 LibreOffice spreadsheet was used for designing the models, followed by integrating them into a single cohesive image using Lucidchart. In this project, the Django User model was used and is incorporated into the image to illustrate its connection with the other project models.
 
 Models:
-- [Model 1](docs_readme/db_design/design1.png)
-- [Contact Model 1](docs_readme/db_design/contact_db.png)
-- [ReacOut Model](docs_readme/db_design/reachout_db.png)
-- [Q&A Models](docs_readme/db_design/qa_db.png)
+![Model 1](docs_readme/db_design/design1.png)
 
-## 6. Technologies Used
+![Contact Model 1](docs_readme/db_design/contact_db.png)
+
+![ReacOut Model](docs_readme/db_design/reachout_db.png)
+
+![Q&A Models](docs_readme/db_design/qa_db.png)
+
+## 6. Features
+
+- ### Home Page
+The homepage features a concise overview of the website's purpose alongside a link to all the products of the store and a section to subscribe to receive emails about recent offers, new deals and arrivals, enticing visitors with a glimpse of the new products awaiting them. A prominent navigation bar grants seamless access to every corner of the site, ensuring users can easily explore and discover a plethora of different products from clothing to deco items.
+
+<details>
+<summary>Home Page Screenshot</summary>
+
+![](/docs_readme/features/homepage.png)
+
+</details>
+
+- ### Navbar
+The navbar is designed to adapt to different screen sizes and contains essential features for user navigation. It prominently displays the website logo and incorporates a search box, enabling users to find products based on specific keywords. Additionally, there are distinct buttons for user registration and login, facilitating access to enhanced functionality within the site.
+
+Once users register or log in, the options in the My Account dropdown menu transform, displaying convenient links to check their personalized profile page. This profile page contains fields the user can edit, allowing for a more rapid payment of checkout products. The My Account menu also displays a link for logging out of the site and a link to check the products added to their wishlist. Below the aforementioned navbar options, there are five additional options available:
+
+-Six categories of products, each leading to a page containing products dedicated to that category. The categories are: All Products, Clothing, Music, Mobility, Deco, and Special Offers.
+- Two links to the 'Contact Us' and 'FAQs' pages, providing users with a means to get in touch and additional information about the website.
+
+This layout ensures that users can easily navigate through the website, explore all items the store has to offer, and access essential pages for further engagement or inquiries.
+
+<details>
+<summary>Nav Bar Screenshots</summary>
+
+![](/docs_readme/features/navbar1.png)
+![](/docs_readme/features/navba2.png)
+
+</details>
+
+- ### User Authentication
+The VintAge website employs the Django Allauth package to manage user authentication and grant authenticated users access to CRUD functionalities. This package furnishes a suite of views and templates dedicated to user registration, login, and logout processes. Throughout the website, defensive programming techniques have been implemented to safeguard against unauthorized access to pages lacking appropriate permissions. Django's LoginRequired mixin is utilized to restrict access to anonymous users, redirecting them to the login page when attempting to view restricted content, for example only the original author of a recipe can make edits of comments or submitted recipes. Unauthorized attempts trigger redirection to a 403 error page, notifying users of their lack of permission to execute the action. Furthermore, for access to the admin panel, users must hold either 'superuser' or 'staff status' permissions.
+
+<details>
+<summary>User Authentication Screenshots</summary>
+
+![](/docs_readme/features/login.png)
+![](/docs_readme/features/logout.png)
+![](/docs_readme/features/register.png)
+
+</details>
+
+## 7. Technologies Used
 ### Languages
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -151,5 +198,13 @@ Models:
 
 - [Firefox DevTools](https://developer.chrome.com/docs/devtools/) used for debugging of css code.
 
-## 10. Acknowledgement
+## 8.
+
+## 9.
+
+## 10.
+
+## 11.
+
+## 12. Acknowledgement
 I'd like to thank my mentor Brian Macharia, for his invaluable guidance, feedback, tips, and the shared resources. 
