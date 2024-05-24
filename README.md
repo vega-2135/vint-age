@@ -56,6 +56,38 @@ Furthermore, GitHub milestones were employed to group related user stories, enha
 
 ![Kanban Board](docs_readme/images/project_kanban.png)
 
+## 3. Design
+
+### Structure
+The VintAge app boasts a straightforward layout, prioritizing user-friendliness and seamless navigation. Its uniform page structure ensures users can effortlessly locate desired information. With a responsive design, the app adapts seamlessly across various devices, guaranteeing clear visibility. All pages show a navigation menu that offers users a consistent means to explore the site's content. Employing CSS and Bootstrap rows and columns, the app maintains a tidy and cohesive content arrangement throughout its pages.
+
+### Colour Scheme
+
+The color Greyish Teal (rgb(109, 154, 156)) was chosen as the background color for the message below the navigation bar stating "Free Delivery on Orders over 50$". This color was also chosen for the border of the subscription box.
+
+The color Pale Blue Lilly (rgb(201, 237, 241)) was chosen as the background color of the div containing the text "The New Accessories are Here" and the Shop Now button.
+
+The color white was chosen as the background color of the rest of the website and also as the font color of the free delivey message at the homepage.
+
+The color black was chosen as the font color for all text on the website, as it provides the best contrast with the white background of the website.
+
+### Typography
+
+In crafting the typography for our website, deliberate consideration was given to ensure optimal readability and aesthetic appeal. To achieve this balance, we've selected the versatile and modern Lato font as the primary typeface throughout the entire site. Renowned for its clean lines, readability, and versatility across various screen sizes and resolutions, Lato offers a seamless reading experience. Its uniformity and clarity elevate the presentation of content, ensuring that users can effortlessly engage with our platform's offerings. By employing Lato consistently across all text elements, from headers to paragraphs, I aim to deliver a cohesive and visually pleasing browsing experience to users.
+
+### Wireframes
+- [Home Page](docs_readme/wireframes/homepage.png)
+- [Products Page](docs_readme/wireframes/products_page.png)
+- [Product Detail Page](docs_readme/wireframes/product_detail_page.png)
+- [Contact Us](docs_readme/wireframes/contact_us_page.png)
+- [FAQs Page](docs_readme/wireframes/faq_page.png)
+
+### Additional
+The logo of the website was taken from [flaticon.com](https://www.flaticon.com/) page and converted in a logo using a [favicon generator webapp](https://favicon.io/)
+ app boasts a straightforward layout, prioritizing user-friendliness and seamless navigation. Its uniform page structure ensures users can effortlessly locate desired information. With a responsive design, the app adapts seamlessly across various devices, guaranteeing clear visibility. All pages show a navigation menu that offers users a consistent means to explore the site's content. Employing CSS and Bootstrap rows and columns, the app maintains a tidy and cohesive content arrangement throughout its pages.
+
+
+
 ## 6. Technologies Used
 ### Languages
 
