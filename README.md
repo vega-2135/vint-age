@@ -91,9 +91,9 @@ LibreOffice spreadsheet was used for designing the models, followed by integrati
 
 Models:
 - [Model 1](docs_readme/db_design/design1.png)
-- [Contact Model 1](docs_readme/db_design/design1.png)
-- [ReacOut Model](docs_readme/db_design/design1.png)
-- [Q&A Models](docs_readme/db_design/design1.png)
+- [Contact Model 1](docs_readme/db_design/contact_db.png)
+- [ReacOut Model](docs_readme/db_design/reachout_db.png)
+- [Q&A Models](docs_readme/db_design/qa_db.png)
 
 ## 6. Technologies Used
 ### Languages
