@@ -86,7 +86,14 @@ In crafting the typography for our website, deliberate consideration was given t
 The logo of the website was taken from [flaticon.com](https://www.flaticon.com/) page and converted in a logo using a [favicon generator webapp](https://favicon.io/)
  app boasts a straightforward layout, prioritizing user-friendliness and seamless navigation. Its uniform page structure ensures users can effortlessly locate desired information. With a responsive design, the app adapts seamlessly across various devices, guaranteeing clear visibility. All pages show a navigation menu that offers users a consistent means to explore the site's content. Employing CSS and Bootstrap rows and columns, the app maintains a tidy and cohesive content arrangement throughout its pages.
 
+## 4. Database Design
+LibreOffice spreadsheet was used for designing the models, followed by integrating them into a single cohesive image using Lucidchart. In this project, the Django User model was used and is incorporated into the image to illustrate its connection with the other project models.
 
+Models:
+- [Model 1](docs_readme/db_design/design1.png)
+- [Contact Model 1](docs_readme/db_design/design1.png)
+- [ReacOut Model](docs_readme/db_design/design1.png)
+- [Q&A Models](docs_readme/db_design/design1.png)
 
 ## 6. Technologies Used
 ### Languages
