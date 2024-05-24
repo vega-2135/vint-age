@@ -31,6 +31,31 @@ VintAge is an e-commerce platform dedicated to providing a seamless shopping exp
 - Secure Transactions: Our platform ensures the safety and security of your personal and payment information with state-of-the-art encryption technology.
 - Excellent Customer Service: Our dedicated customer support team is always ready to assist you with any questions or concerns.
 
+## 1. User Experience (UX)
+
+### User Stories
+
+User stories were generated through GitHub Issues, with story points assigned based on estimated task completion times. Milestones and appropriate tags were also applied for organization.
+
+Explore the user stories below in the section labeled [User Story Testing](### User Story Testing), and delve deeper into comprehensive details, including screenshots, story points, milestones, and tags, by visiting [GitHub Issues](https://github.com/vega-2135/the_pancake_palace/issues).
+
+## 2. Agile Development
+
+The project development at VintAge was guided by Agile principles, allowing iterative and incremental enhancements to the projects's design throughout its evolution. leveraging GitHub's robust features to implement Scrum methodology effectively.GitHub Issues served as the backbone of the product backlog, housing detailed user stories. GitHub Issues' tagging feature was used to assign story points, prioritize features using the MoSCoW method, and categorize user stories for streamlined development. Additionally, GitHub's Milestones feature aided in sprint planning and deadline setting, ensuring timely delivery of project milestones.
+
+Utilizing GitHub Issues and Projects, I meticulously managed each aspect of my project, organizing them into Epics and further breaking them down into User Stories with associated Tasks. Epics represented significant features, while User Stories were prioritized as mentioned using the MoSCoW technique, ensuring efficient allocation of resources.
+
+GitHub's Project board provided a visual representation of our progress, utilizing a [kanban board](https://github.com/users/vega-2135/projects/4) approach to track user story development from 'Todo' to 'Done', with each stage signifying the completion of specific development milestones.
+
+
+Furthermore, GitHub milestones were employed to group related user stories, enhancing project organization and cohesion which additionally aided in sprint planning and deadline setting, ensuring timely delivery of project milestones.
+
+![Github Issues](docs_readme/images/issues_page.png)
+
+![Github Issues](docs_readme/images/issues_closed_page.png)
+
+![Kanban Board](docs_readme/images/project_kanban.png)
+
 ## 6. Technologies Used
 ### Languages
 
