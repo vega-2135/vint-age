@@ -13,7 +13,7 @@ Welcome to VintAge, your ultimate destination for unique and timeless vintage pr
 2. [User Experience (UX)](#2-user-experience-ux)
 3. [Agile Development](#3-agile-development)
 4. [Design](#4-design)
-5. [Features](#5-features)
+5. [Database Design](#5-database-design)
 6. [Technologies Used](#6-technologies-used)
 7. [Local Development and Deployment](#7-local-development-and-deployment)
 8. [Testing](#8-testing)
