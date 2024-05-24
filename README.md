@@ -10,15 +10,15 @@ Welcome to VintAge, your ultimate destination for unique and timeless vintage pr
 ## Contents
 
 1. [About](#1-about)
-2. [User Experience (UX)](#1-user-experience-ux)
-3. [Agile Development](#2-agile-development)
-4. [Design](#3-design)
-5. [Features](#4-features)
-6. [Technologies Used](#5-technologies-used)
-7. [Local Development and Deployment](#6-local-development-and-deployment)
-8. [Testing](#7-testing)
-9. [Credits](#8-credits)
-10. [Acknowledgement](#9-acknowledgement)
+2. [User Experience (UX)](#2-user-experience-ux)
+3. [Agile Development](#3-agile-development)
+4. [Design](#4-design)
+5. [Features](#5-features)
+6. [Technologies Used](#6-technologies-used)
+7. [Local Development and Deployment](#7-local-development-and-deployment)
+8. [Testing](#8-testing)
+9. [Credits](#9-credits)
+10. [Acknowledgement](#10-acknowledgement)
 
 ## 1. About
 VintAge is an e-commerce platform dedicated to providing a seamless shopping experience for vintage enthusiasts. Our collection features a diverse array of products that celebrate the elegance and nostalgia of bygone eras. Whether you're looking for a statement piece to add to your wardrobe, a unique item to decorate your home, or a rare collectible to complete your collection, you'll find it at VintAge.
@@ -31,7 +31,7 @@ VintAge is an e-commerce platform dedicated to providing a seamless shopping exp
 - Secure Transactions: Our platform ensures the safety and security of your personal and payment information with state-of-the-art encryption technology.
 - Excellent Customer Service: Our dedicated customer support team is always ready to assist you with any questions or concerns.
 
-## 1. User Experience (UX)
+## 2. User Experience (UX)
 
 ### User Stories
 
@@ -39,7 +39,7 @@ User stories were generated through GitHub Issues, with story points assigned ba
 
 Explore the user stories below in the section labeled [User Story Testing](### User Story Testing), and delve deeper into comprehensive details, including screenshots, story points, milestones, and tags, by visiting [GitHub Issues](https://github.com/vega-2135/the_pancake_palace/issues).
 
-## 2. Agile Development
+## 3. Agile Development
 
 The project development at VintAge was guided by Agile principles, allowing iterative and incremental enhancements to the projects's design throughout its evolution. leveraging GitHub's robust features to implement Scrum methodology effectively.GitHub Issues served as the backbone of the product backlog, housing detailed user stories. GitHub Issues' tagging feature was used to assign story points, prioritize features using the MoSCoW method, and categorize user stories for streamlined development. Additionally, GitHub's Milestones feature aided in sprint planning and deadline setting, ensuring timely delivery of project milestones.
 
@@ -56,7 +56,7 @@ Furthermore, GitHub milestones were employed to group related user stories, enha
 
 ![Kanban Board](docs_readme/images/project_kanban.png)
 
-## 3. Design
+## 4. Design
 
 ### Structure
 The VintAge app boasts a straightforward layout, prioritizing user-friendliness and seamless navigation. Its uniform page structure ensures users can effortlessly locate desired information. With a responsive design, the app adapts seamlessly across various devices, guaranteeing clear visibility. All pages show a navigation menu that offers users a consistent means to explore the site's content. Employing CSS and Bootstrap rows and columns, the app maintains a tidy and cohesive content arrangement throughout its pages.
@@ -86,7 +86,7 @@ In crafting the typography for our website, deliberate consideration was given t
 The logo of the website was taken from [flaticon.com](https://www.flaticon.com/) page and converted in a logo using a [favicon generator webapp](https://favicon.io/)
  app boasts a straightforward layout, prioritizing user-friendliness and seamless navigation. Its uniform page structure ensures users can effortlessly locate desired information. With a responsive design, the app adapts seamlessly across various devices, guaranteeing clear visibility. All pages show a navigation menu that offers users a consistent means to explore the site's content. Employing CSS and Bootstrap rows and columns, the app maintains a tidy and cohesive content arrangement throughout its pages.
 
-## 4. Database Design
+## 5. Database Design
 LibreOffice spreadsheet was used for designing the models, followed by integrating them into a single cohesive image using Lucidchart. In this project, the Django User model was used and is incorporated into the image to illustrate its connection with the other project models.
 
 Models:
