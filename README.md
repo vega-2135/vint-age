@@ -108,7 +108,7 @@ The homepage features a concise overview of the website's purpose alongside a li
 <details>
 <summary>Home Page Screenshot</summary>
 
-![](/docs_readme/features/homepage.png)
+![Homepage](/docs_readme/features/homepage.png)
 
 </details>
 
@@ -125,8 +125,8 @@ This layout ensures that users can easily navigate through the website, explore 
 <details>
 <summary>Nav Bar Screenshots</summary>
 
-![](/docs_readme/features/navbar1.png)
-![](/docs_readme/features/navba2.png)
+![Navigation Bar Unlogged](/docs_readme/features/navbar1.png)
+![Navigation Bar Logged in](/docs_readme/features/navba2.png)
 
 </details>
 
@@ -136,9 +136,9 @@ The VintAge website employs the Django Allauth package to manage user authentica
 <details>
 <summary>User Authentication Screenshots</summary>
 
-![](/docs_readme/features/login.png)
-![](/docs_readme/features/logout.png)
-![](/docs_readme/features/register.png)
+![Login Page](/docs_readme/features/login.png)
+![Logout Page](/docs_readme/features/logout.png)
+![Register Page](/docs_readme/features/register.png)
 
 </details>
 
@@ -150,8 +150,8 @@ Each product listing on the page features an image of the product, followed by t
 <details>
 <summary>User Authentication Screenshots</summary>
 
-![](/docs_readme/features/products_page1.png)
-![](/docs_readme/features/products_page2.png)
+![Product Page Sample 1](/docs_readme/features/products_page1.png)
+![Product Page Sample 2](/docs_readme/features/products_page2.png)
 
 </details>
 
@@ -164,12 +164,15 @@ The Product Detail Page displays an image of the product. To the right of the pr
 - The current rating of the product,
 - A text providing more information about the product,
 - A quantity box where users can specify the number of items they wish to purchase,
-- Buttons to keep shopping, add to bag, and add to wishlist
+- Buttons to keep shopping, add to bag, and add to wishlist.
+
+Upon clicking the "Add To Bag" button, a message pops out informing the user that the product has been added to the shopping bag.
 
 <details>
 <summary>User Authentication Screenshots</summary>
 
-![](/docs_readme/features/product_detail_page.png)
+![Product Detail Page](/docs_readme/features/product_detail_page.png)
+![Success Message](/docs_readme/features/bag1.png)
 
 </details>
 
