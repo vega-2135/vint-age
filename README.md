@@ -158,37 +158,42 @@ Each product listing on the page features an image of the product, followed by t
 - ### Products Detail Page
 The Product Detail Page displays an image of the product. To the right of the product image, a detailed description is shown, including, from top to bottom:
 
-- The name of the product,
-- The price of the product,
-- The category the product belongs to,
-- The current rating of the product,
-- A text providing more information about the product,
-- A quantity box where users can specify the number of items they wish to purchase,
-- And buttons to keep shopping, add to bag, and add to wishlist.
+- The name of the product
+- The price of the product
+- The category the product belongs to
+- The current rating of the product
+- A text providing more information about the product
+- A quantity box where users can specify the number of items they wish to purchase
+- Buttons to keep shopping, add to bag, and add to wishlist.
 
 Upon clicking the "Add To Bag" button, a message pops out informing the user that the product has been added to the shopping bag.
 
 <details>
-<summary>User Authentication Screenshots</summary>
+<summary>Product Detail Page Screenshots</summary>
 
 ![Product Detail Page](/docs_readme/features/product_detail_page.png)
 ![Success Message](/docs_readme/features/bag1.png)
 
 </details>
 
-- ### Shopping Bag page
-The Shopping Bag Page displays rows of products added to this page. Each row features an image of the product follow by a small description including the produc's SKU and size when applicable. Also the price, quantity and subtotal are also shown. 
+- ### Shopping Bag Page
+The Shopping Bag Page displays rows of products that have been added to the shopping bag. Each row features an image of the product followed by a small description, including the product's SKU and size (when applicable). The price, quantity, and subtotal for each product are also shown.
 
-At the bottom right of the page, the following is displayed:
-- Bag Total, corresponding to the price of the product without the delivery costs,
-- Delivery cost,
-- Grand Total, which include the price of all items added to the shopping bag, plus the delivery costs,
-- And buttons that direct users to the page with all the products of the website ("Keep Shopping") and to the secure checkout page, where users can add the required information for the payment of the products.
+The quantity section includes a spinner control menu that allows the user to increase or decrease the number of items they want to purchase for a given product. It also includes update and remove options. The update option adjusts the quantity of a product if the user changes it, while the remove option deletes the product entirely from the shopping bag.
+
+At the bottom right of the page, the following details are displayed:
+
+- Bag Total: the total price of the products without delivery costs
+- Delivery Cost
+- Grand Total: the total price of all items in the shopping bag, including delivery costs
+- Buttons that direct users to the page with all the products on the website ("Keep Shopping") and to the secure checkout page, where users can add the required information for the payment of the products.
+
 
 <details>
-<summary>User Authentication Screenshots</summary>
+<summary>Shopping Bag Page Screenshots</summary>
 
-![Shopping Bag Page](/docs_readme/features/shopping_bag_page.png)
+![Shopping Bag Page](/docs_readme/features/shopping_bag_page1.png)
+![Shopping Bag Page](/docs_readme/features/shopping_bag_page2.png)
 
 </details>
 
