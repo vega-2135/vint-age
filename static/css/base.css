@@ -132,7 +132,7 @@ i {
 }
 
 /* Secure checkout btn */ 
-.secure-checkout {
+.secure-checkout, .complete-order {
     margin-left: 35px;
 }
 
