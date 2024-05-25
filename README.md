@@ -148,7 +148,7 @@ The Product Page displays all the products that belong to a given category. At t
 Each product listing on the page features an image of the product, followed by the product name, price, category, and rating.
 
 <details>
-<summary>User Authentication Screenshots</summary>
+<summary>Products Page Screenshots</summary>
 
 ![Product Page Sample 1](/docs_readme/features/products_page1.png)
 ![Product Page Sample 2](/docs_readme/features/products_page2.png)
