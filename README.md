@@ -145,7 +145,7 @@ The VintAge website employs the Django Allauth package to manage user authentica
 - ### Products Page
 The Product Page displays all the products that belong to a given category. At the top right of this page, there is a link that redirects users to a page showing all products and a number that represents the total number of products available for a given category. Additionally, there is a dropdown menu to sort the products by price, rating, name, and category.
 
-Each product listing on the page features an image of the product, followed by the product name, price, category, and rating.
+Each product listing on the page features an image of the product, followed by the product name, price, category, and rating. For admin users, "Edit" and "Delete" buttons are displayed to the right of the product rating. Clicking the "Edit" button directs the admin user to a page where they can edit the details of the given product (image, name, price, etc.). Clicking the "Delete" button removes the product from the website and the database.
 
 <details>
 <summary>Products Page Screenshots</summary>
@@ -214,20 +214,52 @@ Once users fill in all the required fields and click the "Complete Order" button
 </details>
 
 - ### Wishlist Page
+The Wishlist Page displays the products that users have added to their wishlist from the product detail page. The page shows the added products with the same information and styles as those on the products page. An additional "Remove from Wishlist" button is located below the rating information of each product. Clicking this button removes the given product from the user's wishlist. When a product is removed from the wishlist, a message pops up informing the user that the product was successfully deleted from t
+
+<details>
+<summary>Wishlist Page Screenshots</summary>
+
+![Wishlist Page](/docs_readme/features/wishlist_page.png)
+
+</details>
 
 - ### Profile Page
 
 - ### Contact Us Page
+All users can contact customer service by clicking in the Contact Us option of the navbar. Users can leave a message for comments, questions or suggestions about the site or products.
+
+<details>
+<summary>Contact Page Screenshot</summary>
+
+![](/docs_readme/features/contact.png)
+
+</details>
 
 - ### FAQs Page
 
 - ### Admin Panel
+The Django admin panel is accessible to 'superusers' and users granted the 'staff status' permission. This panel serves as a central hub for managing site content. Each data model is seamlessly integrated into the admin interface using the register decorator. This allows for easy access and management of various functionalities, including adding or removing recipes, reviewing contact messages, setting the approval status of recipes and comments, as well as managing user accounts for cases of inappropriate behavior on the site. Additionally, the admin panel facilitates the addition of descriptions found on the About page.
+
+<details>
+<summary>Admin Panel Screenshot</summary>
+
+![Admin Panel](/docs_readme/features/admin_panel.png)
+
+</details>
 
 - ### Adding New Products to Website
 
-- ### Footer 
+- ### Footer
+The footer contains the copyright information and the icons for facebook, twitter and instagram pages.
 
-- ### Fure Features
+<details>
+<summary>Search Recipes Screenshot</summary>
+
+![Footer](/docs_readme/features/footer.png)
+
+</details>
+
+- ### Future Features
 
 ## 7. Technologies Used
 ### Languages
