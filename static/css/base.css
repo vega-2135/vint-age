@@ -17,11 +17,12 @@ main {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: rgb(109, 154, 156);
+    margin-top: 100px;
 }
 
 .footer-font {
