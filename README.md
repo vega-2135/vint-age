@@ -142,6 +142,57 @@ The VintAge website employs the Django Allauth package to manage user authentica
 
 </details>
 
+- ### Products Page
+The Product Page displays all the products that belong to a given category. At the top right of this page, there is a link that redirects users to a page showing all products and a number that represents the total number of products available for a given category. Additionally, there is a dropdown menu to sort the products by price, rating, name, and category.
+
+Each product listing on the page features an image of the product, followed by the product name, price, category, and rating.
+
+<details>
+<summary>User Authentication Screenshots</summary>
+
+![](/docs_readme/features/products_page1.png)
+![](/docs_readme/features/products_page2.png)
+
+</details>
+
+- ### Products Detail Page
+The Product Detail Page displays an image of the product. To the right of the product image, a detailed description is shown, including, from top to bottom:
+
+- The name of the product,
+- The price of the product,
+- The category the product belongs to,
+- The current rating of the product,
+- A text providing more information about the product,
+- A quantity box where users can specify the number of items they wish to purchase,
+- Buttons to keep shopping, add to bag, and add to wishlist
+
+<details>
+<summary>User Authentication Screenshots</summary>
+
+![](/docs_readme/features/product_detail_page.png)
+
+</details>
+
+- ### Bag page
+
+- ### Checkout Page
+
+- ### Wishlist Page
+
+- ### Profile Page
+
+- ### Contact Us Page
+
+- ### FAQs Page
+
+- ### Admin Panel
+
+- ### Adding New Products to Website
+
+- ### Footer 
+
+- ### Fure Features
+
 ## 7. Technologies Used
 ### Languages
 
