@@ -201,5 +201,5 @@ def remove_from_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     wishlist = request.user.wishlist
     wishlist.items.remove(product)
-    messages.success(request, "Product deleted from Wish List!")
+    messages.success(request, "Product deleted from Wishlist!")
     return redirect(reverse("wishlist"))
