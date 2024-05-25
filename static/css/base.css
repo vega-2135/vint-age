@@ -125,6 +125,17 @@ i {
     max-width: 600px;
   }
 
+/* Keep shopping btn */
+.keep_shopping {
+    color: black;
+    margin-left: 20px;
+}
+
+/* Secure checkout btn */ 
+.secure-checkout {
+    margin-left: 35px;
+}
+
 /* FAQs page */
 .answers {
     list-style-type: none;
