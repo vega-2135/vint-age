@@ -199,6 +199,19 @@ At the bottom right of the page, the following details are displayed:
 
 
 - ### Checkout Page
+The Checkout Page features three forms on the right side of the page: one for the user's personal details, one for the delivery information, and one for the payment details. Users must provide their card information in the payment form to complete the purchase. On the left side of these forms, the order summary is displayed.
+
+At the bottom of the page, below the payment form, there are two buttons: the "Adjust Bag" button, which allows users to modify the items or quantities of items they want to purchase, and the "Complete Order" button, which finalizes the payment and checkout process for the purchased products.
+
+Once users fill in all the required fields and click the "Complete Order" button, a loading symbol appears at the center of the page. After a few seconds, a new page loads, and the text "Thank You" appears at the top left of the page, followed by the order information. A success message also appears, informing the user that the order was successfully processed. The message includes the order number and confirmation that a confirmation email will be sent to the email address provided in the personal details form.
+
+<details>
+<summary>Checkout Page Screenshots</summary>
+
+![Checkout Page](/docs_readme/features/checkout_page1.png)
+![Cheackout Success Page](/docs_readme/features/checkout_page2.png)
+
+</details>
 
 - ### Wishlist Page
 
