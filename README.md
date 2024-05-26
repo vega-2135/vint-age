@@ -210,7 +210,8 @@ Once users fill in all the required fields and click the "Complete Order" button
 <summary>Checkout Page Screenshots</summary>
 
 ![Checkout Page](/docs_readme/features/checkout_page1.png)
-![Cheackout Success Page](/docs_readme/features/checkout_page2.png)
+![Checkout Page/ Loading](/docs_readme/features/checkout_page2.png)
+![Cheackout Success Page](/docs_readme/features/checkout_page3.png)
 
 </details>
 
@@ -220,7 +221,8 @@ The Wishlist Page displays the products that users have added to their wishlist 
 <details>
 <summary>Wishlist Page Screenshots</summary>
 
-![Wishlist Page](/docs_readme/features/wishlist_page.png)
+![Wishlist Page Sample #1](/docs_readme/features/wishlist_page1.png)
+![Wishlist Page Sample #2](/docs_readme/features/wishlist_page2.png)
 
 </details>
 
@@ -355,13 +357,177 @@ The footer contains the copyright information and the icons for facebook, twitte
 
 - [Firefox DevTools](https://developer.chrome.com/docs/devtools/) used for debugging of css code.
 
-## 8.
+## 8. Search ENgine Optimization and Web Marketing
+When planning the project, an important step was to consider SEO strategies to achieve a high-quality product that ranks well in search engines. The content of this website was created with the idea of building a vintage e-commerce site, taking into account the users' needs. The information on the website is easy to understand and demonstrates expertise, authoritativeness, and trustworthiness.
 
-## 9.
+Key changes implemented to achieve this include:
+
+- Planning keywords for the meta sections of the HTML file and throughout the site's content.
+- Choosing names and alt text for all images to match the site’s keywords, increasing the chances of a higher quality evaluation from search engines.
+- Creating an FAQs section to help and guide users with any questions about the site or products, while also contributing to a high-quality product that can potentially rank high in search engines.
+- Selecting tags to attract clicks from users, such as span, h1, and h2.
+- Utilizing sitemap.xml and robots.txt files.
+- Creating a Facebook page for VintAge online store
+[VintAge Facebook Page Link](https://www.facebook.com/profile.php?id=61560058197456)
+![VintAge Facebook Page Sample #1](/docs_readme/features/facebook_page1.png)
+![VintAge Facebook Page Sample #1](/docs_readme/features/facebook_page2.png)
+
+## 9. Deployment
+### 1. Forking the Repository
+
+- Log in to GitHub.
+- Go to the repository for this project (<https://github.com/vega-2135/vint-age>).
+- In the top-right corner of the page, click "Fork".
+- Under "Owner", select an owner for the repository from the dropdown menu.
+- Optionally, in the "Description" field, type a description of your fork.
+- To copy the main branch only, select the "Copy the main branch only" check box. If you do not select this option, all branches will be copied into the new fork.
+- Click "Create fork"
+
+### 2. Cloning Your Forked Repository
+
+- Log-in to GitHub.com, navigate to your fork of the repository.
+- Above the list of files, click Code.
+- Copy the URL for the repository.
+  - To clone the repository using HTTPS, under "Clone with HTTPS", click the "Copy" icon.
+  - To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click the "Copy" icon.
+  - To clone a repository using GitHub CLI, click Use GitHub CLI, then click the "Copy" icon.
+- Open Git Bash
+- Change the current working directory to the location where you want the cloned directory.
+- Type git clone, and then paste the URL you copied earlier.
+- Press Enter. Your local clone will be created.
+
+For more details about forking and cloning a repository, please refer to [GitHub documentation](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+
+### 3. Install Dependencies
+
+Use the `pip install -r requirements.txt` command to install all of the Python modules and packages listed in your requirements.txt file.
+
+### 4. List of Requirements:
+- Open your terminal and run the command pip3 freeze > requirements.txt to generate a list of dependencies.
+- Commit the changes and push them to your GitHub repository.
+
+### 5. Create your env.py
+
+- In your project workspace, create a file called env.py and make sure this file is included in the .gitignore file.
+- Add the following code:
+
+```python
+import os
+
+os.environ["DATABASE_URL"]='<copiedURL>'
+os.environ['SECRET_KEY'] = '<ADD YOUR SECRET KEY HERE>'
+import os
+
+os.environ.setdefault(
+    "STRIPE_PUBLIC_KEY",
+    "<ADD YOUR PUBLIC KEY HERE>",
+)
+os.environ.setdefault(
+    "STRIPE_SECRET_KEY",
+    "<ADD YOUR SECRET KEY HERE>",
+)
+os.environ.setdefault(
+    "STRIPE_WH_SECRET",
+    "<ADD YOUR WH SECRET KEY HERE>",
+)
+os.environ.setdefault(
+    "DATABASE_URL",
+    "<copiedURL>",
+)
+
+os.environ.setdefault("AWS_ACCESS_KEY_ID", "<ADD YOUR AWS ACCESS KEY HERE>")
+os.environ.setdefault(
+    "AWS_SECRET_ACCESS_KEY", "<ADD YOUR AWS SECRET ACCESS KEY HERE>"
+)
+os.environ.setdefault("EMAIL_HOST_USER", "<ADD YOUR EMAIL HOST USER HERE>")
+os.environ.setdefault("EMAIL_HOST_PASS", "<ADD YOUR EMAIL HOST PASSWORD HERE>")
+
+
+```
+
+- Replace `<TEXT BETWEEN ANGLE BRAKETS>` in the corresponding environment variables with your own secret keys or passwords.
+- Save the file.
+
+### 6. Create a Database
+
+- Create an account and log in with ElephantSQL.com.
+- From the dashboard click “Create New Instance”.
+- Set up your plan
+  - Give your plan a Name
+  - Select a plan tier
+  - You can leave the Tags field blank
+- Select “Select Region”
+- Select a data center near you
+- Then click “Review”
+- Check your details are correct and then click “Create instance”
+- Return to the ElephantSQL dashboard and click on the database instance name for this project
+- In the URL section, click the copy icon to copy the database URL
+- In your env.py file replace `<copiedURL>` in the DATABASE_URL environment variable with the copied URL.
+- Save the file.
+
+#### 7. Set Up AWS
+
+#### 7. Set Up Stripe
+
+
+
+
+
+### 8. Heroku Account Setup:
+- Create an account in Heroku (if you don't have one).
+- Navigate to the Heroku dashboard and click on the "Create new app" button.
+- Choose a unique name for your app, select the region, and then click "Create app".
+
+### 9. Configuring Environment Variables:
+- Open the app settings and click on the "Reveal Config Vars" button.
+- Add a key-value pair:
+    - Key: PORTCLOUDINARY_URL
+    - Value:  	paste your API Environment variable copied from the Cloudinary dashboard
+- Click "Add".
+- Add another key-value pair:
+    - Key: DATABASE_URL
+    - Value: paste the URL copied from ElephantSQL dashboard
+- Click "Add".
+- Add another key-value pair:
+    - Key: SECRET_KEY
+    - Value: paste your secret key
+- Click "Add".
+
+### 10. Pre Production Deployment Configuration:
+- Go to the "Deploy" tab in settings.
+- Choose the deployment method as GitHub.
+- Connect your Heroku app to your GitHub repository.
+- Search for the GitHub repository name and click "connect".
+- You can select the option automatic deploys, which enables any change in the chosen branch to be automatically deployed to the app.
+- On manual deploy click "Deploy Branch"
+- After a few seconds this message appears: "Your app was successfully deployed."
+- Click on "view" to open the website containing the command line application.
 
 ## 10.
 
-## 11.
+## 11. Credits
+
+- ### Code
+I used the Python Essentials template from Code Institute as the foundation and personalized both the HTML and CSS components.
+
+Code from Code Institute's Boutique Ado walkthrough project was used and modified accordingly.
+
+
+- ### Images
+- Foro all the products images, phtoleap mobile app was used for creating the images. 
+
+- Pexels was used for the images in the homepage.
+[Image at the top of page](https://www.pexels.com/photo/man-in-bus-247929/)
+[Image of girl with an old camera](https://www.pexels.com/photo/little-girl-taking-photo-on-vintage-instant-photo-camera-5560466/)
+
+- The icon of the page was taken from [flaticon.com](https://www.flaticon.com/free-icon/old-camera_6373842?term=vintage+camera&page=1&position=6&origin=tag&related_id=6373842) and then uploaded to [favicon generator](https://favicon.io/)
+
+- Error pages:
+[400 and 404 Error Pages Image](https://www.freepik.com/free-vector/404-error-background-flat-style_1825302.htm#query=404%20background&position=25&from_view=keyword&track=ais&uuid=a5621bc7-ebb8-4dab-b635-d6a2928c04fa)
+
+[403 Error Page Image](https://www.freepik.com/free-vector/403-error-forbidden-with-police-concept-illustration_7938324.htm#fromView=search&page=1&position=1&uuid=e30b37c7-600d-46ca-8b16-4f27f3ccc261)
+
+[500 Error Page Image](https://www.freepik.com/free-vector/data-scientist-data-analytics-manager-database-developer-administrator-working-big-data-job-database-developers-careers-big-data-concept_11667700.htm#fromView=image_search_similar&page=1&position=52&uuid=8390b579-7d08-4305-8972-36e5c14ddec5)
 
 ## 12. Acknowledgement
 I'd like to thank my mentor Brian Macharia, for his invaluable guidance, feedback, tips, and the shared resources. 
