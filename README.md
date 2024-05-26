@@ -205,6 +205,7 @@ At the bottom of the page, below the payment form, there are two buttons: the "A
 
 Once users fill in all the required fields and click the "Complete Order" button, a loading symbol appears at the center of the page. After a few seconds, a new page loads, and the text "Thank You" appears at the top left of the page, followed by the order information. A success message also appears, informing the user that the order was successfully processed. The message includes the order number and confirmation that a confirmation email will be sent to the email address provided in the personal details form.
 
+
 <details>
 <summary>Checkout Page Screenshots</summary>
 
@@ -223,22 +224,47 @@ The Wishlist Page displays the products that users have added to their wishlist 
 
 </details>
 
-- ### Profile Page
+
+- ### My Profile Page
+The My Profile Page features a form on the right side of the page where users can fill in their personal and delivery information. Users can edit and update this information at any time, and a success message will appear at the top right of the page informing the user that their profile was successfully updated. If a field is filled in on the My Profile Page, the same field on the checkout page will be automatically populated, allowing for a faster checkout experience. On the left side of the page, the order history of the user is displayed, showing all the products the user has purchased since they created an account on the site.
+
+
+<details>
+<summary>My Profile Page Screenshots</summary>
+
+![My Profile Page](/docs_readme/features/my_profile_page1.png)
+![My Profile Page](/docs_readme/features/my_profile_page2.png)
+
+</details>
+
 
 - ### Contact Us Page
 All users can contact customer service by clicking in the Contact Us option of the navbar. Users can leave a message for comments, questions or suggestions about the site or products.
 
+
 <details>
 <summary>Contact Page Screenshot</summary>
 
-![](/docs_readme/features/contact.png)
+![Contact Us Page](/docs_readme/features/contact_us_page.png)
 
 </details>
 
+
 - ### FAQs Page
+The FAQs page provides a brief description of the page content followed by answers to the most frequently asked questions from users.
+
+
+<details>
+<summary>FAQs Page Screenshot</summary>
+
+![FAQs Page](/docs_readme/features/faq_page.png)
+
+</details>
+
 
 - ### Admin Panel
 The Django admin panel is accessible to 'superusers' and users granted the 'staff status' permission. This panel serves as a central hub for managing site content. Each data model is seamlessly integrated into the admin interface using the register decorator. This allows for easy access and management of various functionalities, including adding or removing recipes, reviewing contact messages, setting the approval status of recipes and comments, as well as managing user accounts for cases of inappropriate behavior on the site. Additionally, the admin panel facilitates the addition of descriptions found on the About page.
+
 
 <details>
 <summary>Admin Panel Screenshot</summary>
@@ -247,10 +273,21 @@ The Django admin panel is accessible to 'superusers' and users granted the 'staf
 
 </details>
 
-- ### Adding New Products to Website
+
+- ### Product Management Page
+The Product Management Page allows users with admin accounts to add products directly, bypassing the need to visit the admin panel. The page displays a form with all the necessary fields to add a new product to the store. At the bottom of the form, users can either cancel the action or add the product. Upon clicking the "Add Product" button, a success message appears at the top right of the page, informing the user that the product was successfully added to the online store.
+
+
+<details>
+<summary>Product Management Page Screenshot</summary>
+
+![Product Management Page](/docs_readme/features/product_management_page.png)
+
+</details>
 
 - ### Footer
 The footer contains the copyright information and the icons for facebook, twitter and instagram pages.
+
 
 <details>
 <summary>Search Recipes Screenshot</summary>
@@ -258,6 +295,7 @@ The footer contains the copyright information and the icons for facebook, twitte
 ![Footer](/docs_readme/features/footer.png)
 
 </details>
+
 
 - ### Future Features
 
