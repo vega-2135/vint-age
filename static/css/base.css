@@ -137,6 +137,13 @@ i {
 }
 
 /* FAQs page */
+.faq {
+    margin-top: 150px;
+}
+
+.faq-card {
+    border: 1px solid rgb(109, 154, 156) !important;
+}
 .answers {
     list-style-type: none;
 }
