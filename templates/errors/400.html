@@ -1,0 +1,12 @@
+{% extends 'errors/base.html' %}
+{% block content %}
+{% load static %}
+<div class="color-back page-400">
+    <div class="footer-font text-center error-txt">
+        <p class="mt-5">Sorry we can't process this request. Return to <a href="{% url 'home' %}">
+            <button class="btn btn-success home-link">Home Page</button></a></p>
+    </div>
+</div>
+{% endblock content %}
+
+

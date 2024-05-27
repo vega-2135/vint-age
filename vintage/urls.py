@@ -14,3 +14,9 @@ urlpatterns = [
     path("contact/", include("contact.urls")),
     path("faq/", include("faq.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+handler400 = "vintage.views.error_400"
+handler403 = "vintage.views.error_403"
+handler404 = "vintage.views.error_404"
+handler500 = "vintage.views.error_500"
