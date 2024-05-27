@@ -137,6 +137,13 @@ i {
 }
 
 /* FAQs page */
+.faq {
+    margin-top: 150px;
+}
+
+.faq-card {
+    border: 1px solid rgb(109, 154, 156) !important;
+}
 .answers {
     list-style-type: none;
 }
@@ -296,6 +303,27 @@ input[name='q']::placeholder {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* Error Pages */
+.page-400, .page-403, .page-404, .page500 {
+    background-image: url(../images/400.webp);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh; 
+}
+
+.page-403 {
+    background-image: url(../images/403.webp); 
+}
+
+.page-404 {
+    background-image: url(../images/404.webp); 
+}
+
+.page-500 {
+    background-image: url(../images/500.webp);
 }
 
 /* -------------------------------- Media Queries */

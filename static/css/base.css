@@ -305,6 +305,44 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/* Error Pages */
+.color-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(175, 216, 255);
+    min-height: 100vh;
+    position: relative;
+}
+
+.error-txt {
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Adjust as needed */
+    text-align: center;
+}
+
+.page-400, .page-403, .page-404, .page500 {
+    background-image: url(../images/400.webp);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh; 
+}
+
+.page-403 {
+    background-image: url(../images/403.webp); 
+}
+
+.page-404 {
+    background-image: url(../images/404.webp); 
+}
+
+.page-500 {
+    background-image: url(../images/500.webp);
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

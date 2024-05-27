@@ -14,13 +14,13 @@ Welcome to VintAge, your ultimate destination for unique and timeless vintage pr
 3. [Agile Development](#3-agile-development)
 4. [Design](#4-design)
 5. [Database Design](#5-database-design)
-6. [features](#6-features)
-7. [Technologies Used](#6-technologies-used)
-8. [Search Engine Optimization and Web Marketing](#6-search-engine-optimization-and-web-marketing)
-9. [Local Development and Deployment](#7-local-development-and-deployment)
-10. [Testing](#8-testing)
-11. [Credits](#9-credits)
-12. [Acknowledgement](#10-acknowledgement)
+6. [Features](#6-features)
+7. [Technologies Used](#7-technologies-used)
+8. [Search Engine Optimization and Web Marketing](#8-search-engine-optimization-and-web-marketing)
+9. [Deployment](#9-deployment)
+10. [Testing](#10-testing)
+11. [Credits](#11-credits)
+12. [Acknowledgement](#12-acknowledgement)
 
 ## 1. About
 VintAge is an e-commerce platform dedicated to providing a seamless shopping experience for vintage enthusiasts. Our collection features a diverse array of products that celebrate the elegance and nostalgia of bygone eras. Whether you're looking for a statement piece to add to your wardrobe, a unique item to decorate your home, or a rare collectible to complete your collection, you'll find it at VintAge.
@@ -298,8 +298,18 @@ The footer contains the copyright information and the icons for facebook, twitte
 
 </details>
 
-
 - ### Future Features
+#### Cancellation of Oreders: 
+Allow customers to cancel their orders directly through their account page, providing greater flexibility and control over their purchases.
+
+#### Return of Products:
+Implement a hassle-free return process enabling customers to initiate returns easily from their order history, ensuring a smooth and customer-friendly experience.
+
+#### Tracking of Sent Products:
+Introduce real-time tracking for shipped products, allowing customers to monitor the delivery status and location of their orders seamlessly.
+
+#### Chatbot for Customer Service:
+Deploy an AI-powered chatbot to assist customers with their inquiries, offering quicker and more efficient support for common issues and questions.
 
 ## 7. Technologies Used
 ### Languages
@@ -312,22 +322,32 @@ The footer contains the copyright information and the icons for facebook, twitte
 ### Frameworks, Libraries and Packages
 
 - [Django 4.2.1](https://docs.djangoproject.com/en/3.2/)
-- [Bootstrap 5](https://getbootstrap.com/)
-- [jQuery 3.7.1](https://releases.jquery.com/)
-- [Font Awesome 6.5.2](https://fontawesome.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
-- [cripsy-bootstrap5](https://github.com/django-crispy-forms/crispy-bootstrap5)
-- [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
-- [django-dynamic-formset](https://github.com/elo80ka/django-dynamic-formset)
-- [django-autoslug](https://django-autoslug.readthedocs.io/en/stable/)
-- [django-taggit](https://django-taggit.readthedocs.io/en/stable/)
+
+- [Bootstrap 4](https://getbootstrap.com/)
+
+- [dj_database_url](https://pypi.org/project/dj-database-url/) used to allow Database urls to connect to the PostgreSQL database.
+
+- [Psycopg2](https://pypi.org/project/psycopg2/) used to support the connection to the PostgreSQL database.
+
+- [ElephantSQL](https://www.elephantsql.com/) used for storing and managing the project database.
+
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) used to simplify form rendering.
+
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) used for account registration and authentication.
+
+- [Gunicorn](https://gunicorn.org/) used as the Web Server to run Django on Heroku.
+
+- [Pillow](https://pillow.readthedocs.io/en/stable/) used to support image processing capabilities.
 
 ### Tools
 
 - [GitHub:](https://github.com/) used for version control, collaborative development and code management.
 
+- [GitHub Kanban Board](https://github.com/users/vega-2135/projects/4) used for managing and tracking the user stories using the agile methodology.
+
 - [Google Fonts:](https://fonts.google.com/) used to import and apply a variety of fonts to enhance the visual appeal of the website.
+
+- [Font Awesome](https://fontawesome.com/) used to add icons for aesthetic and UX purposes.
 
 - [VSCode (Visual Studio Code):](https://code.visualstudio.com/) used for writing, editing, and debugging the code for this webapp.
 
@@ -339,9 +359,9 @@ The footer contains the copyright information and the icons for facebook, twitte
 
 - [Lucid Chart:](https://www.lucidchart.com/) used for making a flow chart of the project models.
 
-- [ElephantSQL](https://www.elephantsql.com/) used for storing and managing the project database.
+- [Stripe](https://stripe.com/en-de) used for secure payments (referenced in base.html).
 
-- [Cloudinary](https://cloudinary.com/) used for storing images uploaded by users.
+- [AWS](https://aws.amazon.com/s3/) used to store static files and images.
 
 - [Bulkresizephotos](https://bulkresizephotos.com/en?format=webp&quality=93) used for changing extension and size of the recipe's images.
 
@@ -373,7 +393,10 @@ Key changes implemented to achieve this include:
 ![VintAge Facebook Page Sample #1](/docs_readme/features/facebook_page2.png)
 
 ## 9. Deployment
-### 1. Forking the Repository
+Below are detailed instructions on how to clone this project repository and the steps to configure and deploy the application.
+
+<details>
+<summary>1. Fork Repository</summary>
 
 - Log in to GitHub.
 - Go to the repository for this project (<https://github.com/vega-2135/vint-age>).
@@ -382,8 +405,10 @@ Key changes implemented to achieve this include:
 - Optionally, in the "Description" field, type a description of your fork.
 - To copy the main branch only, select the "Copy the main branch only" check box. If you do not select this option, all branches will be copied into the new fork.
 - Click "Create fork"
+</details>
 
-### 2. Cloning Your Forked Repository
+<details>
+<summary>2. Cloning Your Forked Repository</summary>
 
 - Log-in to GitHub.com, navigate to your fork of the repository.
 - Above the list of files, click Code.
@@ -397,21 +422,22 @@ Key changes implemented to achieve this include:
 - Press Enter. Your local clone will be created.
 
 For more details about forking and cloning a repository, please refer to [GitHub documentation](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+</details>
 
-### 3. Install Dependencies
+<details>
+<summary>3. Install Dependencies</summary>
 
 Use the `pip install -r requirements.txt` command to install all of the Python modules and packages listed in your requirements.txt file.
+</details>
 
-### 4. List of Requirements:
-- Open your terminal and run the command pip3 freeze > requirements.txt to generate a list of dependencies.
-- Commit the changes and push them to your GitHub repository.
-
-### 5. Create your env.py
+<details>
+<summary>4. Create your env.py</summary>
 
 - In your project workspace, create a file called env.py and make sure this file is included in the .gitignore file.
 - Add the following code:
 
 ```python
+
 import os
 
 os.environ["DATABASE_URL"]='<copiedURL>'
@@ -447,8 +473,10 @@ os.environ.setdefault("EMAIL_HOST_PASS", "<ADD YOUR EMAIL HOST PASSWORD HERE>")
 
 - Replace `<TEXT BETWEEN ANGLE BRAKETS>` in the corresponding environment variables with your own secret keys or passwords.
 - Save the file.
+</details>
 
-### 6. Create a Database
+<details>
+<summary>5. Create a Database</summary>
 
 - Create an account and log in with ElephantSQL.com.
 - From the dashboard click “Create New Instance”.
@@ -464,53 +492,430 @@ os.environ.setdefault("EMAIL_HOST_PASS", "<ADD YOUR EMAIL HOST PASSWORD HERE>")
 - In the URL section, click the copy icon to copy the database URL
 - In your env.py file replace `<copiedURL>` in the DATABASE_URL environment variable with the copied URL.
 - Save the file.
+</details>
 
-#### 7. Set Up AWS
+<details>
+<summary>6. Set Up AWS</summary>
+AWS has been used as the cloud host for imagery. To implement this you will need and AWS account and to create an S3 Bucket and User Profile. Developer guidance can be followed on AWS's site.
 
-#### 7. Set Up Stripe
+To serve the images you will need to add the following config to your settings.py file.
+
+```
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    # Bucket config
+    AWS_STORAGE_BUCKET_NAME = 'the-coffee-collective'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+    # Override static and media URLs in Production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}'
+```
+</details>
+
+<details>
+<summary>7. Set Up Stripe</summary>
+
+Stripe has been used to receive payments from customers. To implement this functionality, you need to register an account in Stripe and follow the [documentation](https://stripe.com/docs) to incorporate the guided HTML, Python and JavaScript code. Be sure to add the secret key generated with Stripe to your Heroku Config Variables and in the settings.py file as described in the documentation.
+
+Once Stripe is activated you can test the checkout process with a test credit card detail provided by Stripe. Please use these details (below) and not real card details as there is no guarantee that your mony can be returned as this is a fictitious site. In the stripe's documentation, there are a few tests cards details that you can use for different tests of the checkout process using stripe.
+
+Example of test card details(found onstripe documentation):
+
+| CARD NO             | MM / YY | CVC | Post Code |
+| ------------------- | ------- | --- | --------- |
+| 4242 4242 4242 4242 | 04 / 24 | 242 | 42424     |
+</details>
+
+<details>
+<summary>Gmail SMTP</summary>
+
+Gmail SMTP has been used to send account confirmation, order confirmations and user contact emails in the deployed version. To use this configuration, copy and adapt the code below into your settings.py file.
+
+```
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = '(ADD YOUR EMAIL ADDRESS)@gmail.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER =  os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+```
+</details>
+<details>
+<summary>8. Heroku Account Setup</summary>
+1. Create an account in Heroku (if you don't have one).
+
+2. Navigate to the Heroku dashboard and click on the "Create new app" button.
+
+3. Choose a unique name for your app, select the region, and then click "Create app".
+
+Configuration of Variables
+
+4. On the Application Configuration page for the new app, click on the Resources tab.
+
+5. Next, click on Settings on the Application Configuration page and click on "Reveal Config Vars".
+
+6. Add a new Config Var called DISABLE_COLLECTSTATIC and assign it a value of 1, and click Add to save it. Remove this when releasing for Production.
+
+7. Add a new Config Var called SECRET_KEY and assign it a value - any random string of letters, digits and symbols, and click Add to save it.
+
+8. Add a new Config Var called DATABASE_URL and paste in the value for your ElephantSQL database, and click Add to save it.
+
+9. The settings.py file should be updated to use the DATABASE_URL and SECRET_KEY environment variable values as follows :
+
+    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+
+10. In Gitpod, in the project terminal window, to initialize the data model in the postgres database, run the command : python3 manage.py migrate
+
+11. Update the requirements.txt file with all necessary supporting files by entering the command : pip freeze > requirements.txt
+
+12. Commit and push any local changes to GitHub.
+
+13. In order to be able to run the application on localhost, add SECRET_KEY and DATABASE_URL and their values to env.py.
+
+Connect GitHub Repository to Heroku App
+
+1. Navigate to Application Configuration page for the application on Heroku and click on the Deploy tab.
+1. Select GitHub as the Deployment Method and if prompted, confirm that you want to connect to GitHub. Enter and search for the required repository, then click on Connect to link them up..
+1. Scroll down the page and choose to either Automatically Deploy each time changes are pushed to GitHub, or Manually deploy - I chose the latter for the initial deployment to watch the build and then opted for Automatic Deployment.
+1. The application can be run from the Application Configuration page by clicking on the Open App button.
+1. Each time you push code from your GitHub Repo it will be automatically reflected in your Heroku App.
+</details>
+
+<details>
+<summary>9. Pre Production Deployment Configuration</summary>
+
+In Your Django Project code:
+1. Set DEBUG flag to False in settings.py
+1. Update the requirements.txt file with all necessary supporting files by entering the command : pip freeze > requirements.txt
+1. Commit and push code to GitHub
+
+In the Heroku App:
+1. Settings > Config Vars : Delete environment variable : DISABLE_COLLECTSTATIC
+1. Deploy : Click on deploy branch
+</details>
+
+## 10. Testing
+- ### Manual Testing
+I conducted ongoing manual testing throughout the development stages of the project to ensure its functionality and performance met the desired standards.
+
+Additionally, I enlisted the help of friends to rigorously test various features such as account registration, submitting, editing, and deleting comments and recipes. Their feedback was instrumental in identifying and addressing any potential issues or bugs within the system.
+
+- ### User Story Testing
+
+<details>
+<summary>As a shopper, I want to see a list of products upon visiting the site, so that I can select some to buy.</summary>
+
+### Acceptance Criteria
+
+- Given a logged-in user, they see a list of products.
+- Given a logged-in user, they can select the products they want to buy.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper I can View individual prodict details, so that I can see images and available sizes of that product.</summary>
+
+### Acceptance Criteria
+
+- Given a user, they see a list of products.
+- Given a  user, they can click on a product and a new page will open showing the product details. 
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper I can quickly indentify deals and special  offers, so that I can take advantage of special savings on products I would like to buy.</summary>
+
+### Acceptance Criteria
+
+- Given a user, they see a page with special offers.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper I can quickly indentify new arrivals, so that I can avoid goin through all the list of products searching for the new merchandise.</summary>
+
+### Acceptance Criteria
+
+- Given a user, they see a page with new arrived products.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I can easily view the total of my purchases at any time, so that I can avoid spending to much money</summary>
+
+### Acceptance Criteria
+
+- Given a logged in user, they see at any time, at the top right corner of the page the total cost of the products they have in their shopping cart.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a first-time visitor, I want a clear explanation of the advantages of being a registered user so that I can decide if I want to create an account on the site.</summary>
+
+### Acceptance Criteria
+
+- Given a first time visitor, upon being redirected to the sign-in page after clicking the register button, an explanation appears below the 'Sign in' title stating the advantages of having an account.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a user, I want to receive feedback messages upon registering and each time I log in or out of the site, providing assurance that the registration or login process was successful.</summary>
+
+### Acceptance Criteria
+
+- Given a user, after they click the register button, a welcome message appears at the top of the website.
+- Given a user, after they log in and out of the website, a message pops up stating that they have logged in or out of the website.
 
 
 
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I can easily register for an account, so that I have the benefits of having a personal account in the site.</summary>
+
+### Acceptance Criteria
+
+- Given a user, after they click the register button, they can fill a form with details required for creating an account.
 
 
-### 8. Heroku Account Setup:
-- Create an account in Heroku (if you don't have one).
-- Navigate to the Heroku dashboard and click on the "Create new app" button.
-- Choose a unique name for your app, select the region, and then click "Create app".
+**Result:** ✅ Pass
+</details>
 
-### 9. Configuring Environment Variables:
-- Open the app settings and click on the "Reveal Config Vars" button.
-- Add a key-value pair:
-    - Key: PORTCLOUDINARY_URL
-    - Value:  	paste your API Environment variable copied from the Cloudinary dashboard
-- Click "Add".
-- Add another key-value pair:
-    - Key: DATABASE_URL
-    - Value: paste the URL copied from ElephantSQL dashboard
-- Click "Add".
-- Add another key-value pair:
-    - Key: SECRET_KEY
-    - Value: paste your secret key
-- Click "Add".
+<details>
+<summary>As a shopper, I can easily login or logout from the site, so that I can see my personal account information any time I want.</summary>
 
-### 10. Pre Production Deployment Configuration:
-- Go to the "Deploy" tab in settings.
-- Choose the deployment method as GitHub.
-- Connect your Heroku app to your GitHub repository.
-- Search for the GitHub repository name and click "connect".
-- You can select the option automatic deploys, which enables any change in the chosen branch to be automatically deployed to the app.
-- On manual deploy click "Deploy Branch"
-- After a few seconds this message appears: "Your app was successfully deployed."
-- Click on "view" to open the website containing the command line application.
+### Acceptance Criteria
 
-## 10.
+- Given a user, when they navigate to the site's login page, they see clear fields for entering their username/email and password.
+- Upon entering valid credentials and clicking the login button, the users should be logged in to the site and have access to their profile information.
+- Given a logged in user, there should be a clearly visible logout option, such as a "Logout" button or link, in the header or menu. Upon clicking the logout option, theusers should be logged out of the site and redirected to the site's homepage or another designated landing page.
+- After logging out, if I they  try to access any protected pages or personal account information, they should be redirected to the login page and prompted to log in again.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I can recover my password in case I forget it, so that I can continue having access to my account.</summary>
+
+### Acceptance Criteria
+
+- Given a shopper who has forgotten their password, when they navigate to the site's password recovery page, they should see a clear option to initiate the password recovery process.
+- Given a shopper who has successfully reset their password, when they attempt to log in using the new credentials, they should be able to access their account without any issues.
+- After resetting the password and logging in, the shopper should have full access to their profile information and any other features available to logged-in users.
+ 
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary> As a shopper, I want to receive an email of confirmation after registering in the site, so that I can be sure that my account registration was successful.</summary>
+
+### Acceptance Criteria
+
+- Given a shopper who has successfully completed the registration process on the site, when they submit their registration details, they should receive an email confirmation request.
+- The email confirmation request should be sent to the email address provided during registration and should contain a clear call-to-action to confirm the registration.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I want to have a profile page, so that I can view my personal order history and order confirmations, and save my payment information.</summary>
+
+### Acceptance Criteria
+
+- Given a registered shopper, when they log in to the site, there should be a clearly visible link or button in the navigation menu labeled "Profile" or "My Account".
+- Upon clicking on the "Profile" link/button, the shopper should be directed to their profile page, which should display their personal information, order history, and any other relevant details.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I want to be able to sort the list of available products, so that I can easily identify products by category, ratings or price.</summary>
+
+### Acceptance Criteria
+
+- Given a shopper, when they navigates to the list of available products on the site, there should be clearly visible sorting options provided, such as dropdown menus or buttons, allowing the shopper to sort the products by category, ratings, or price.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I want to be able to sort the products of a specific category by name or sort a specific category of product, so that I can find the best-rated or best-priced product in a specific category.</summary>
+
+### Acceptance Criteria
+
+- Given a shopper, when they select a specific category of products, such as devises, jeans, or records, there should be sorting options provided exclusively for that category.
+- The sorting options should include sorting by name, rating, and price, tailored specifically to the products within the selected category.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I want to have the capability to simultaneously sort various categories of products, enabling me to identify the product with the best price or higher rating across diverse product categories like "clothing" or "music".</summary>
+
+### Acceptance Criteria
+
+- Given a shopper navigating the product listings, when they select multiple categories to sort, the system should provide options to sort products across these chosen categories by price or rating.
+- Upon selecting the sorting criteria, the products within the specified categories should be dynamically sorted based on the chosen parameters, allowing the shopper to view the best-priced or best-rated products across the selected categories simultaneously.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I want to be able to easily see the number of results of the product I have searched in the search box, so that I can quickly see whether the product I want is availabe and how many of that type of product are listed in the site.</summary>
+
+### Acceptance Criteria
+
+- Given a shopper using the search box to look for a specific product, when they enter their search query and press the search button, the site should display the total number of search results matching their query.
+- Given a shopper entering a search query in the search box, when they refine or modify their search criteria, the site should dynamically update and display the updated number of search results without requiring a page refresh.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I want to select the size and quantity of a product when purchasing it, so that I can correct a mistaken quantity or size of a selected product.</summary>
+
+### Acceptance Criteria
+
+- Given a shopper, when they add a produt to the shopping cart, they have the option again in the shopping cart to select the size or/and quantity of the selected product.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper I want to view the items in my shopping bag, so that I can verify the total cost of my purchase and ensure all items I want to buy are included.
+</summary>
+
+### Acceptance Criteria
+
+- Given a shopper, when they add items to the shopping bag, upon clicking the shopping bag, the bag page displays a list of all items added, including their names, quantities, and individual prices.
+
+- Given a shopper, they can expect that the total cost of all items in the shopping bag are accurately calculated and displayed.
+
+- Each item in the shopping bag provides a link to its detailed description page, so I can review the details before finalizing the purchase.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I want to be able to change the quantity of individual items in my shopping bag, so that I can easily modify my purchase before proceeding to checkout.</summary>
+
+### Acceptance Criteria
+
+- Given a shopper, once they are in the shopping bag page, they can make changes to the quantity of each of the items listed in the page.
+- The total cost in the shopping bag updates automatically whenever they change the quantity of any item.
+- The shopping bag page displays an error message if the shoppers attempt to set the quantity of an item to an invalid number (e.g., less than 1).
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I want to easily enter my payment information, so that I can checkout quickly and without any problems.</summary>
+
+### Acceptance Criteria
+
+- Given a shopper, they can expect that the payment form validates the entered information in real-time and displays appropriate error messages for any incorrect or incomplete entries.
+
+- Given a shopper, they can expect that the the payment information is securely submitted and processed, ensuring customer data is protected during the transaction.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I can feel confident that my personal and payment information is safe and secure, so that I can provide the necessary details to complete my purchase.</summary>
+
+### Acceptance Criteria
+
+- The system uses Stripe for payment processing, ensuring that all transactions are handled securely and in compliance with Stripe's security standards.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a shopper, I want to add products to a wishlist, so that I can save items I'm interested in purchasing at a later time.</summary>
+
+### Acceptance Criteria
+
+- Given a loged-in shopper, when they view a product on the product detail page, upon clicking the "Add to Wishlist" button, 
+the product is added to their wishlist, and a message pops out stating that the product was added to their Wishlist.
+    
+- Given a logged in shopper, when they navigate to their wishlist from the "My Account" menu option, they see a list of all the products they have added to their wishlist and each product display the name, price, a remove from wishlist button and an image thumbnail.
+
+- Given a logged in shopper viewing their wishlist, when they click the "Remove from Wishlist" button in the product thumbnail, the product is removed from the wishlist and a confirmation message pops out stating that the product was removed from their wishlist.
+
+
+**Result:** ✅ Pass
+</details>
+
+- ### Code Validation
+- #### Html code validation
+The W3C Markup Validation Service was used to validate all HTML files, ensuring adherence to web standards. The majority of pages passed validation with no errors. However, pages containing forms and dynamically generated content, such as the About page edited via the admin panel, exhibited occasional deprecated tags, prompting suggestions to use CSS alternatives instead.
+
+![Alt text](docs_readme/images/validation/no_errors.png)
+
+- #### CSS code validation
+![Alt text](docs_readme/images/validation/css_validation.png)
+
+- #### JavaScript code validation
+![Alt text](docs_readme/images/validation/script.js.png)
+![Alt text](docs_readme/images/validation/comments_js.png)
+
+- #### Python code validation
+The Code Institute Python Linter was used to validate and format the python files correctly. All errors were fixed and no errors were found in the final tests.
+![Alt text](docs_readme/images/validation/python_testing.png)
+
+- ### Challenges Faced
+During the development phase, encountering bugs was inevitable. However, through active problem-solving strategies including consulting various resources, participating in forums, and revisiting bootcamp relevant materials, I successfully identified and resolved the issues that arose.
 
 ## 11. Credits
 
 - ### Code
-I used the Python Essentials template from Code Institute as the foundation and personalized both the HTML and CSS components.
-
-Code from Code Institute's Boutique Ado walkthrough project was used and modified accordingly.
+Much of the coding and testing relies heavily on information in the "Boutique Ado" walkthrough in the Code Institue Building an E-Commerce Platform module.
 
 
 - ### Images

@@ -8,6 +8,20 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Meta tags for search engines -->
+        <meta name="description" content="Discover the finest vintage items each telling a story. Every piece in
+        our collection is carefully selected for its quality, history, and charm.
+        Whether you're a vintage enthusiast or a curious newcomer, we invite you
+        to explore our selection and find something truly special">
+        <meta name="keywords" content="vintage, fashion, trending, vintage products, old products
+        retro products, vintage autos, vintage scooters, vintage tv, vintage accessories, vintage clothes, vintage posters">
+    {% endblock %}
+
+    {% block favicon %}
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'favicon/site.webmanifest' %">
     {% endblock %}
 
     {% block extra_meta %}
@@ -51,7 +65,7 @@
                         <div class="input-group-append">
                             <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                 <span class="icon">
-                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-search mr-0"></i>
                                 </span>
                             </button>
                         </div>
@@ -74,7 +88,7 @@
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                <a href="{% url 'wishlist' %}" class="dropdown-item">My Whish List</a>
+                                <a href="{% url 'wishlist' %}" class="dropdown-item">My Whishlist</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
@@ -151,15 +165,15 @@
 
             <!-- Right -->
             <div>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-instagram"></i>
-                </a>
+                <a href="https://www.facebook.com/" class="me-4 text-reset" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook page (opens in a new tab)">
+                        <i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/" class="me-4 text-reset" target="_blank" rel="noopener"
+                        aria-label="Visit our Twitter page (opens in a new tab)">
+                        <i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" class="me-4 text-reset" target="_blank" rel="noopener"
+                        aria-label="Visit our Instagram page (opens in a new tab)">
+                        <i class="fab fa-instagram"></i></a>
             </div>
             <!-- Right -->
         </div>
