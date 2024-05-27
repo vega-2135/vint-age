@@ -1,0 +1,7 @@
+{% load i18n %}{% autoescape off %}{% blocktrans %}Hello from Vint-Age!{% endblocktrans %}
+
+{% block content %}{% endblock content %}
+
+{% blocktrans %}Thank you for using Vint-Age!
+{{ site_domain }}{% endblocktrans %}
+{% endautoescape %}

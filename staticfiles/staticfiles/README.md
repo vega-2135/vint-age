@@ -10,15 +10,17 @@ Welcome to VintAge, your ultimate destination for unique and timeless vintage pr
 ## Contents
 
 1. [About](#1-about)
-2. [User Experience (UX)](#1-user-experience-ux)
-3. [Agile Development](#2-agile-development)
-4. [Design](#3-design)
-5. [Features](#4-features)
-6. [Technologies Used](#5-technologies-used)
-7. [Local Development and Deployment](#6-local-development-and-deployment)
-8. [Testing](#7-testing)
-9. [Credits](#8-credits)
-10. [Acknowledgement](#9-acknowledgement)
+2. [User Experience (UX)](#2-user-experience-ux)
+3. [Agile Development](#3-agile-development)
+4. [Design](#4-design)
+5. [Database Design](#5-database-design)
+6. [features](#6-features)
+7. [Technologies Used](#6-technologies-used)
+8. [Search Engine Optimization and Web Marketing](#6-search-engine-optimization-and-web-marketing)
+9. [Local Development and Deployment](#7-local-development-and-deployment)
+10. [Testing](#8-testing)
+11. [Credits](#9-credits)
+12. [Acknowledgement](#10-acknowledgement)
 
 ## 1. About
 VintAge is an e-commerce platform dedicated to providing a seamless shopping experience for vintage enthusiasts. Our collection features a diverse array of products that celebrate the elegance and nostalgia of bygone eras. Whether you're looking for a statement piece to add to your wardrobe, a unique item to decorate your home, or a rare collectible to complete your collection, you'll find it at VintAge.
@@ -31,7 +33,7 @@ VintAge is an e-commerce platform dedicated to providing a seamless shopping exp
 - Secure Transactions: Our platform ensures the safety and security of your personal and payment information with state-of-the-art encryption technology.
 - Excellent Customer Service: Our dedicated customer support team is always ready to assist you with any questions or concerns.
 
-## 1. User Experience (UX)
+## 2. User Experience (UX)
 
 ### User Stories
 
@@ -39,7 +41,7 @@ User stories were generated through GitHub Issues, with story points assigned ba
 
 Explore the user stories below in the section labeled [User Story Testing](### User Story Testing), and delve deeper into comprehensive details, including screenshots, story points, milestones, and tags, by visiting [GitHub Issues](https://github.com/vega-2135/the_pancake_palace/issues).
 
-## 2. Agile Development
+## 3. Agile Development
 
 The project development at VintAge was guided by Agile principles, allowing iterative and incremental enhancements to the projects's design throughout its evolution. leveraging GitHub's robust features to implement Scrum methodology effectively.GitHub Issues served as the backbone of the product backlog, housing detailed user stories. GitHub Issues' tagging feature was used to assign story points, prioritize features using the MoSCoW method, and categorize user stories for streamlined development. Additionally, GitHub's Milestones feature aided in sprint planning and deadline setting, ensuring timely delivery of project milestones.
 
@@ -56,7 +58,7 @@ Furthermore, GitHub milestones were employed to group related user stories, enha
 
 ![Kanban Board](docs_readme/images/project_kanban.png)
 
-## 3. Design
+## 4. Design
 
 ### Structure
 The VintAge app boasts a straightforward layout, prioritizing user-friendliness and seamless navigation. Its uniform page structure ensures users can effortlessly locate desired information. With a responsive design, the app adapts seamlessly across various devices, guaranteeing clear visibility. All pages show a navigation menu that offers users a consistent means to explore the site's content. Employing CSS and Bootstrap rows and columns, the app maintains a tidy and cohesive content arrangement throughout its pages.
@@ -86,12 +88,220 @@ In crafting the typography for our website, deliberate consideration was given t
 The logo of the website was taken from [flaticon.com](https://www.flaticon.com/) page and converted in a logo using a [favicon generator webapp](https://favicon.io/)
  app boasts a straightforward layout, prioritizing user-friendliness and seamless navigation. Its uniform page structure ensures users can effortlessly locate desired information. With a responsive design, the app adapts seamlessly across various devices, guaranteeing clear visibility. All pages show a navigation menu that offers users a consistent means to explore the site's content. Employing CSS and Bootstrap rows and columns, the app maintains a tidy and cohesive content arrangement throughout its pages.
 
-## 4. Database Design
+## 5. Database Design
 LibreOffice spreadsheet was used for designing the models, followed by integrating them into a single cohesive image using Lucidchart. In this project, the Django User model was used and is incorporated into the image to illustrate its connection with the other project models.
 
-![Models](docs_readme/db_design/models.png)
+Models:
+![Model 1](docs_readme/db_design/design1.png)
 
-## 6. Technologies Used
+![Contact Model 1](docs_readme/db_design/contact_db.png)
+
+![ReacOut Model](docs_readme/db_design/reachout_db.png)
+
+![Q&A Models](docs_readme/db_design/qa_db.png)
+
+## 6. Features
+
+- ### Home Page
+The homepage features a concise overview of the website's purpose alongside a link to all the products of the store and a section to subscribe to receive emails about recent offers, new deals and arrivals, enticing visitors with a glimpse of the new products awaiting them. A prominent navigation bar grants seamless access to every corner of the site, ensuring users can easily explore and discover a plethora of different products from clothing to deco items.
+
+<details>
+<summary>Home Page Screenshot</summary>
+
+![Homepage](/docs_readme/features/homepage.png)
+
+</details>
+
+- ### Navbar
+The navbar is designed to adapt to different screen sizes and contains essential features for user navigation. It prominently displays the website logo and incorporates a search box, enabling users to find products based on specific keywords. Additionally, there are distinct buttons for user registration and login, facilitating access to enhanced functionality within the site.
+
+Once users register or log in, the options in the My Account dropdown menu transform, displaying convenient links to check their personalized profile page. This profile page contains fields the user can edit, allowing for a more rapid payment of checkout products. The My Account menu also displays a link for logging out of the site and a link to check the products added to their wishlist. Below the aforementioned navbar options, there are five additional options available:
+
+-Six categories of products, each leading to a page containing products dedicated to that category. The categories are: All Products, Clothing, Music, Mobility, Deco, and Special Offers.
+- Two links to the 'Contact Us' and 'FAQs' pages, providing users with a means to get in touch and additional information about the website.
+
+This layout ensures that users can easily navigate through the website, explore all items the store has to offer, and access essential pages for further engagement or inquiries.
+
+<details>
+<summary>Nav Bar Screenshots</summary>
+
+![Navigation Bar Unlogged](/docs_readme/features/navbar1.png)
+![Navigation Bar Logged in](/docs_readme/features/navba2.png)
+
+</details>
+
+- ### User Authentication
+The VintAge website employs the Django Allauth package to manage user authentication and grant authenticated users access to CRUD functionalities. This package furnishes a suite of views and templates dedicated to user registration, login, and logout processes. Throughout the website, defensive programming techniques have been implemented to safeguard against unauthorized access to pages lacking appropriate permissions. Django's LoginRequired mixin is utilized to restrict access to anonymous users, redirecting them to the login page when attempting to view restricted content, for example only the original author of a recipe can make edits of comments or submitted recipes. Unauthorized attempts trigger redirection to a 403 error page, notifying users of their lack of permission to execute the action. Furthermore, for access to the admin panel, users must hold either 'superuser' or 'staff status' permissions.
+
+<details>
+<summary>User Authentication Screenshots</summary>
+
+![Login Page](/docs_readme/features/login.png)
+![Logout Page](/docs_readme/features/logout.png)
+![Register Page](/docs_readme/features/register.png)
+
+</details>
+
+- ### Products Page
+The Product Page displays all the products that belong to a given category. At the top right of this page, there is a link that redirects users to a page showing all products and a number that represents the total number of products available for a given category. Additionally, there is a dropdown menu to sort the products by price, rating, name, and category.
+
+Each product listing on the page features an image of the product, followed by the product name, price, category, and rating. For admin users, "Edit" and "Delete" buttons are displayed to the right of the product rating. Clicking the "Edit" button directs the admin user to a page where they can edit the details of the given product (image, name, price, etc.). Clicking the "Delete" button removes the product from the website and the database.
+
+<details>
+<summary>Products Page Screenshots</summary>
+
+![Product Page Sample 1](/docs_readme/features/products_page1.png)
+![Product Page Sample 2](/docs_readme/features/products_page2.png)
+
+</details>
+
+- ### Products Detail Page
+The Product Detail Page displays an image of the product. To the right of the product image, a detailed description is shown, including, from top to bottom:
+
+- The name of the product
+- The price of the product
+- The category the product belongs to
+- The current rating of the product
+- A text providing more information about the product
+- A quantity box where users can specify the number of items they wish to purchase
+- Buttons to keep shopping, add to bag, and add to wishlist.
+
+Upon clicking the "Add To Bag" button, a message pops out informing the user that the product has been added to the shopping bag.
+
+<details>
+<summary>Product Detail Page Screenshots</summary>
+
+![Product Detail Page](/docs_readme/features/product_detail_page.png)
+![Success Message](/docs_readme/features/bag1.png)
+
+</details>
+
+- ### Shopping Bag Page
+The Shopping Bag Page displays rows of products that have been added to the shopping bag. Each row features an image of the product followed by a small description, including the product's SKU and size (when applicable). The price, quantity, and subtotal for each product are also shown.
+
+The quantity section includes a spinner control menu that allows the user to increase or decrease the number of items they want to purchase for a given product. It also includes update and remove options. The update option adjusts the quantity of a product if the user changes it, while the remove option deletes the product entirely from the shopping bag.
+
+At the bottom right of the page, the following details are displayed:
+
+- Bag Total: the total price of the products without delivery costs
+- Delivery Cost
+- Grand Total: the total price of all items in the shopping bag, including delivery costs
+- Buttons that direct users to the page with all the products on the website ("Keep Shopping") and to the secure checkout page, where users can add the required information for the payment of the products.
+
+
+<details>
+<summary>Shopping Bag Page Screenshots</summary>
+
+![Shopping Bag Page](/docs_readme/features/shopping_bag_page1.png)
+![Shopping Bag Page](/docs_readme/features/shopping_bag_page2.png)
+
+</details>
+
+
+- ### Checkout Page
+The Checkout Page features three forms on the right side of the page: one for the user's personal details, one for the delivery information, and one for the payment details. Users must provide their card information in the payment form to complete the purchase. On the left side of these forms, the order summary is displayed.
+
+At the bottom of the page, below the payment form, there are two buttons: the "Adjust Bag" button, which allows users to modify the items or quantities of items they want to purchase, and the "Complete Order" button, which finalizes the payment and checkout process for the purchased products.
+
+Once users fill in all the required fields and click the "Complete Order" button, a loading symbol appears at the center of the page. After a few seconds, a new page loads, and the text "Thank You" appears at the top left of the page, followed by the order information. A success message also appears, informing the user that the order was successfully processed. The message includes the order number and confirmation that a confirmation email will be sent to the email address provided in the personal details form.
+
+
+<details>
+<summary>Checkout Page Screenshots</summary>
+
+![Checkout Page](/docs_readme/features/checkout_page1.png)
+![Checkout Page/ Loading](/docs_readme/features/checkout_page2.png)
+![Cheackout Success Page](/docs_readme/features/checkout_page3.png)
+
+</details>
+
+- ### Wishlist Page
+The Wishlist Page displays the products that users have added to their wishlist from the product detail page. The page shows the added products with the same information and styles as those on the products page. An additional "Remove from Wishlist" button is located below the rating information of each product. Clicking this button removes the given product from the user's wishlist. When a product is removed from the wishlist, a message pops up informing the user that the product was successfully deleted from t
+
+<details>
+<summary>Wishlist Page Screenshots</summary>
+
+![Wishlist Page Sample #1](/docs_readme/features/wishlist_page1.png)
+![Wishlist Page Sample #2](/docs_readme/features/wishlist_page2.png)
+
+</details>
+
+
+- ### My Profile Page
+The My Profile Page features a form on the right side of the page where users can fill in their personal and delivery information. Users can edit and update this information at any time, and a success message will appear at the top right of the page informing the user that their profile was successfully updated. If a field is filled in on the My Profile Page, the same field on the checkout page will be automatically populated, allowing for a faster checkout experience. On the left side of the page, the order history of the user is displayed, showing all the products the user has purchased since they created an account on the site.
+
+
+<details>
+<summary>My Profile Page Screenshots</summary>
+
+![My Profile Page](/docs_readme/features/my_profile_page1.png)
+![My Profile Page](/docs_readme/features/my_profile_page2.png)
+
+</details>
+
+
+- ### Contact Us Page
+All users can contact customer service by clicking in the Contact Us option of the navbar. Users can leave a message for comments, questions or suggestions about the site or products.
+
+
+<details>
+<summary>Contact Page Screenshot</summary>
+
+![Contact Us Page](/docs_readme/features/contact_us_page.png)
+
+</details>
+
+
+- ### FAQs Page
+The FAQs page provides a brief description of the page content followed by answers to the most frequently asked questions from users.
+
+
+<details>
+<summary>FAQs Page Screenshot</summary>
+
+![FAQs Page](/docs_readme/features/faq_page.png)
+
+</details>
+
+
+- ### Admin Panel
+The Django admin panel is accessible to 'superusers' and users granted the 'staff status' permission. This panel serves as a central hub for managing site content. Each data model is seamlessly integrated into the admin interface using the register decorator. This allows for easy access and management of various functionalities, including adding or removing recipes, reviewing contact messages, setting the approval status of recipes and comments, as well as managing user accounts for cases of inappropriate behavior on the site. Additionally, the admin panel facilitates the addition of descriptions found on the About page.
+
+
+<details>
+<summary>Admin Panel Screenshot</summary>
+
+![Admin Panel](/docs_readme/features/admin_panel.png)
+
+</details>
+
+
+- ### Product Management Page
+The Product Management Page allows users with admin accounts to add products directly, bypassing the need to visit the admin panel. The page displays a form with all the necessary fields to add a new product to the store. At the bottom of the form, users can either cancel the action or add the product. Upon clicking the "Add Product" button, a success message appears at the top right of the page, informing the user that the product was successfully added to the online store.
+
+
+<details>
+<summary>Product Management Page Screenshot</summary>
+
+![Product Management Page](/docs_readme/features/product_management_page.png)
+
+</details>
+
+- ### Footer
+The footer contains the copyright information and the icons for facebook, twitter and instagram pages.
+
+
+<details>
+<summary>Search Recipes Screenshot</summary>
+
+![Footer](/docs_readme/features/footer.png)
+
+</details>
+
+
+- ### Future Features
+
+## 7. Technologies Used
 ### Languages
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -147,5 +357,177 @@ LibreOffice spreadsheet was used for designing the models, followed by integrati
 
 - [Firefox DevTools](https://developer.chrome.com/docs/devtools/) used for debugging of css code.
 
-## 10. Acknowledgement
+## 8. Search ENgine Optimization and Web Marketing
+When planning the project, an important step was to consider SEO strategies to achieve a high-quality product that ranks well in search engines. The content of this website was created with the idea of building a vintage e-commerce site, taking into account the users' needs. The information on the website is easy to understand and demonstrates expertise, authoritativeness, and trustworthiness.
+
+Key changes implemented to achieve this include:
+
+- Planning keywords for the meta sections of the HTML file and throughout the site's content.
+- Choosing names and alt text for all images to match the site’s keywords, increasing the chances of a higher quality evaluation from search engines.
+- Creating an FAQs section to help and guide users with any questions about the site or products, while also contributing to a high-quality product that can potentially rank high in search engines.
+- Selecting tags to attract clicks from users, such as span, h1, and h2.
+- Utilizing sitemap.xml and robots.txt files.
+- Creating a Facebook page for VintAge online store
+[VintAge Facebook Page Link](https://www.facebook.com/profile.php?id=61560058197456)
+![VintAge Facebook Page Sample #1](/docs_readme/features/facebook_page1.png)
+![VintAge Facebook Page Sample #1](/docs_readme/features/facebook_page2.png)
+
+## 9. Deployment
+### 1. Forking the Repository
+
+- Log in to GitHub.
+- Go to the repository for this project (<https://github.com/vega-2135/vint-age>).
+- In the top-right corner of the page, click "Fork".
+- Under "Owner", select an owner for the repository from the dropdown menu.
+- Optionally, in the "Description" field, type a description of your fork.
+- To copy the main branch only, select the "Copy the main branch only" check box. If you do not select this option, all branches will be copied into the new fork.
+- Click "Create fork"
+
+### 2. Cloning Your Forked Repository
+
+- Log-in to GitHub.com, navigate to your fork of the repository.
+- Above the list of files, click Code.
+- Copy the URL for the repository.
+  - To clone the repository using HTTPS, under "Clone with HTTPS", click the "Copy" icon.
+  - To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click the "Copy" icon.
+  - To clone a repository using GitHub CLI, click Use GitHub CLI, then click the "Copy" icon.
+- Open Git Bash
+- Change the current working directory to the location where you want the cloned directory.
+- Type git clone, and then paste the URL you copied earlier.
+- Press Enter. Your local clone will be created.
+
+For more details about forking and cloning a repository, please refer to [GitHub documentation](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+
+### 3. Install Dependencies
+
+Use the `pip install -r requirements.txt` command to install all of the Python modules and packages listed in your requirements.txt file.
+
+### 4. List of Requirements:
+- Open your terminal and run the command pip3 freeze > requirements.txt to generate a list of dependencies.
+- Commit the changes and push them to your GitHub repository.
+
+### 5. Create your env.py
+
+- In your project workspace, create a file called env.py and make sure this file is included in the .gitignore file.
+- Add the following code:
+
+```python
+import os
+
+os.environ["DATABASE_URL"]='<copiedURL>'
+os.environ['SECRET_KEY'] = '<ADD YOUR SECRET KEY HERE>'
+import os
+
+os.environ.setdefault(
+    "STRIPE_PUBLIC_KEY",
+    "<ADD YOUR PUBLIC KEY HERE>",
+)
+os.environ.setdefault(
+    "STRIPE_SECRET_KEY",
+    "<ADD YOUR SECRET KEY HERE>",
+)
+os.environ.setdefault(
+    "STRIPE_WH_SECRET",
+    "<ADD YOUR WH SECRET KEY HERE>",
+)
+os.environ.setdefault(
+    "DATABASE_URL",
+    "<copiedURL>",
+)
+
+os.environ.setdefault("AWS_ACCESS_KEY_ID", "<ADD YOUR AWS ACCESS KEY HERE>")
+os.environ.setdefault(
+    "AWS_SECRET_ACCESS_KEY", "<ADD YOUR AWS SECRET ACCESS KEY HERE>"
+)
+os.environ.setdefault("EMAIL_HOST_USER", "<ADD YOUR EMAIL HOST USER HERE>")
+os.environ.setdefault("EMAIL_HOST_PASS", "<ADD YOUR EMAIL HOST PASSWORD HERE>")
+
+
+```
+
+- Replace `<TEXT BETWEEN ANGLE BRAKETS>` in the corresponding environment variables with your own secret keys or passwords.
+- Save the file.
+
+### 6. Create a Database
+
+- Create an account and log in with ElephantSQL.com.
+- From the dashboard click “Create New Instance”.
+- Set up your plan
+  - Give your plan a Name
+  - Select a plan tier
+  - You can leave the Tags field blank
+- Select “Select Region”
+- Select a data center near you
+- Then click “Review”
+- Check your details are correct and then click “Create instance”
+- Return to the ElephantSQL dashboard and click on the database instance name for this project
+- In the URL section, click the copy icon to copy the database URL
+- In your env.py file replace `<copiedURL>` in the DATABASE_URL environment variable with the copied URL.
+- Save the file.
+
+#### 7. Set Up AWS
+
+#### 7. Set Up Stripe
+
+
+
+
+
+### 8. Heroku Account Setup:
+- Create an account in Heroku (if you don't have one).
+- Navigate to the Heroku dashboard and click on the "Create new app" button.
+- Choose a unique name for your app, select the region, and then click "Create app".
+
+### 9. Configuring Environment Variables:
+- Open the app settings and click on the "Reveal Config Vars" button.
+- Add a key-value pair:
+    - Key: PORTCLOUDINARY_URL
+    - Value:  	paste your API Environment variable copied from the Cloudinary dashboard
+- Click "Add".
+- Add another key-value pair:
+    - Key: DATABASE_URL
+    - Value: paste the URL copied from ElephantSQL dashboard
+- Click "Add".
+- Add another key-value pair:
+    - Key: SECRET_KEY
+    - Value: paste your secret key
+- Click "Add".
+
+### 10. Pre Production Deployment Configuration:
+- Go to the "Deploy" tab in settings.
+- Choose the deployment method as GitHub.
+- Connect your Heroku app to your GitHub repository.
+- Search for the GitHub repository name and click "connect".
+- You can select the option automatic deploys, which enables any change in the chosen branch to be automatically deployed to the app.
+- On manual deploy click "Deploy Branch"
+- After a few seconds this message appears: "Your app was successfully deployed."
+- Click on "view" to open the website containing the command line application.
+
+## 10.
+
+## 11. Credits
+
+- ### Code
+I used the Python Essentials template from Code Institute as the foundation and personalized both the HTML and CSS components.
+
+Code from Code Institute's Boutique Ado walkthrough project was used and modified accordingly.
+
+
+- ### Images
+- Foro all the products images, phtoleap mobile app was used for creating the images. 
+
+- Pexels was used for the images in the homepage.
+[Image at the top of page](https://www.pexels.com/photo/man-in-bus-247929/)
+[Image of girl with an old camera](https://www.pexels.com/photo/little-girl-taking-photo-on-vintage-instant-photo-camera-5560466/)
+
+- The icon of the page was taken from [flaticon.com](https://www.flaticon.com/free-icon/old-camera_6373842?term=vintage+camera&page=1&position=6&origin=tag&related_id=6373842) and then uploaded to [favicon generator](https://favicon.io/)
+
+- Error pages:
+[400 and 404 Error Pages Image](https://www.freepik.com/free-vector/404-error-background-flat-style_1825302.htm#query=404%20background&position=25&from_view=keyword&track=ais&uuid=a5621bc7-ebb8-4dab-b635-d6a2928c04fa)
+
+[403 Error Page Image](https://www.freepik.com/free-vector/403-error-forbidden-with-police-concept-illustration_7938324.htm#fromView=search&page=1&position=1&uuid=e30b37c7-600d-46ca-8b16-4f27f3ccc261)
+
+[500 Error Page Image](https://www.freepik.com/free-vector/data-scientist-data-analytics-manager-database-developer-administrator-working-big-data-job-database-developers-careers-big-data-concept_11667700.htm#fromView=image_search_similar&page=1&position=52&uuid=8390b579-7d08-4305-8972-36e5c14ddec5)
+
+## 12. Acknowledgement
 I'd like to thank my mentor Brian Macharia, for his invaluable guidance, feedback, tips, and the shared resources. 

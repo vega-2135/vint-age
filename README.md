@@ -506,6 +506,7 @@ if 'USE_AWS' in os.environ:
 
 <details>
 <summary>7. Set Up Stripe</summary>
+
 Stripe has been used to receive payments from customers. To implement this functionality, you need to register an account in Stripe and follow the [documentation](https://stripe.com/docs) to incorporate the guided HTML, Python and JavaScript code. Be sure to add the secret key generated with Stripe to your Heroku Config Variables and in the settings.py file as described in the documentation.
 
 Once Stripe is activated you can test the checkout process with a test credit card detail provided by Stripe. Please use these details (below) and not real card details as there is no guarantee that your mony can be returned as this is a fictitious site. In the stripe's documentation, there are a few tests cards details that you can use for different tests of the checkout process using stripe.
@@ -517,6 +518,25 @@ Example of test card details(found onstripe documentation):
 | 4242 4242 4242 4242 | 04 / 24 | 242 | 42424     |
 </details>
 
+<details>
+<summary>Gmail SMTP</summary>
+
+Gmail SMTP has been used to send account confirmation, order confirmations and user contact emails in the deployed version. To use this configuration, copy and adapt the code below into your settings.py file.
+
+```
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = '(ADD YOUR EMAIL ADDRESS)@gmail.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER =  os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+```
+</details>
 <details>
 <summary>8. Heroku Account Setup</summary>
 1. Create an account in Heroku (if you don't have one).

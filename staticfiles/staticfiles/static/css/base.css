@@ -17,11 +17,12 @@ main {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: rgb(109, 154, 156);
+    margin-top: 100px;
 }
 
 .footer-font {
@@ -123,6 +124,17 @@ i {
     font: 1rem Open Sans, sans-serif;
     max-width: 600px;
   }
+
+/* Keep shopping btn */
+.keep_shopping {
+    color: black;
+    margin-left: 20px;
+}
+
+/* Secure checkout btn */ 
+.secure-checkout, .complete-order {
+    margin-left: 35px;
+}
 
 /* FAQs page */
 .answers {
