@@ -312,22 +312,32 @@ The footer contains the copyright information and the icons for facebook, twitte
 ### Frameworks, Libraries and Packages
 
 - [Django 4.2.1](https://docs.djangoproject.com/en/3.2/)
-- [Bootstrap 5](https://getbootstrap.com/)
-- [jQuery 3.7.1](https://releases.jquery.com/)
-- [Font Awesome 6.5.2](https://fontawesome.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
-- [cripsy-bootstrap5](https://github.com/django-crispy-forms/crispy-bootstrap5)
-- [django-allauth](https://django-allauth.readthedocs.io/en/latest/)
-- [django-dynamic-formset](https://github.com/elo80ka/django-dynamic-formset)
-- [django-autoslug](https://django-autoslug.readthedocs.io/en/stable/)
-- [django-taggit](https://django-taggit.readthedocs.io/en/stable/)
+
+- [Bootstrap 4](https://getbootstrap.com/)
+
+- [dj_database_url](https://pypi.org/project/dj-database-url/) used to allow Database urls to connect to the PostgreSQL database.
+
+- [Psycopg2](https://pypi.org/project/psycopg2/) used to support the connection to the PostgreSQL database.
+
+- [ElephantSQL](https://www.elephantsql.com/) used for storing and managing the project database.
+
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) used to simplify form rendering.
+
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) used for account registration and authentication.
+
+- [Gunicorn](https://gunicorn.org/) used as the Web Server to run Django on Heroku.
+
+- [Pillow](https://pillow.readthedocs.io/en/stable/) used to support image processing capabilities.
 
 ### Tools
 
 - [GitHub:](https://github.com/) used for version control, collaborative development and code management.
 
+- [GitHub Kanban Board](https://github.com/users/vega-2135/projects/4) used for managing and tracking the user stories using the agile methodology.
+
 - [Google Fonts:](https://fonts.google.com/) used to import and apply a variety of fonts to enhance the visual appeal of the website.
+
+- [Font Awesome](https://fontawesome.com/) used to add icons for aesthetic and UX purposes.
 
 - [VSCode (Visual Studio Code):](https://code.visualstudio.com/) used for writing, editing, and debugging the code for this webapp.
 
@@ -339,9 +349,9 @@ The footer contains the copyright information and the icons for facebook, twitte
 
 - [Lucid Chart:](https://www.lucidchart.com/) used for making a flow chart of the project models.
 
-- [ElephantSQL](https://www.elephantsql.com/) used for storing and managing the project database.
+- [Stripe](https://stripe.com/en-de) used for secure payments (referenced in base.html).
 
-- [Cloudinary](https://cloudinary.com/) used for storing images uploaded by users.
+- [AWS](https://aws.amazon.com/s3/) used to store static files and images.
 
 - [Bulkresizephotos](https://bulkresizephotos.com/en?format=webp&quality=93) used for changing extension and size of the recipe's images.
 
