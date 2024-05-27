@@ -373,7 +373,10 @@ Key changes implemented to achieve this include:
 ![VintAge Facebook Page Sample #1](/docs_readme/features/facebook_page2.png)
 
 ## 9. Deployment
-### 1. Forking the Repository
+Below are detailed instructions on how to clone this project repository and the steps to configure and deploy the application.
+
+<details>
+<summary>1. Fork Repository</summary>
 
 - Log in to GitHub.
 - Go to the repository for this project (<https://github.com/vega-2135/vint-age>).
@@ -382,8 +385,10 @@ Key changes implemented to achieve this include:
 - Optionally, in the "Description" field, type a description of your fork.
 - To copy the main branch only, select the "Copy the main branch only" check box. If you do not select this option, all branches will be copied into the new fork.
 - Click "Create fork"
+</details>
 
-### 2. Cloning Your Forked Repository
+<details>
+<summary>2. Cloning Your Forked Repository</summary>
 
 - Log-in to GitHub.com, navigate to your fork of the repository.
 - Above the list of files, click Code.
@@ -397,21 +402,22 @@ Key changes implemented to achieve this include:
 - Press Enter. Your local clone will be created.
 
 For more details about forking and cloning a repository, please refer to [GitHub documentation](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+</details>
 
-### 3. Install Dependencies
+<details>
+<summary>3. Install Dependencies</summary>
 
 Use the `pip install -r requirements.txt` command to install all of the Python modules and packages listed in your requirements.txt file.
+</details>
 
-### 4. List of Requirements:
-- Open your terminal and run the command pip3 freeze > requirements.txt to generate a list of dependencies.
-- Commit the changes and push them to your GitHub repository.
-
-### 5. Create your env.py
+<details>
+<summary>4. Create your env.py</summary>
 
 - In your project workspace, create a file called env.py and make sure this file is included in the .gitignore file.
 - Add the following code:
 
 ```python
+
 import os
 
 os.environ["DATABASE_URL"]='<copiedURL>'
@@ -447,8 +453,10 @@ os.environ.setdefault("EMAIL_HOST_PASS", "<ADD YOUR EMAIL HOST PASSWORD HERE>")
 
 - Replace `<TEXT BETWEEN ANGLE BRAKETS>` in the corresponding environment variables with your own secret keys or passwords.
 - Save the file.
+</details>
 
-### 6. Create a Database
+<details>
+<summary>5. Create a Database</summary>
 
 - Create an account and log in with ElephantSQL.com.
 - From the dashboard click “Create New Instance”.
@@ -464,53 +472,113 @@ os.environ.setdefault("EMAIL_HOST_PASS", "<ADD YOUR EMAIL HOST PASSWORD HERE>")
 - In the URL section, click the copy icon to copy the database URL
 - In your env.py file replace `<copiedURL>` in the DATABASE_URL environment variable with the copied URL.
 - Save the file.
+</details>
 
-#### 7. Set Up AWS
+<details>
+<summary>6. Set Up AWS</summary>
+AWS has been used as the cloud host for imagery. To implement this you will need and AWS account and to create an S3 Bucket and User Profile. Developer guidance can be followed on AWS's site.
 
-#### 7. Set Up Stripe
+To serve the images you will need to add the following config to your settings.py file.
 
+```
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    # Bucket config
+    AWS_STORAGE_BUCKET_NAME = 'the-coffee-collective'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+    # Override static and media URLs in Production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}'
+```
+</details>
 
+<details>
+<summary>7. Set Up Stripe</summary>
+Stripe has been used to receive payments from customers. To implement this functionality, you need to register an account in Stripe and follow the [documentation](https://stripe.com/docs) to incorporate the guided HTML, Python and JavaScript code. Be sure to add the secret key generated with Stripe to your Heroku Config Variables and in the settings.py file as described in the documentation.
 
+Once Stripe is activated you can test the checkout process with a test credit card detail provided by Stripe. Please use these details (below) and not real card details as there is no guarantee that your mony can be returned as this is a fictitious site. In the stripe's documentation, there are a few tests cards details that you can use for different tests of the checkout process using stripe.
 
+Example of test card details(found onstripe documentation):
 
-### 8. Heroku Account Setup:
-- Create an account in Heroku (if you don't have one).
-- Navigate to the Heroku dashboard and click on the "Create new app" button.
-- Choose a unique name for your app, select the region, and then click "Create app".
+| CARD NO             | MM / YY | CVC | Post Code |
+| ------------------- | ------- | --- | --------- |
+| 4242 4242 4242 4242 | 04 / 24 | 242 | 42424     |
+</details>
 
-### 9. Configuring Environment Variables:
-- Open the app settings and click on the "Reveal Config Vars" button.
-- Add a key-value pair:
-    - Key: PORTCLOUDINARY_URL
-    - Value:  	paste your API Environment variable copied from the Cloudinary dashboard
-- Click "Add".
-- Add another key-value pair:
-    - Key: DATABASE_URL
-    - Value: paste the URL copied from ElephantSQL dashboard
-- Click "Add".
-- Add another key-value pair:
-    - Key: SECRET_KEY
-    - Value: paste your secret key
-- Click "Add".
+<details>
+<summary>8. Heroku Account Setup</summary>
+1. Create an account in Heroku (if you don't have one).
 
-### 10. Pre Production Deployment Configuration:
-- Go to the "Deploy" tab in settings.
-- Choose the deployment method as GitHub.
-- Connect your Heroku app to your GitHub repository.
-- Search for the GitHub repository name and click "connect".
-- You can select the option automatic deploys, which enables any change in the chosen branch to be automatically deployed to the app.
-- On manual deploy click "Deploy Branch"
-- After a few seconds this message appears: "Your app was successfully deployed."
-- Click on "view" to open the website containing the command line application.
+2. Navigate to the Heroku dashboard and click on the "Create new app" button.
+
+3. Choose a unique name for your app, select the region, and then click "Create app".
+
+Configuration of Variables
+
+4. On the Application Configuration page for the new app, click on the Resources tab.
+
+5. Next, click on Settings on the Application Configuration page and click on "Reveal Config Vars".
+
+6. Add a new Config Var called DISABLE_COLLECTSTATIC and assign it a value of 1, and click Add to save it. Remove this when releasing for Production.
+
+7. Add a new Config Var called SECRET_KEY and assign it a value - any random string of letters, digits and symbols, and click Add to save it.
+
+8. Add a new Config Var called DATABASE_URL and paste in the value for your ElephantSQL database, and click Add to save it.
+
+9. The settings.py file should be updated to use the DATABASE_URL and SECRET_KEY environment variable values as follows :
+
+    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+
+10. In Gitpod, in the project terminal window, to initialize the data model in the postgres database, run the command : python3 manage.py migrate
+
+11. Update the requirements.txt file with all necessary supporting files by entering the command : pip freeze > requirements.txt
+
+12. Commit and push any local changes to GitHub.
+
+13. In order to be able to run the application on localhost, add SECRET_KEY and DATABASE_URL and their values to env.py.
+
+Connect GitHub Repository to Heroku App
+
+1. Navigate to Application Configuration page for the application on Heroku and click on the Deploy tab.
+1. Select GitHub as the Deployment Method and if prompted, confirm that you want to connect to GitHub. Enter and search for the required repository, then click on Connect to link them up..
+1. Scroll down the page and choose to either Automatically Deploy each time changes are pushed to GitHub, or Manually deploy - I chose the latter for the initial deployment to watch the build and then opted for Automatic Deployment.
+1. The application can be run from the Application Configuration page by clicking on the Open App button.
+1. Each time you push code from your GitHub Repo it will be automatically reflected in your Heroku App.
+</details>
+
+<details>
+<summary>9. Pre Production Deployment Configuration</summary>
+
+In Your Django Project code:
+1. Set DEBUG flag to False in settings.py
+1. Update the requirements.txt file with all necessary supporting files by entering the command : pip freeze > requirements.txt
+1. Commit and push code to GitHub
+
+In the Heroku App:
+1. Settings > Config Vars : Delete environment variable : DISABLE_COLLECTSTATIC
+1. Deploy : Click on deploy branch
+</details>
 
 ## 10.
 
 ## 11. Credits
 
 - ### Code
-I used the Python Essentials template from Code Institute as the foundation and personalized both the HTML and CSS components.
-
-Code from Code Institute's Boutique Ado walkthrough project was used and modified accordingly.
+Much of the coding and testing relies heavily on information in the "Boutique Ado" walkthrough in the Code Institue Building an E-Commerce Platform module.
 
 
 - ### Images
