@@ -298,8 +298,18 @@ The footer contains the copyright information and the icons for facebook, twitte
 
 </details>
 
-
 - ### Future Features
+#### Cancellation of Oreders: 
+Allow customers to cancel their orders directly through their account page, providing greater flexibility and control over their purchases.
+
+#### Return of Products:
+Implement a hassle-free return process enabling customers to initiate returns easily from their order history, ensuring a smooth and customer-friendly experience.
+
+#### Tracking of Sent Products:
+Introduce real-time tracking for shipped products, allowing customers to monitor the delivery status and location of their orders seamlessly.
+
+#### Chatbot for Customer Service:
+Deploy an AI-powered chatbot to assist customers with their inquiries, offering quicker and more efficient support for common issues and questions.
 
 ## 7. Technologies Used
 ### Languages
