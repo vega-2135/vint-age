@@ -287,7 +287,7 @@ the product is added to their wishlist, and a message pops out stating that the 
 
 This test aims to check all features and links from across the site are working as designed and developed.
 
-To perform the test I used a Chrome browser, and validated each page from a mobile and desktop perspective using the inbuilt developer tool as some features were unique to a particular screen size.
+To perform the test I used a Firefox browser, and validated each page from a mobile and desktop perspective using the inbuilt developer tool as some features were unique to a particular screen size.
 
 <br>
 
@@ -319,7 +319,7 @@ templates/errors/500.html                                                       
 
 ## Responsiveness
 
-To ensure the website's layout and content remain well-structured and accessible across different screen sizes, I used Chrome's Developer Tools to virtualize the look and feel of the website and all its pages. Given that I opted to use Bootstrap, which provides standard media queries for screen sizes from XS through XL, I selected the following screens for testing: Samsung Galaxy Fold, Samsung Galaxy Note, iPhone 4, iPhone SE, iPad, iPad Mini, Laptop at 1366x768, Monitor at 1920x1080, and iMac 5K.
+To ensure the website's layout and content remain well-structured and accessible across different screen sizes, I used Firefox's Developer Tools to virtualize the look and feel of the website and all its pages. Given that I opted to use Bootstrap, which provides standard media queries for screen sizes from XS through XL, I selected the following screens for testing: Samsung Galaxy Fold, Samsung Galaxy Note, iPhone 4, iPhone SE, iPad, iPad Mini, Laptop at 1366x768, Monitor at 1920x1080, and iMac 5K.
 
 <br>
 
@@ -348,6 +348,37 @@ templates/errors/500.html                                                       
 
 <br>
 
+
+## Accessibility 
+
+Ensuring accessibility is essential for any successful eCommerce website. During the design phase, I used color contrast checkers to verify accessibility, and I was pleased with the positive results. Additionally, I employed Firefox Developer Tools to test each HTML page and the WAVE online assessment tool, which offers deeper insights and clearly highlights areas needing improvement.
+
+<br>
+
+File path                                                                                    | Features working | Links active
+-------------------------------------------------------------------------------------------- | ---------------- | ------------
+bag/templates/bag/bag.html                                                                   | PASS             | PASS        
+checkout/templates/checkout/checkout\_success.html                                           | PASS             | PASS        
+checkout/templates/checkout/checkout.html                                                    | PASS             | PASS               
+contact/templates/contact.html                                                               | PASS             | PASS        
+faq/templates/faq.html                                                                       | PASS             | PASS        
+home/templates/index.html                                                                    | PASS             | PASS              
+products/templates/products/add\_product.html                                                | PASS             | PASS           
+products/templates/products/edit\_product.html                                               | PASS             | PASS        
+products/templates/products/product\_detail.html                                             | PASS             | PASS        
+products/templates/products/products.html                                                    | PASS             | PASS        
+products/templates/products/wishlist.html                                                    | PASS             | PASS
+profiles/templates/profiles/profile.html                                                     | PASS             | PASS        
+templates/allauth/account/confirm-email.html                                                 | PASS             | PASS        
+templates/allauth/account/login.html                                                         | PASS             | PASS        
+templates/allauth/account/logout.html                                                        | PASS             | PASS        
+templates/allauth/account/signup.html                                                        | PASS             | PASS
+templates/errors/400.html                                                                    | PASS             | PASS        
+templates/errors/403.html                                                                    | PASS             | PASS        
+templates/errors/404.html                                                                    | PASS             | PASS        
+templates/errors/500.html                                                                    | PASS             | PASS   
+
+<br>
 
 - ### Code Validation
 - #### Html code validation
