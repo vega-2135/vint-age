@@ -456,24 +456,109 @@ Similar to the aims of browser testing, I wanted to tests responsiveness and UX 
 | templates/includes/toasts/toast\_success.html                                                | PASS             | PASS                  | PASS               | PASS                        |
 | templates/includes/toasts/toast\_warning.html                                                | PASS             | PASS                  | PASS               | PASS                        |    
 
+<br>
 
-- ### Code Validation
-- #### Html code validation
-The W3C Markup Validation Service was used to validate all HTML files, ensuring adherence to web standards. The majority of pages passed validation with no errors. However, pages containing forms and dynamically generated content, such as the About page edited via the admin panel, exhibited occasional deprecated tags, prompting suggestions to use CSS alternatives instead.
 
-![Alt text](docs_readme/images/validation/no_errors.png)
+## Code Validation
 
-- #### CSS code validation
-![Alt text](docs_readme/images/validation/css_validation.png)
+Writing well-structured, quality code is essential for the future development of this website or any other. To support this goal, I used industry-standard tools (see list below) to validate every line of code via the input method.
 
-- #### JavaScript code validation
-![Alt text](docs_readme/images/validation/script.js.png)
-![Alt text](docs_readme/images/validation/comments_js.png)
+* W3 Validator for HTML
+* W3 Jigsaw for CSS
+* JS Hint for JavaScript
+* CI Python Linter for Python
 
-- #### Python code validation
-The Code Institute Python Linter was used to validate and format the python files correctly. All errors were fixed and no errors were found in the final tests.
-![Alt text](docs_readme/images/validation/python_testing.png)
+<br>
 
-- ### Challenges Faced
+| File path                                                                                    | File Type | HTML | CSS  | JavaScript | Python | 
+| -------------------------------------------------------------------------------------------- | --------- | ---- | ---- | ---------- | ------ | 
+| bag/templates/bag/bag.html                                                                   | HTML      | PASS |      |            |        | 
+| bag/templatetags/bag\_tools.py                                                               | PY        |      |      |            | PASS   | 
+| bag/apps.py                                                                                  | PY        |      |      |            | PASS   | 
+| bag/contexts.py                                                                              | PY        |      |      |            | PASS   | 
+| bag/models.py                                                                                | PY        |      |      |            | PASS   | 
+| bag/urls.py                                                                                  | PY        |      |      |            | PASS   | 
+| bag/views.py                                                                                 | PY        |      |      |            | PASS   | 
+| checkout/static/css/checkout.css                                                             | CSS       |      | PASS |            |        | 
+| checkout/static/js/stripe\_elements.js                                                       | JS        |      |      | EXC        |        | 
+| checkout/templates/checkout/checkout\_success.html                                           | HTML      | PASS |      |            |        | 
+| checkout/templates/checkout/checkout.html                                                    | HTML      | PASS |      |            |        | 
+| checkout/admin.py                                                                            | PY        |      |      |            | PASS   | 
+| checkout/apps.py                                                                             | PY        |      |      |            | PASS   | 
+| checkout/forms.py                                                                            | PY        |      |      |            | PASS   | 
+| checkout/models.py                                                                           | PY        |      |      |            | PASS   | 
+| checkout/signals.py                                                                          | PY        |      |      |            | PASS   | 
+| checkout/urls.py                                                                             | PY        |      |      |            | PASS   | 
+| checkout/views.py                                                                            | PY        |      |      |            | PASS   | 
+| checkout/webhook\_handler.py                                                                 | PY        |      |      |            | PASS   | 
+| checkout/webhooks.py                                                                         | PY        |      |      |            | PASS   | 
+| contact/templates/contact/contact.html                                                       | HTML      | PASS |      |            |        |               
+| contact/admin.py                                                                             | PY        |      |      |            | PASS   | 
+| contact/apps.py                                                                              | PY        |      |      |            | PASS   | 
+| contact/forms.py                                                                             | PY        |      |      |            | PASS   | 
+| contact/models.py                                                                            | PY        |      |      |            | PASS   | 
+| contact/urls.py                                                                              | PY        |      |      |            | PASS   | 
+| contact/views.py                                                                             | PY        |      |      |            | PASS   | 
+| faq/templates/faq/faq.html                                                                   | HTML      | PASS |      |            |        |              
+| faq/admin.py                                                                                 | PY        |      |      |            | PASS   | 
+| faq/apps.py                                                                                  | PY        |      |      |            | PASS   | 
+| faq/models.py                                                                                | PY        |      |      |            | PASS   | 
+| faq/urls.py                                                                                  | PY        |      |      |            | PASS   | 
+| faq/views.py                                                                                 | PY        |      |      |            | PASS   | 
+| home/tamplates/home/index.html                                                               | HTML      |      |      |            | PASS   | 
+| home/apps.py                                                                                 | PY        |      |      |            | PASS   | 
+| home/urls.py                                                                                 | PY        |      |      |            | PASS   | 
+| home/views.py                                                                                | PY        |      |      |            | PASS   | 
+| products/templates/products/custom\_widget\_templates/custom\_clearable\_file\_input.html    | HTML      | PASS |      |            |        | 
+| products/templates/products/includes/quantity\_input\_script.html                            | HTML      | PASS |      |            |        | 
+| products/templates/products/add\_product.html                                                | HTML      | PASS |      |            |        | 
+| products/templates/products/base\_products\_display.html                                     | HTML      | PASS |      |            |        | 
+| products/templates/products/edit\_product.html                                               | HTML      | PASS |      |            |        | 
+| products/templates/products/product\_detail.html                                             | HTML      | PASS |      |            |        | 
+| products/templates/products/products.html                                                    | HTML      | PASS |      |            |        | 
+| products/templates/products/wish\_list.html                                                  | HTML      | PASS |      |            |        |
+| products/admin.py                                                                            | PY        |      |      |            | PASS   | 
+| products/apps.py                                                                             | PY        |      |      |            | PASS   | 
+| products/forms.py                                                                            | PY        |      |      |            | PASS   | 
+| products/models.py                                                                           | PY        |      |      |            | PASS   | 
+| products/urls.py                                                                             | PY        |      |      |            | PASS   | 
+| products/views.py                                                                            | PY        |      |      |            | PASS   | 
+| products/widgets.py                                                                          | PY        |      |      |            | PASS   | 
+| profiles/static/css/profiles.css                                                             | CSS       |      | PASS |            |        | 
+| profiles/static/js/countryfield.js                                                           | JS        |      |      | EXC        |        | 
+| profiles/templates/profiles/profile.html                                                     | HTML      | PASS |      |            |        | 
+| profiles/apps.py                                                                             | PY        |      |      |            | PASS   | 
+| profiles/forms.py                                                                            | PY        |      |      |            | PASS   | 
+| profiles/models.py                                                                           | PY        |      |      |            | PASS   | 
+| profiles/urls.py                                                                             | PY        |      |      |            | PASS   | 
+| profiles/views.py                                                                            | PY        |      |      |            | PASS   | 
+| static/css/style.css                                                                         | CSS       |      | PASS |            |        | 
+| templates/allauth/account/confirm-email.html                                                 | HTML      | PASS |      |            |        | 
+| templates/allauth/account/login.html                                                         | HTML      | PASS |      |            |        | 
+| templates/allauth/account/logout.html                                                        | HTML      | PASS |      |            |        | 
+| templates/allauth/account/signup.html                                                        | HTML      | PASS |      |            |        | 
+| templates/errors/403.html                                                                    | HTML      | PASS |      |            |        | 
+| templates/errors/404.html                                                                    | HTML      | PASS |      |            |        | 
+| templates/errors/405.html                                                                    | HTML      | PASS |      |            |        | 
+| templates/errors/500.html                                                                    | HTML      | PASS |      |            |        | 
+| templates/includes/toasts/toast\_error.html                                                  | HTML      | PASS |      |            |        | 
+| templates/includes/toasts/toast\_info.html                                                   | HTML      | PASS |      |            |        | 
+| templates/includes/toasts/toast\_success.html                                                | HTML      | PASS |      |            |        | 
+| templates/includes/toasts/toast\_warning.html                                                | HTML      | PASS |      |            |        |  
+| templates/includes/main-nav.html                                                             | HTML      | PASS |      |            |        | 
+| templates/includes/mobile-top\_head.html                                                     | HTML      | PASS |      |            |        | 
+| templates/base.html                                                                          | HTML      | PASS |      |            |        | 
+| vintage/settings.py                                                                          | PY        |      |      |            | PASS   | 
+| vintage/urls.py                                                                              | PY        |      |      |            | PASS   | 
+| vintage/views.py                                                                             | PY        |      |      |            | PASS   | 
+| vintage/wsgi.py                                                                              | PY        |      |      |            | PASS   | 
+| custom\_storages.py                                                                          | PY        |      |      |            | PASS   | 
+| env.py                                                                                       | PY        |      |      |            | PASS   | 
+
+
+<br>
+
+
+## Challenges Faced
 During the development phase, encountering bugs was inevitable. However, through active problem-solving strategies including consulting various resources, participating in forums, and revisiting bootcamp relevant materials, I successfully identified and resolved the issues that arose.
 
