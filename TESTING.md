@@ -6,6 +6,8 @@ The purpose of this document is to show the results, bugs and fixes made during 
 
 All tests were performed using the live environment deployed from Heroku.
 
+<br>
+
 ## User Story Testing
 
 <details>
@@ -279,6 +281,43 @@ the product is added to their wishlist, and a message pops out stating that the 
 **Result:** ✅ Pass
 </details>
 
+<br>
+
+## Page Validation
+
+This test aims to check all features and links from across the site are working as designed and developed.
+
+To perform the test I used a Chrome browser, and validated each page from a mobile and desktop perspective using the inbuilt developer tool as some features were unique to a particular screen size.
+
+<br>
+
+File path                                                                                    | Features working | Links active
+-------------------------------------------------------------------------------------------- | ---------------- | ------------
+bag/templates/bag/bag.html                                                                   | PASS             | PASS        
+checkout/templates/checkout/checkout\_success.html                                           | PASS             | PASS        
+checkout/templates/checkout/checkout.html                                                    | PASS             | PASS               
+contact/templates/contact.html                                                               | PASS             | PASS        
+faq/templates/faq.html                                                                       | PASS             | PASS        
+home/templates/index.html                                                                    | PASS             | PASS              
+products/templates/products/add\_product.html                                                | PASS             | PASS           
+products/templates/products/edit\_product.html                                               | PASS             | PASS        
+products/templates/products/product\_detail.html                                             | PASS             | PASS        
+products/templates/products/products.html                                                    | PASS             | PASS        
+products/templates/products/wishlist.html                                                    | PASS             | PASS
+profiles/templates/profiles/profile.html                                                     | PASS             | PASS        
+templates/allauth/account/confirm-email.html                                                 | PASS             | PASS        
+templates/allauth/account/login.html                                                         | PASS             | PASS        
+templates/allauth/account/logout.html                                                        | PASS             | PASS        
+templates/allauth/account/signup.html                                                        | PASS             | PASS
+templates/errors/400.html                                                                    | PASS             | PASS        
+templates/errors/403.html                                                                    | PASS             | PASS        
+templates/errors/404.html                                                                    | PASS             | PASS        
+templates/errors/500.html                                                                    | PASS             | PASS        
+
+
+<br>
+
+
 - ### Code Validation
 - #### Html code validation
 The W3C Markup Validation Service was used to validate all HTML files, ensuring adherence to web standards. The majority of pages passed validation with no errors. However, pages containing forms and dynamically generated content, such as the About page edited via the admin panel, exhibited occasional deprecated tags, prompting suggestions to use CSS alternatives instead.
@@ -298,3 +337,4 @@ The Code Institute Python Linter was used to validate and format the python file
 
 - ### Challenges Faced
 During the development phase, encountering bugs was inevitable. However, through active problem-solving strategies including consulting various resources, participating in forums, and revisiting bootcamp relevant materials, I successfully identified and resolved the issues that arose.
+
