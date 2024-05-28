@@ -323,12 +323,19 @@ input[name='q']::placeholder {
     text-align: center;
 }
 
-.page-400, .page-403, .page-404, .page500 {
-    background-image: url(../images/400.webp);
+.page-400, .page-403, .page-404, .page-500 {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     height: 80vh; 
+}
+
+.page-400 {
+    background-image: url(../images/400.jpg);
+}
+
+.margin-400 {
+    margin-bottom: 100px;
 }
 
 .page-403 {
@@ -341,6 +348,11 @@ input[name='q']::placeholder {
 
 .page-500 {
     background-image: url(../images/500.webp);
+}
+
+.btn-error {
+    padding: 0px 4px 0 4px;
+    border-width: 0 0 3px 0;
 }
 
 /* -------------------------------- Media Queries */

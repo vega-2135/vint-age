@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from django.shortcuts import get_object_or_404, redirect, render, reverse
 from django.core.exceptions import SuspiciousOperation
+from django.core.exceptions import PermissionDenied
 
 from .forms import AddToWishlistForm, ProductForm
 from .models import Category, Product, Wishlist
@@ -75,7 +76,6 @@ def product_detail(request, product_id):
     }
 
     return render(request, "products/product_detail.html", context)
-    #raise SuspiciousOperation("Title and ingredients are required.")
 
 
 @login_required
