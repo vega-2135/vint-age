@@ -314,6 +314,37 @@ templates/errors/403.html                                                       
 templates/errors/404.html                                                                    | PASS             | PASS        
 templates/errors/500.html                                                                    | PASS             | PASS        
 
+<br>
+
+
+## Responsiveness
+
+To ensure the website's layout and content remain well-structured and accessible across different screen sizes, I used Chrome's Developer Tools to virtualize the look and feel of the website and all its pages. Given that I opted to use Bootstrap, which provides standard media queries for screen sizes from XS through XL, I selected the following screens for testing: Samsung Galaxy Fold, Samsung Galaxy Note, iPhone 4, iPhone SE, iPad, iPad Mini, Laptop at 1366x768, Monitor at 1920x1080, and iMac 5K.
+
+<br>
+
+File path                                                                                    | Features working | Links active
+-------------------------------------------------------------------------------------------- | ---------------- | ------------
+bag/templates/bag/bag.html                                                                   | PASS             | PASS        
+checkout/templates/checkout/checkout\_success.html                                           | PASS             | PASS        
+checkout/templates/checkout/checkout.html                                                    | PASS             | PASS               
+contact/templates/contact.html                                                               | PASS             | PASS        
+faq/templates/faq.html                                                                       | PASS             | PASS        
+home/templates/index.html                                                                    | PASS             | PASS              
+products/templates/products/add\_product.html                                                | PASS             | PASS           
+products/templates/products/edit\_product.html                                               | PASS             | PASS        
+products/templates/products/product\_detail.html                                             | PASS             | PASS        
+products/templates/products/products.html                                                    | PASS             | PASS        
+products/templates/products/wishlist.html                                                    | PASS             | PASS
+profiles/templates/profiles/profile.html                                                     | PASS             | PASS        
+templates/allauth/account/confirm-email.html                                                 | PASS             | PASS        
+templates/allauth/account/login.html                                                         | PASS             | PASS        
+templates/allauth/account/logout.html                                                        | PASS             | PASS        
+templates/allauth/account/signup.html                                                        | PASS             | PASS
+templates/errors/400.html                                                                    | PASS             | PASS        
+templates/errors/403.html                                                                    | PASS             | PASS        
+templates/errors/404.html                                                                    | PASS             | PASS        
+templates/errors/500.html                                                                    | PASS             | PASS        
 
 <br>
 
