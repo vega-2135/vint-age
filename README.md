@@ -622,7 +622,7 @@ After a manual approach to development and deployment, I have opted to conduct m
 * Accessibility: Test each page for compliance with accessibility guidelines using the WAVE online assessment tool.
 * Performance: Use Chrome's developer tool 'Lighthouse Testing' to assess pages for performance, best practices, SEO, and accessibility.
 * Browser: Test pages for layout, features, and overall performance across Chrome, Firefox, Edge, Safari, and Opera.
-* Device: Conduct manual testing on iOS and Android mobiles, tablets, laptops, and desktops to ensure a positive user experience across all devices and browsers.
+* Devices Responsivesess: Conduct manual testing on iOS and Android mobiles, tablets, laptops, and desktops to ensure a positive user experience across all devices and browsers.
 * Code validation: Ensure the codebase is validated using industry-standard tools for HTML, CSS, JavaScript, and Python code.
 
 Due to the large size of the results tables, I have decided display them in a separate file.
