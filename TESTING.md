@@ -360,9 +360,9 @@ File path                                                                       
 bag/templates/bag/bag.html                                                                   | PASS             | PASS        
 checkout/templates/checkout/checkout\_success.html                                           | PASS             | PASS        
 checkout/templates/checkout/checkout.html                                                    | PASS             | PASS               
-contact/templates/contact.html                                                               | PASS             | PASS        
-faq/templates/faq.html                                                                       | PASS             | PASS        
-home/templates/index.html                                                                    | PASS             | PASS              
+contact/templates/contact/contact.html                                                               | PASS             | PASS        
+faq/templates/faq/faq.html                                                                       | PASS             | PASS        
+home/templates/home/index.html                                                                    | PASS             | PASS              
 products/templates/products/add\_product.html                                                | PASS             | PASS           
 products/templates/products/edit\_product.html                                               | PASS             | PASS        
 products/templates/products/product\_detail.html                                             | PASS             | PASS        
@@ -379,6 +379,49 @@ templates/errors/404.html                                                       
 templates/errors/500.html                                                                    | PASS             | PASS   
 
 <br>
+
+
+## Performance
+<br>
+<br>
+
+
+## Browser
+
+Performing cross-browser testing is crucial for ensuring a positive user experience regardless of the user's preferred browser. To conduct a thorough test, I used Firefox, Chrome, and Edge on my local machine running Arch Linux. Additionally, I employed Lambda Testing, a browser testing tool that virtualizes various browsers, devices, and screen sizes, allowing me to test the site on Safari and Opera. 
+
+<br>
+
+| File path                                                                                    | Chrome (v107) | Firefox (v107 win 10) | Edge (v104 Win 10) | Safari (v15 macOS Monterey) | Opera (v89 macOS Monterey) |
+| -------------------------------------------------------------------------------------------- | ------------- | --------------------- | ------------------ | --------------------------- | -------------------------- |
+| bag/templates/bag/bag.html                                                                   | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| checkout/templates/checkout/checkout\_success.html                                           | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| checkout/templates/checkout/checkout.html                                                    | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| contact/templates/contact/contact.html                                                       | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| faq/templates/faq/faq.html                                                                   | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| home/templates/home/index.html                                                               | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| products/templates/products/add\_product.html                                                | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| products/templates/products/edit\_product.html                                               | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| products/templates/products/product\_detail.html                                             | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| products/templates/products/products.html                                                    | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| products/templates/products/wish\_list.html                                                  | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| profiles/templates/profiles/profile.html                                                     | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| templates/allauth/account/confirm-email.html                                                 | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| templates/allauth/account/login.html                                                         | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| templates/allauth/account/logout.html                                                        | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| templates/allauth/account/signup.html                                                        | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| templates/errors/400.html                                                                    | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| templates/errors/403.html                                                                    | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| templates/errors/404.html                                                                    | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| templates/errors/500.html                                                                    | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| templates/includes/toasts/toast\_error.html                                                  | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| templates/includes/toasts/toast\_info.html                                                   | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| templates/includes/toasts/toast\_success.html                                                | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+| templates/includes/toasts/toast\_warning.html                                                | PASS          | PASS                  | PASS               | PASS                        | PASS                       |
+
+
+<br>
+
 
 - ### Code Validation
 - #### Html code validation
