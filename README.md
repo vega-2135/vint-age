@@ -91,7 +91,9 @@ The logo of the website was taken from [flaticon.com](https://www.flaticon.com/)
 ## 5. Database Design
 LibreOffice spreadsheet was used for designing the models, followed by integrating them into a single cohesive image using Lucidchart. In this project, the Django User model was used and is incorporated into the image to illustrate its connection with the other project models.
 
-Models:
+<details>
+<summary>Models Screenshots</summary>
+
 ![Model 1](docs_readme/db_design/design1.png)
 
 ![Contact Model 1](docs_readme/db_design/contact_db.png)
@@ -127,6 +129,17 @@ This layout ensures that users can easily navigate through the website, explore 
 
 ![Navigation Bar Unlogged](/docs_readme/features/navbar1.png)
 ![Navigation Bar Logged in](/docs_readme/features/navba2.png)
+
+</details>
+
+- ### Footer
+The footer contains the copyright information and the icons for facebook, twitter and instagram pages.
+
+
+<details>
+<summary>Search Recipes Screenshot</summary>
+
+![Footer](/docs_readme/features/footer.png)
 
 </details>
 
@@ -287,14 +300,17 @@ The Product Management Page allows users with admin accounts to add products dir
 
 </details>
 
-- ### Footer
-The footer contains the copyright information and the icons for facebook, twitter and instagram pages.
+- ### Error Pages
+This project shows customized error pages for error: 400, 403, 404 and 500.
 
 
 <details>
-<summary>Search Recipes Screenshot</summary>
+<summary>Error Pages Screenshots</summary>
 
-![Footer](/docs_readme/features/footer.png)
+![Error 400](/docs_readme/features/400.png)
+![Error 403](/docs_readme/features/403.png)
+![Error 403](/docs_readme/features/404.png)
+![Error 500](/docs_readme/features/500.png)
 
 </details>
 
