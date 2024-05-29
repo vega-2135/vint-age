@@ -78,11 +78,18 @@ The color black was chosen as the font color for all text on the website, as it 
 In crafting the typography for our website, deliberate consideration was given to ensure optimal readability and aesthetic appeal. To achieve this balance, we've selected the versatile and modern Lato font as the primary typeface throughout the entire site. Renowned for its clean lines, readability, and versatility across various screen sizes and resolutions, Lato offers a seamless reading experience. Its uniformity and clarity elevate the presentation of content, ensuring that users can effortlessly engage with our platform's offerings. By employing Lato consistently across all text elements, from headers to paragraphs, I aim to deliver a cohesive and visually pleasing browsing experience to users.
 
 ### Wireframes
+
+The wireframes for the main pages of the VintAge website were created using the Balsamiq web app. This tool allowed for efficient and intuitive design, ensuring a clear and user-friendly layout for the website's primary features and navigation.
+
 - [Home Page](docs_readme/wireframes/homepage.png)
 - [Products Page](docs_readme/wireframes/products_page.png)
 - [Product Detail Page](docs_readme/wireframes/product_detail_page.png)
 - [Contact Us](docs_readme/wireframes/contact_us_page.png)
 - [FAQs Page](docs_readme/wireframes/faq_page.png)
+- [Shopping Bag Page](docs_readme/wireframes/shopping_bag_page.png)
+- [Checkout Page](docs_readme/wireframes/checkout_page.png)
+- [My Profile Page](docs_readme/wireframes/my_profile_page.png)
+- [Wishlist Page](docs_readme/wireframes/wishlist_page.png)
 
 ### Additional
 The logo of the website was taken from [flaticon.com](https://www.flaticon.com/) page and converted in a logo using a [favicon generator webapp](https://favicon.io/)
