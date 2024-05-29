@@ -334,6 +334,10 @@ input[name='q']::placeholder {
     background-image: url(../images/400.jpg);
 }
 
+.p-400 {
+    margin-bottom: 0;
+}
+
 .margin-400 {
     margin-bottom: 100px;
 }
@@ -347,7 +351,16 @@ input[name='q']::placeholder {
 }
 
 .page-500 {
-    background-image: url(../images/500.webp);
+    /*background-image: url(../images/500.webp);*/
+    display: flex;
+    justify-content: center;
+}
+.error500-image {
+    width: 100%;
+}
+
+.error-5002 {
+    padding:0 16px 0 16px;
 }
 
 .btn-error {
@@ -358,6 +371,13 @@ input[name='q']::placeholder {
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
+@media screen and (min-width: 1024px) {
+    .logo-font2 {
+        font-weight: bold;
+        padding: 20px;
+    }
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
@@ -477,6 +497,18 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
+
+    .sub-col {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .sub-card {
+        width: 40%;
+        margin-bottom: 100px;
+        border: 0.5rem solid rgb(109, 154, 156) !important;
+    }
 }
 
 @media (max-width: 991px) {
@@ -531,25 +563,9 @@ input[name='q']::placeholder {
 }
 
 
-@media screen and (min-width: 992px) {
-    .sub-col {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-    }
-    
-    .sub-card {
-        width: 40%;
-        margin-bottom: 100px;
-        border: 0.5rem solid rgb(109, 154, 156) !important;
-    }
-}
-
-/* Media query: laptops (1024px and up) */
-@media screen and (min-width: 1024px) {
-    .logo-font2 {
-        font-weight: bold;
-        padding: 20px;
+@media screen and (min-width: 700px){
+    .error500-image {
+        width: 70%;
     }
 }
 

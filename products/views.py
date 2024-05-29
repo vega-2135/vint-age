@@ -3,8 +3,6 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.shortcuts import get_object_or_404, redirect, render, reverse
-from django.core.exceptions import SuspiciousOperation
-from django.core.exceptions import PermissionDenied
 
 from .forms import AddToWishlistForm, ProductForm
 from .models import Category, Product, Wishlist
