@@ -51,6 +51,10 @@ i {
     margin-top: 50px;
 }
 
+.form-group {
+    margin: 30px 0 30px 0 !important;
+}
+
 /* Home page */
 .home-img {
     width: 100%;
