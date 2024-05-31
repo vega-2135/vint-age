@@ -21,7 +21,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(109, 154, 156);
+    background-color: rgb(115, 190, 201);
     margin-top: 100px;
 }
 
@@ -94,19 +94,22 @@ i {
 .about {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+    background-color: rgba(144, 210, 220,0.3)
 }
 
 .about-us {
-    font-weight: bolder;
+    font-weight:1000
 }
 
 .about-usp {
     padding: 0;
+    background-color: rgba(144, 210, 220, 0.3);
 }
 
 .about-reg {
     text-align: justify;
     font-size: 25px;
+    font-weight: 1000;
 }
 
 .subscribe-header {
@@ -234,7 +237,7 @@ i {
 }
 
 .bg-black {
-    background: rgb(109, 154, 156) !important;
+    background: rgb(115, 190, 201) !important;
 } 
 
 .overlay {
@@ -528,7 +531,7 @@ input[name='q']::placeholder {
     .sub-card {
         width: 40%;
         margin-bottom: 100px;
-        border: 0.5rem solid rgb(109, 154, 156) !important;
+        border: 0.5rem solid rgb(115, 190, 201) !important;
     }
 }
 
