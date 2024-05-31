@@ -98,7 +98,8 @@ i {
 }
 
 .about-us {
-    font-weight:1000
+    font-weight:1000;
+    margin-top: 50px;
 }
 
 .about-usp {
@@ -110,6 +111,8 @@ i {
     text-align: justify;
     font-size: 25px;
     font-weight: 1000;
+    margin-bottom: 100px;
+    padding: 0 30px 0 30px;
 }
 
 .subscribe-header {
@@ -137,7 +140,13 @@ i {
 }
 
 .advantage {
-    font-size: 25px;
+    font-weight: 1000;
+    font-size: 2rem;
+    margin-top: 100px;
+}
+
+.advantages-pad {
+    padding: 0 30px 0 50px !important;
 }
 
 #mc_embed_signup {
@@ -530,6 +539,7 @@ input[name='q']::placeholder {
     
     .sub-card {
         width: 40%;
+        margin-top: 150px;
         margin-bottom: 100px;
         border: 0.5rem solid rgb(115, 190, 201) !important;
     }
