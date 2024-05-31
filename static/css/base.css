@@ -94,7 +94,7 @@ i {
 .about {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
-    background-color: rgba(144, 210, 220,0.3)
+    background-color: rgba(201, 237, 241)
 }
 
 .about-us {
@@ -104,7 +104,7 @@ i {
 
 .about-usp {
     padding: 0;
-    background-color: rgba(144, 210, 220, 0.3);
+    background-color: rgba(201, 237, 241);
 }
 
 .about-reg {
@@ -127,16 +127,8 @@ i {
     margin-top: 50px;
 }
 
-.homeimg2 {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.homepic2 {
-    width: 100%;
-    height: auto;
-
+.home-2 {
+    margin-top: 150px;
 }
 
 .advantage {
