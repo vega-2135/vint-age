@@ -19,7 +19,7 @@ Welcome to VintAge, your ultimate destination for unique and timeless vintage pr
 8. [Search Engine Optimization and Web Marketing](#8-search-engine-optimization-and-web-marketing)
 9. [Deployment](#9-deployment)
 10. [Testing](#10-testing)
-11. [Credits](#11-credits)
+11. [Credits and Attributes](#11-credits)
 12. [Acknowledgement](#12-acknowledgement)
 
 ## 1. About
@@ -658,20 +658,27 @@ Due to the large size of the results tables, I have decided display them in a se
 
 <br>
 
-## 11. Credits
+## 11. Credits and Attributes
 
 - ### Code
-Much of the coding and testing relies heavily on information in the "Boutique Ado" walkthrough in the Code Institue Building an E-Commerce Platform module.
+Much of the coding and testing relies heavily on the Code Institutes walkthrough project "Boutique Ado" in the Code Institue Building an E-Commerce Platform module.
 
+I used several online resources to implement an idea into code, including:
+
+- [Django Documentation](https://docs.djangoproject.com/en/4.0/): Frequently referenced to refresh old concepts and explore new topics and functionalities.
+- [W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_carousel.asp): Used for the carousel on the homepage. Although I initially developed this functionality on my own, I found W3Schools' approach to be cleaner, simpler, and more elegant, so I adopted it.
+- [Stack Overflow forums](https://stackoverflow.com): Utilized for debugging and fixing code issues.
 
 - ### Images
-- Foro all the products images, phtoleap mobile app was used for creating the images. 
+
+- For all the products images, phtoleap mobile app was used for creating the images. 
 
 - Pexels was used for the images in the homepage.
-[Image at the top of page](https://www.pexels.com/photo/man-in-bus-247929/)
-[Image of girl with an old camera](https://www.pexels.com/photo/little-girl-taking-photo-on-vintage-instant-photo-camera-5560466/)
-
-- The icon of the page was taken from [flaticon.com](https://www.flaticon.com/free-icon/old-camera_6373842?term=vintage+camera&page=1&position=6&origin=tag&related_id=6373842) and then uploaded to [favicon generator](https://favicon.io/)
+[Carousel Image 1](https://www.pexels.com/photo/man-in-bus-247929/)
+[Carousel Image 2](https://www.pexels.com/photo/vintage-coronet-twelve-20-box-camera-22033622/)
+[Carousel Image 3](https://www.pexels.com/photo/gray-double-bell-clock-1037993/)
+[Carousel Image 4](https://www.pexels.com/photo/blue-vinyl-record-playing-on-turntable-1389429/)
+[Carousel Image 5](https://www.pexels.com/photo/woman-driving-vintage-car-on-road-during-daytime-33678/)
 
 - Error pages:
 [400 and 404 Error Pages Image](https://www.freepik.com/free-vector/404-error-background-flat-style_1825302.htm#query=404%20background&position=25&from_view=keyword&track=ais&uuid=a5621bc7-ebb8-4dab-b635-d6a2928c04fa)
@@ -679,6 +686,10 @@ Much of the coding and testing relies heavily on information in the "Boutique Ad
 [403 Error Page Image](https://www.freepik.com/free-vector/403-error-forbidden-with-police-concept-illustration_7938324.htm#fromView=search&page=1&position=1&uuid=e30b37c7-600d-46ca-8b16-4f27f3ccc261)
 
 [500 Error Page Image](https://www.freepik.com/free-vector/data-scientist-data-analytics-manager-database-developer-administrator-working-big-data-job-database-developers-careers-big-data-concept_11667700.htm#fromView=image_search_similar&page=1&position=52&uuid=8390b579-7d08-4305-8972-36e5c14ddec5)
+
+- ### Favicon
+
+The icon of the page was taken from [flaticon.com](https://www.flaticon.com/free-icon/old-camera_6373842?term=vintage+camera&page=1&position=6&origin=tag&related_id=6373842) and then uploaded to [favicon generator](https://favicon.io/)
 
 ## 12. Acknowledgement
 I'd like to thank my mentor Brian Macharia, for his invaluable guidance, feedback, tips, and the shared resources. 
