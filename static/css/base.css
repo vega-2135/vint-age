@@ -532,7 +532,7 @@ input[name='q']::placeholder {
     .sub-card {
         width: 40%;
         margin-top: 150px;
-        margin-bottom: 100px;
+        margin-bottom: 45px;
         border: 0.5rem solid rgb(115, 190, 201) !important;
     }
 }
