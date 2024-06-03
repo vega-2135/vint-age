@@ -6,14 +6,52 @@
         <div class="row">
             <div class="col-12 my-auto d-flex">
                     <div class="row">
-                        <div class="col-md-6 img-col">
-                            <img class="home-img d-flex" src="{% static 'images/homepage.jpg' %}" alt="Image with vintage things">
+                        <div class="col-md-8 img-col">
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                                <!-- Indicators -->
+                                <ul class="carousel-indicators">
+                                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                  <li data-target="#demo" data-slide-to="1"></li>
+                                  <li data-target="#demo" data-slide-to="2"></li>
+                                  <li data-target="#demo" data-slide-to="3"></li>
+                                  <li data-target="#demo" data-slide-to="4"></li>
+                                </ul>
+                              
+                                <!-- The slideshow -->
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img class="home-img d-flex" src="{% static 'images/homepage.jpg' %}" alt="Image of vintage objects like a suitcase, a bike...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="home-img d-flex" src="{% static 'images/camera.jpg' %}" alt="Vintage Camera">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="home-img d-flex" src="{% static 'images/vintage-clock.jpg' %}" alt="Vintage Clock">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="home-img d-flex" src="{% static 'images/lp.jpg' %}" alt="LP Record">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="home-img d-flex" src="{% static 'images/woman-driving.jpg' %}" alt="Vintage image of woman driving a car">
+                                  </div>
+                                </div>
+                              
+                                <!-- Left and right controls -->
+                                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                  <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#demo" data-slide="next">
+                                  <span class="carousel-control-next-icon"></span>
+                                </a>
+                              
+                            </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="row shop-bg">
                                 <div class="col-md-8">
                                     <h1 class="display-4 logo-font text-black mb-0">
-                                        The new accessories are here
+                                        Best quality Vintage products
                                     </h1>
                                 </div>
                                 <div class="col-md-4 shop-now">
@@ -33,8 +71,8 @@
     <!-- About section -->
     <section id="about-subscription">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 my-auto about">
+            <div class="row home-2">
+                <div class="col my-auto about">
                     <div class="card">
                         <div class="card-body about-usp">
                             <h2 class="card-title text-center about-us">
@@ -49,38 +87,35 @@
                                 to explore our selection and find something truly special. Join us on this 
                                 journey through time and discover the magic of vintage.
                             </p>
-                            <p class="mt-5 advantage">
-                                <strong>In Order to Take Full Advantage of Our Site, Register Today and Enjoy These Exclusive Benefits:</strong>
-                            </p>
-                            <ul class="about-reg mt-5">
-                                <li>Special Offers:
+                            <h2 class="text-center advantage">
+                                Register Today and Enjoy These Exclusive Benefits:
+                            </h2>
+                            <ul class="about-reg advantages-pad mt-3">
+                                <li class="li-adv">Special Offers:
                                     Gain access to exclusive special offers, including early bird discounts, flash sales, and unique deals that are not available to the general public.
                                 </li>
-                                <li class="mt-3">Personalized Discounts:
+                                <li class="mt-3 li-adv">Personalized Discounts:
                                     Receive personalized discount codes and promotional offers tailored to your shopping habits, helping you save more on the items you love most.
                                 </li>
-                                <li class="mt-3">First Look at New Arrivals:
+                                <li class="mt-3 li-adv">First Look at New Arrivals:
                                     Be the first to know about our latest products and get early access to new arrivals, ensuring you stay ahead of the trends.
                                 </li>
-                                <li class="mt-3">Reward Points Program:
+                                <li class="mt-3 li-adv">Reward Points Program:
                                     Earn points every time you shop, leave a review, or refer a friend. Redeem these points for discounts on future purchases, giving you more reasons to shop with us.
                                 </li>
-                                <li class="mt-3">Hassle-Free Checkout:
+                                <li class="mt-3 li-adv">Hassle-Free Checkout:
                                     Save your shipping and payment information for a quicker, easier checkout experience. Additionally, track your orders and view your purchase history all in one convenient place.
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 my-auto homeimg2">
-                    <img class="homepic2" src="{% static 'images/vintage-home.webp' %}" alt="Girl holding an old camera">
-                </div>
             </div>
         </div>
     </section>
     <!-- Subscription section -->
     <section id="subscription">
-        <div class="row">
+        <div class="row subscription-row">
             <div class="col-12 my-auto sub-col">
                 <div class="card sub-card">
                     <div class="card-body subscribe" id="mc_embed_shell">

@@ -19,7 +19,7 @@ Welcome to VintAge, your ultimate destination for unique and timeless vintage pr
 8. [Search Engine Optimization and Web Marketing](#8-search-engine-optimization-and-web-marketing)
 9. [Deployment](#9-deployment)
 10. [Testing](#10-testing)
-11. [Credits](#11-credits)
+11. [Credits and Attributes](#11-credits)
 12. [Acknowledgement](#12-acknowledgement)
 
 ## 1. About
@@ -78,11 +78,18 @@ The color black was chosen as the font color for all text on the website, as it 
 In crafting the typography for our website, deliberate consideration was given to ensure optimal readability and aesthetic appeal. To achieve this balance, we've selected the versatile and modern Lato font as the primary typeface throughout the entire site. Renowned for its clean lines, readability, and versatility across various screen sizes and resolutions, Lato offers a seamless reading experience. Its uniformity and clarity elevate the presentation of content, ensuring that users can effortlessly engage with our platform's offerings. By employing Lato consistently across all text elements, from headers to paragraphs, I aim to deliver a cohesive and visually pleasing browsing experience to users.
 
 ### Wireframes
+
+The wireframes for the main pages of the VintAge website were created using the Balsamiq web app. This tool allowed for efficient and intuitive design, ensuring a clear and user-friendly layout for the website's primary features and navigation.
+
 - [Home Page](docs_readme/wireframes/homepage.png)
 - [Products Page](docs_readme/wireframes/products_page.png)
 - [Product Detail Page](docs_readme/wireframes/product_detail_page.png)
 - [Contact Us](docs_readme/wireframes/contact_us_page.png)
 - [FAQs Page](docs_readme/wireframes/faq_page.png)
+- [Shopping Bag Page](docs_readme/wireframes/shopping_bag_page.png)
+- [Checkout Page](docs_readme/wireframes/checkout_page.png)
+- [My Profile Page](docs_readme/wireframes/my_profile_page.png)
+- [Wishlist Page](docs_readme/wireframes/wishlist_page.png)
 
 ### Additional
 The logo of the website was taken from [flaticon.com](https://www.flaticon.com/) page and converted in a logo using a [favicon generator webapp](https://favicon.io/)
@@ -91,7 +98,9 @@ The logo of the website was taken from [flaticon.com](https://www.flaticon.com/)
 ## 5. Database Design
 LibreOffice spreadsheet was used for designing the models, followed by integrating them into a single cohesive image using Lucidchart. In this project, the Django User model was used and is incorporated into the image to illustrate its connection with the other project models.
 
-Models:
+<details>
+<summary>Models Screenshots</summary>
+
 ![Model 1](docs_readme/db_design/design1.png)
 
 ![Contact Model 1](docs_readme/db_design/contact_db.png)
@@ -127,6 +136,17 @@ This layout ensures that users can easily navigate through the website, explore 
 
 ![Navigation Bar Unlogged](/docs_readme/features/navbar1.png)
 ![Navigation Bar Logged in](/docs_readme/features/navba2.png)
+
+</details>
+
+- ### Footer
+The footer contains the copyright information and the icons for facebook, twitter and instagram pages.
+
+
+<details>
+<summary>Search Recipes Screenshot</summary>
+
+![Footer](/docs_readme/features/footer.png)
 
 </details>
 
@@ -287,14 +307,17 @@ The Product Management Page allows users with admin accounts to add products dir
 
 </details>
 
-- ### Footer
-The footer contains the copyright information and the icons for facebook, twitter and instagram pages.
+- ### Error Pages
+This project shows customized error pages for error: 400, 403, 404 and 500.
 
 
 <details>
-<summary>Search Recipes Screenshot</summary>
+<summary>Error Pages Screenshots</summary>
 
-![Footer](/docs_readme/features/footer.png)
+![Error 400](/docs_readme/features/400.png)
+![Error 403](/docs_readme/features/403.png)
+![Error 403](/docs_readme/features/404.png)
+![Error 500](/docs_readme/features/500.png)
 
 </details>
 
@@ -614,318 +637,48 @@ In the Heroku App:
 </details>
 
 ## 10. Testing
-- ### Manual Testing
-I conducted ongoing manual testing throughout the development stages of the project to ensure its functionality and performance met the desired standards.
+After a manual approach to development and deployment, I have opted to conduct manual testing for the MVP. The testing procedures will ensure that the deployed site matches the site in development by covering the following aspects:
 
-Additionally, I enlisted the help of friends to rigorously test various features such as account registration, submitting, editing, and deleting comments and recipes. Their feedback was instrumental in identifying and addressing any potential issues or bugs within the system.
+* User stories: Validate that the user requirements have been fulfilled for the MVP release.
+* Page validation: Ensure all features and links across the site function as designed and developed.1
+* Responsiveness: Verify that each page is responsive across three media queries: mobiles, tablets-laptops, and desktop monitors.
+* Accessibility: Test each page for compliance with accessibility guidelines using the WAVE online assessment tool.
+* Performance: Use Chrome's developer tool 'Lighthouse Testing' to assess pages for performance, best practices, SEO, and accessibility.
+* Browser: Test pages for layout, features, and overall performance across Chrome, Firefox, Edge, Safari, and Opera.
+* Devices Responsivesess: Conduct manual testing on iOS and Android mobiles, tablets, laptops, and desktops to ensure a positive user experience across all devices and browsers.
+* Code validation: Ensure the codebase is validated using industry-standard tools for HTML, CSS, JavaScript, and Python code.
 
-- ### User Story Testing
+Due to the large size of the results tables, I have decided display them in a separate file.
 
-<details>
-<summary>As a shopper, I want to see a list of products upon visiting the site, so that I can select some to buy.</summary>
+[Navigate to TESTING.md](TESTING.md)
 
-### Acceptance Criteria
+<br>
 
-- Given a logged-in user, they see a list of products.
-- Given a logged-in user, they can select the products they want to buy.
+***
 
+<br>
 
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper I can View individual prodict details, so that I can see images and available sizes of that product.</summary>
-
-### Acceptance Criteria
-
-- Given a user, they see a list of products.
-- Given a  user, they can click on a product and a new page will open showing the product details. 
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper I can quickly indentify deals and special  offers, so that I can take advantage of special savings on products I would like to buy.</summary>
-
-### Acceptance Criteria
-
-- Given a user, they see a page with special offers.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper I can quickly indentify new arrivals, so that I can avoid goin through all the list of products searching for the new merchandise.</summary>
-
-### Acceptance Criteria
-
-- Given a user, they see a page with new arrived products.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I can easily view the total of my purchases at any time, so that I can avoid spending to much money</summary>
-
-### Acceptance Criteria
-
-- Given a logged in user, they see at any time, at the top right corner of the page the total cost of the products they have in their shopping cart.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a first-time visitor, I want a clear explanation of the advantages of being a registered user so that I can decide if I want to create an account on the site.</summary>
-
-### Acceptance Criteria
-
-- Given a first time visitor, upon being redirected to the sign-in page after clicking the register button, an explanation appears below the 'Sign in' title stating the advantages of having an account.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a user, I want to receive feedback messages upon registering and each time I log in or out of the site, providing assurance that the registration or login process was successful.</summary>
-
-### Acceptance Criteria
-
-- Given a user, after they click the register button, a welcome message appears at the top of the website.
-- Given a user, after they log in and out of the website, a message pops up stating that they have logged in or out of the website.
-
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I can easily register for an account, so that I have the benefits of having a personal account in the site.</summary>
-
-### Acceptance Criteria
-
-- Given a user, after they click the register button, they can fill a form with details required for creating an account.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I can easily login or logout from the site, so that I can see my personal account information any time I want.</summary>
-
-### Acceptance Criteria
-
-- Given a user, when they navigate to the site's login page, they see clear fields for entering their username/email and password.
-- Upon entering valid credentials and clicking the login button, the users should be logged in to the site and have access to their profile information.
-- Given a logged in user, there should be a clearly visible logout option, such as a "Logout" button or link, in the header or menu. Upon clicking the logout option, theusers should be logged out of the site and redirected to the site's homepage or another designated landing page.
-- After logging out, if I they  try to access any protected pages or personal account information, they should be redirected to the login page and prompted to log in again.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I can recover my password in case I forget it, so that I can continue having access to my account.</summary>
-
-### Acceptance Criteria
-
-- Given a shopper who has forgotten their password, when they navigate to the site's password recovery page, they should see a clear option to initiate the password recovery process.
-- Given a shopper who has successfully reset their password, when they attempt to log in using the new credentials, they should be able to access their account without any issues.
-- After resetting the password and logging in, the shopper should have full access to their profile information and any other features available to logged-in users.
- 
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary> As a shopper, I want to receive an email of confirmation after registering in the site, so that I can be sure that my account registration was successful.</summary>
-
-### Acceptance Criteria
-
-- Given a shopper who has successfully completed the registration process on the site, when they submit their registration details, they should receive an email confirmation request.
-- The email confirmation request should be sent to the email address provided during registration and should contain a clear call-to-action to confirm the registration.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I want to have a profile page, so that I can view my personal order history and order confirmations, and save my payment information.</summary>
-
-### Acceptance Criteria
-
-- Given a registered shopper, when they log in to the site, there should be a clearly visible link or button in the navigation menu labeled "Profile" or "My Account".
-- Upon clicking on the "Profile" link/button, the shopper should be directed to their profile page, which should display their personal information, order history, and any other relevant details.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I want to be able to sort the list of available products, so that I can easily identify products by category, ratings or price.</summary>
-
-### Acceptance Criteria
-
-- Given a shopper, when they navigates to the list of available products on the site, there should be clearly visible sorting options provided, such as dropdown menus or buttons, allowing the shopper to sort the products by category, ratings, or price.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I want to be able to sort the products of a specific category by name or sort a specific category of product, so that I can find the best-rated or best-priced product in a specific category.</summary>
-
-### Acceptance Criteria
-
-- Given a shopper, when they select a specific category of products, such as devises, jeans, or records, there should be sorting options provided exclusively for that category.
-- The sorting options should include sorting by name, rating, and price, tailored specifically to the products within the selected category.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I want to have the capability to simultaneously sort various categories of products, enabling me to identify the product with the best price or higher rating across diverse product categories like "clothing" or "music".</summary>
-
-### Acceptance Criteria
-
-- Given a shopper navigating the product listings, when they select multiple categories to sort, the system should provide options to sort products across these chosen categories by price or rating.
-- Upon selecting the sorting criteria, the products within the specified categories should be dynamically sorted based on the chosen parameters, allowing the shopper to view the best-priced or best-rated products across the selected categories simultaneously.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I want to be able to easily see the number of results of the product I have searched in the search box, so that I can quickly see whether the product I want is availabe and how many of that type of product are listed in the site.</summary>
-
-### Acceptance Criteria
-
-- Given a shopper using the search box to look for a specific product, when they enter their search query and press the search button, the site should display the total number of search results matching their query.
-- Given a shopper entering a search query in the search box, when they refine or modify their search criteria, the site should dynamically update and display the updated number of search results without requiring a page refresh.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I want to select the size and quantity of a product when purchasing it, so that I can correct a mistaken quantity or size of a selected product.</summary>
-
-### Acceptance Criteria
-
-- Given a shopper, when they add a produt to the shopping cart, they have the option again in the shopping cart to select the size or/and quantity of the selected product.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper I want to view the items in my shopping bag, so that I can verify the total cost of my purchase and ensure all items I want to buy are included.
-</summary>
-
-### Acceptance Criteria
-
-- Given a shopper, when they add items to the shopping bag, upon clicking the shopping bag, the bag page displays a list of all items added, including their names, quantities, and individual prices.
-
-- Given a shopper, they can expect that the total cost of all items in the shopping bag are accurately calculated and displayed.
-
-- Each item in the shopping bag provides a link to its detailed description page, so I can review the details before finalizing the purchase.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I want to be able to change the quantity of individual items in my shopping bag, so that I can easily modify my purchase before proceeding to checkout.</summary>
-
-### Acceptance Criteria
-
-- Given a shopper, once they are in the shopping bag page, they can make changes to the quantity of each of the items listed in the page.
-- The total cost in the shopping bag updates automatically whenever they change the quantity of any item.
-- The shopping bag page displays an error message if the shoppers attempt to set the quantity of an item to an invalid number (e.g., less than 1).
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I want to easily enter my payment information, so that I can checkout quickly and without any problems.</summary>
-
-### Acceptance Criteria
-
-- Given a shopper, they can expect that the payment form validates the entered information in real-time and displays appropriate error messages for any incorrect or incomplete entries.
-
-- Given a shopper, they can expect that the the payment information is securely submitted and processed, ensuring customer data is protected during the transaction.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I can feel confident that my personal and payment information is safe and secure, so that I can provide the necessary details to complete my purchase.</summary>
-
-### Acceptance Criteria
-
-- The system uses Stripe for payment processing, ensuring that all transactions are handled securely and in compliance with Stripe's security standards.
-
-
-**Result:** ✅ Pass
-</details>
-
-<details>
-<summary>As a shopper, I want to add products to a wishlist, so that I can save items I'm interested in purchasing at a later time.</summary>
-
-### Acceptance Criteria
-
-- Given a loged-in shopper, when they view a product on the product detail page, upon clicking the "Add to Wishlist" button, 
-the product is added to their wishlist, and a message pops out stating that the product was added to their Wishlist.
-    
-- Given a logged in shopper, when they navigate to their wishlist from the "My Account" menu option, they see a list of all the products they have added to their wishlist and each product display the name, price, a remove from wishlist button and an image thumbnail.
-
-- Given a logged in shopper viewing their wishlist, when they click the "Remove from Wishlist" button in the product thumbnail, the product is removed from the wishlist and a confirmation message pops out stating that the product was removed from their wishlist.
-
-
-**Result:** ✅ Pass
-</details>
-
-- ### Code Validation
-- #### Html code validation
-The W3C Markup Validation Service was used to validate all HTML files, ensuring adherence to web standards. The majority of pages passed validation with no errors. However, pages containing forms and dynamically generated content, such as the About page edited via the admin panel, exhibited occasional deprecated tags, prompting suggestions to use CSS alternatives instead.
-
-![Alt text](docs_readme/images/validation/no_errors.png)
-
-- #### CSS code validation
-![Alt text](docs_readme/images/validation/css_validation.png)
-
-- #### JavaScript code validation
-![Alt text](docs_readme/images/validation/script.js.png)
-![Alt text](docs_readme/images/validation/comments_js.png)
-
-- #### Python code validation
-The Code Institute Python Linter was used to validate and format the python files correctly. All errors were fixed and no errors were found in the final tests.
-![Alt text](docs_readme/images/validation/python_testing.png)
-
-- ### Challenges Faced
-During the development phase, encountering bugs was inevitable. However, through active problem-solving strategies including consulting various resources, participating in forums, and revisiting bootcamp relevant materials, I successfully identified and resolved the issues that arose.
-
-## 11. Credits
+## 11. Credits and Attributes
 
 - ### Code
-Much of the coding and testing relies heavily on information in the "Boutique Ado" walkthrough in the Code Institue Building an E-Commerce Platform module.
+Much of the coding and testing relies heavily on the Code Institutes walkthrough project "Boutique Ado" in the Code Institue Building an E-Commerce Platform module.
 
+I used several online resources to implement an idea into code, including:
+
+- [Django Documentation](https://docs.djangoproject.com/en/4.0/): Frequently referenced to refresh old concepts and explore new topics and functionalities.
+- [W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_carousel.asp): Used for the carousel on the homepage. Although I initially developed this functionality on my own, I found W3Schools' approach to be cleaner, simpler, and more elegant, so I adopted it.
+- [Stack Overflow forums](https://stackoverflow.com): Utilized for debugging and fixing code issues.
 
 - ### Images
-- Foro all the products images, phtoleap mobile app was used for creating the images. 
+
+- For all the products images, phtoleap mobile app was used for creating the images. 
 
 - Pexels was used for the images in the homepage.
-[Image at the top of page](https://www.pexels.com/photo/man-in-bus-247929/)
-[Image of girl with an old camera](https://www.pexels.com/photo/little-girl-taking-photo-on-vintage-instant-photo-camera-5560466/)
-
-- The icon of the page was taken from [flaticon.com](https://www.flaticon.com/free-icon/old-camera_6373842?term=vintage+camera&page=1&position=6&origin=tag&related_id=6373842) and then uploaded to [favicon generator](https://favicon.io/)
+[Carousel Image 1](https://www.pexels.com/photo/man-in-bus-247929/)
+[Carousel Image 2](https://www.pexels.com/photo/vintage-coronet-twelve-20-box-camera-22033622/)
+[Carousel Image 3](https://www.pexels.com/photo/gray-double-bell-clock-1037993/)
+[Carousel Image 4](https://www.pexels.com/photo/blue-vinyl-record-playing-on-turntable-1389429/)
+[Carousel Image 5](https://www.pexels.com/photo/woman-driving-vintage-car-on-road-during-daytime-33678/)
 
 - Error pages:
 [400 and 404 Error Pages Image](https://www.freepik.com/free-vector/404-error-background-flat-style_1825302.htm#query=404%20background&position=25&from_view=keyword&track=ais&uuid=a5621bc7-ebb8-4dab-b635-d6a2928c04fa)
@@ -933,6 +686,10 @@ Much of the coding and testing relies heavily on information in the "Boutique Ad
 [403 Error Page Image](https://www.freepik.com/free-vector/403-error-forbidden-with-police-concept-illustration_7938324.htm#fromView=search&page=1&position=1&uuid=e30b37c7-600d-46ca-8b16-4f27f3ccc261)
 
 [500 Error Page Image](https://www.freepik.com/free-vector/data-scientist-data-analytics-manager-database-developer-administrator-working-big-data-job-database-developers-careers-big-data-concept_11667700.htm#fromView=image_search_similar&page=1&position=52&uuid=8390b579-7d08-4305-8972-36e5c14ddec5)
+
+- ### Favicon
+
+The icon of the page was taken from [flaticon.com](https://www.flaticon.com/free-icon/old-camera_6373842?term=vintage+camera&page=1&position=6&origin=tag&related_id=6373842) and then uploaded to [favicon generator](https://favicon.io/)
 
 ## 12. Acknowledgement
 I'd like to thank my mentor Brian Macharia, for his invaluable guidance, feedback, tips, and the shared resources. 

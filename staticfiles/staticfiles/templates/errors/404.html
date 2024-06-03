@@ -1,0 +1,13 @@
+{% extends 'errors/base.html' %}
+{% block content %}
+{% load static %}
+<div class="color-back">
+    <div class="page-404"></div>
+    <div class="footer-font text-center">
+        <p>Sorry, page not found. Return to <a href="{% url 'home' %}">
+            <button class="btn btn-success home-link">Home Page</button></a></p>
+    </div>
+</div>
+{% endblock content %}
+
+

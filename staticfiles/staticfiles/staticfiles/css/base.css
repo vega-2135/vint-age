@@ -1,5 +1,6 @@
 html {
-    height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -16,10 +17,12 @@ main {
 }
 
 footer {
-    bottom: 0;
+    position: relative;
     left: 0;
+    bottom: 0;
     width: 100%;
     background-color: rgb(109, 154, 156);
+    margin-top: 100px;
 }
 
 .footer-font {
@@ -33,10 +36,104 @@ i {
 
 /* Home page */
 .home-img {
-    width: 75%;
+    width: 100%;
     height: auto;
     align-items: center;
     justify-content: center;
+}
+
+.img-col {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.shop-now {
+    align-content: flex-end;
+    padding-right: 0;
+}
+
+.shop-now-btn {
+    color: white;
+    min-width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.shop-bg {
+    background-color: rgb(201, 237, 241); 
+    height: 100%;
+}
+
+.card {
+    border: none !important;
+    margin-top: 50px;
+}
+
+.about {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.about-us {
+    font-weight: bolder;
+}
+
+.about-usp {
+    padding: 0;
+}
+
+.about-reg {
+    text-align: justify;
+    font-size: 25px;
+}
+
+.subscribe-header {
+    margin-left: 18px;
+}
+
+.subscribe {
+    width: 100%;
+}
+
+.second-section{
+    margin-top: 50px;
+}
+
+.homeimg2 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.homepic2 {
+    width: 100%;
+    height: auto;
+
+}
+
+.advantage {
+    font-size: 25px;
+}
+
+#mc_embed_signup {
+    background: #fff;
+      background-color: rgb(255, 255, 255);
+      background-image: none;
+    clear: left;
+    font: 1rem Open Sans, sans-serif;
+    max-width: 600px;
+  }
+
+/* Keep shopping btn */
+.keep_shopping {
+    color: black;
+    margin-left: 20px;
+}
+
+/* Secure checkout btn */ 
+.secure-checkout, .complete-order {
+    margin-left: 35px;
 }
 
 /* FAQs page */
@@ -76,22 +173,6 @@ i {
 
 .main-logo-link {
     width: fit-content;
-}
-
-.shop-now {
-    align-content: flex-end;
-}
-
-.shop-now-btn {
-    color: white;
-    min-width: 260px;
-    align-items: flex-end;
-    justify-content: center;
-
-}
-
-.shop-bg {
-    background-color: rgb(201, 237, 241); 
 }
 
 .btn-black {
@@ -392,6 +473,21 @@ input[name='q']::placeholder {
     }
 }
 
+
+@media screen and (min-width: 992px) {
+    .sub-col {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .sub-card {
+        width: 40%;
+        margin-bottom: 100px;
+        border: 0.5rem solid rgb(109, 154, 156) !important;
+    }
+}
+
 /* Media query: laptops (1024px and up) */
 @media screen and (min-width: 1024px) {
     .logo-font2 {
@@ -399,3 +495,5 @@ input[name='q']::placeholder {
         padding: 20px;
     }
 }
+
+
