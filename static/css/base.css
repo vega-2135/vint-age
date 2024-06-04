@@ -169,12 +169,12 @@ footer {
 /* Keep shopping btn */
 .keep_shopping {
     color: black;
-    margin-left: 20px;
 }
 
 /* Secure checkout btn */ 
 .secure-checkout, .complete-order {
     margin-left: 35px;
+    margin-right: 30px;
 }
 
 /* FAQs page */
