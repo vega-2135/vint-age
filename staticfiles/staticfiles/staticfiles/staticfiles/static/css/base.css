@@ -29,9 +29,17 @@ footer {
     color: white !important;
 }
 
-i {
-    margin-right: 30px;
+.i-footer {
+    margin-right: 15px;
     color: white;
+}
+
+.i-insta {
+    color: white;
+}
+
+.i-facebook {
+    margin-left: 30px;
 }
 
 /* Authentication */
@@ -161,12 +169,21 @@ i {
 /* Keep shopping btn */
 .keep_shopping {
     color: black;
-    margin-left: 20px;
 }
 
 /* Secure checkout btn */ 
 .secure-checkout, .complete-order {
     margin-left: 35px;
+    margin-right: 30px;
+}
+
+/* Shopping Bag page */
+.product-name {
+    color: black;
+}
+
+.product-name:hover {
+    color: #0056b3;
 }
 
 /* FAQs page */
@@ -619,6 +636,26 @@ input[name='q']::placeholder {
     
     .error500-image {
         width: 70%;
+    }
+
+    .i-footer, .i-insta {
+        color: white;
+        font-size: 30px;
+    }
+
+    .i-footer {
+        margin-right: 80px;
+    }
+
+    .footer-font {
+        font-size: 30px;
+    }
+
+    .social-media {
+        width: 25%;
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
     }
 }
 

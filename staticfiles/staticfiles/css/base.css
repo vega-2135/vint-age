@@ -21,7 +21,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(109, 154, 156);
+    background-color: rgb(115, 190, 201);
     margin-top: 100px;
 }
 
@@ -32,6 +32,27 @@ footer {
 i {
     margin-right: 30px;
     color: white;
+}
+
+/* Authentication */
+.auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px;
+}
+
+.auth-box {
+    border: 2px solid black;
+    box-shadow: 6px 5px 0px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 25px;
+    background-color: rgba(214, 230, 245, 0.2);
+    padding: 25px;
+    margin-top: 50px;
+}
+
+.form-group {
+    margin: 30px 0 30px 0 !important;
 }
 
 /* Home page */
@@ -49,7 +70,7 @@ i {
 
 .shop-now {
     align-content: flex-end;
-    padding-right: 0;
+    padding: 0;
 }
 
 .shop-now-btn {
@@ -73,19 +94,29 @@ i {
 .about {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+    background-color: rgba(201, 237, 241)
 }
 
 .about-us {
-    font-weight: bolder;
+    font-weight:1000;
+    margin-top: 50px;
 }
 
 .about-usp {
     padding: 0;
+    background-color: rgba(201, 237, 241);
 }
 
 .about-reg {
     text-align: justify;
     font-size: 25px;
+    font-weight: 1000;
+    margin-bottom: 100px;
+    padding: 0 30px 0 30px;
+}
+
+.subscription-row {
+    margin: 0;
 }
 
 .subscribe-header {
@@ -96,33 +127,35 @@ i {
     width: 100%;
 }
 
+.indicates-required {
+    text-align: left !important;
+}
+
 .second-section{
     margin-top: 50px;
 }
 
-.homeimg2 {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.homepic2 {
-    width: 100%;
-    height: auto;
-
+.home-2 {
+    margin-top: 150px;
 }
 
 .advantage {
-    font-size: 25px;
+    font-weight: 1000;
+    font-size: 2rem;
+    margin-top: 100px;
+}
+
+.advantages-pad {
+    padding: 0 30px 0 50px !important;
 }
 
 #mc_embed_signup {
     background: #fff;
-      background-color: rgb(255, 255, 255);
-      background-image: none;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
     clear: left;
     font: 1rem Open Sans, sans-serif;
-    max-width: 600px;
+    width: auto !important;
   }
 
 /* Keep shopping btn */
@@ -137,6 +170,13 @@ i {
 }
 
 /* FAQs page */
+.faq {
+    margin-top: 150px;
+}
+
+.faq-card {
+    border: 1px solid rgb(109, 154, 156) !important;
+}
 .answers {
     list-style-type: none;
 }
@@ -206,7 +246,7 @@ i {
 }
 
 .bg-black {
-    background: rgb(109, 154, 156) !important;
+    background: rgb(115, 190, 201) !important;
 } 
 
 .overlay {
@@ -298,9 +338,94 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/* Error Pages */
+.color-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(175, 216, 255);
+    min-height: 100vh;
+    position: relative;
+}
+
+.error-txt {
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Adjust as needed */
+    text-align: center;
+}
+
+.page-400, .page-403, .page-404, .page-500 {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh; 
+}
+
+.page-400 {
+    background-image: url(../images/400.jpg);
+}
+
+.p-400 {
+    margin-bottom: 0;
+}
+
+.margin-400 {
+    margin-bottom: 100px;
+}
+
+.page-403 {
+    background-image: url(../images/403.webp); 
+}
+
+.page-404 {
+    background-image: url(../images/404.webp); 
+}
+
+.page-500 {
+    /*background-image: url(../images/500.webp);*/
+    display: flex;
+    justify-content: center;
+}
+.error500-image {
+    width: 100%;
+}
+
+.error-5002 {
+    padding:0 16px 0 16px;
+}
+
+.btn-error {
+    padding: 0px 4px 0 4px;
+    border-width: 0 0 3px 0;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
+@media screen and (min-width: 1024px) {
+    .logo-font2 {
+        font-weight: bold;
+        padding: 20px;
+    }
+
+    .about-us, .advantage {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .about-reg {
+        padding-right: 100px;
+        padding-left: 100px;
+        font-size: 30px;
+    }
+
+    .li-adv {
+        margin: 0 100px 0 100px;
+    }
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
@@ -420,6 +545,19 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
+
+    .sub-col {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .sub-card {
+        width: 40%;
+        margin-top: 150px;
+        margin-bottom: 45px;
+        border: 0.5rem solid rgb(115, 190, 201) !important;
+    }
 }
 
 @media (max-width: 991px) {
@@ -474,25 +612,13 @@ input[name='q']::placeholder {
 }
 
 
-@media screen and (min-width: 992px) {
-    .sub-col {
-        display: flex;
-        justify-content: center;
-        align-content: center;
+@media screen and (min-width: 700px){
+    .indicates-required {
+        text-align: right !important;
     }
     
-    .sub-card {
-        width: 40%;
-        margin-bottom: 100px;
-        border: 0.5rem solid rgb(109, 154, 156) !important;
-    }
-}
-
-/* Media query: laptops (1024px and up) */
-@media screen and (min-width: 1024px) {
-    .logo-font2 {
-        font-weight: bold;
-        padding: 20px;
+    .error500-image {
+        width: 70%;
     }
 }
 

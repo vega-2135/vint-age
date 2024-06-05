@@ -199,6 +199,8 @@ Upon clicking the "Add To Bag" button, a message pops out informing the user tha
 - ### Shopping Bag Page
 The Shopping Bag Page displays rows of products that have been added to the shopping bag. Each row features an image of the product followed by a small description, including the product's SKU and size (when applicable). The price, quantity, and subtotal for each product are also shown.
 
+When the user clicks on the product's name or image they are redirected to the detail page of that product.
+
 The quantity section includes a spinner control menu that allows the user to increase or decrease the number of items they want to purchase for a given product. It also includes update and remove options. The update option adjusts the quantity of a product if the user changes it, while the remove option deletes the product entirely from the shopping bag.
 
 At the bottom right of the page, the following details are displayed:

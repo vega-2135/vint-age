@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+<div class="container mt-5 contact-page">
+    <div class="row justify-content-center">
+            <div class="col-12 col-md-6 my-5">
+                {% if request.user.is_authenticated %}
+                <h2 class="mb-3 contact">{{contact.title}}, {{ request.user.username }}!</h2>
+                {% else %}
+                <h2>Welcome!</h2>
+                {% endif %}
+                <p>{{contact.content | safe}}</p>
+                <form class="contact-form" method="post">
+                    {{ reachout_form | crispy }}
+                    {% csrf_token %}
+                    <button class="btn btn-secondary" type="submit">Submit</button>
+                </form>
+            </div>
+    </div>
+</div>
+{% endblock content %}
