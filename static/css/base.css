@@ -177,6 +177,15 @@ footer {
     margin-right: 30px;
 }
 
+/* Shopping Bag page */
+.product-name {
+    color: black;
+}
+
+.product-name:hover {
+    color: #0056b3;
+}
+
 /* FAQs page */
 .faq {
     margin-top: 150px;
