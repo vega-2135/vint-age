@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /accounts/
-Disallow: /bag/
-Sitemap: https://vint-age-f72b1a14d20f.herokuapp.com//sitemap.xml
