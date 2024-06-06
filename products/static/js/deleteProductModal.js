@@ -20,7 +20,12 @@ deleteButtons.forEach(function(button) {
 
 });
 
-
+// Close modal when the user clicks anywhere outside of the modal window
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 // Get the close and cancel confirmation window's buttons 
 const closeConfirmationButton = document.getElementById("close-confirmation-btn")
