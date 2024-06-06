@@ -179,8 +179,10 @@ footer {
     padding: 6px 21px;
 }
 
+/* Used to override the flex used in .card-body class
+that is used in the product names */
 .product-name {
-    height: 10px;
+    flex: none !important;
 }
 
 /* Secure checkout btn */ 

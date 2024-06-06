@@ -81,13 +81,14 @@
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
-                                            {% if request.user.is_superuser %}
-                                                <small class="ml-3">
-                                                    <a class="btn btn-warning btn-edit" href="{% url 'edit_product' product.id %}">Edit</a>
-                                                    <button id="deleteProductBtn" class="btn btn-danger" data-product-id="{{ product.id }}">Delete</button>
-                                                </small>
-                                            {% endif %}
+
                                         </div>
+                                        {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a class="btn btn-warning btn-edit" href="{% url 'edit_product' product.id %}">Edit</a>
+                                            <button id="deleteProductBtn" class="btn btn-danger" data-product-id="{{ product.id }}">Delete</button>
+                                        </small>
+                                        {% endif %}
                                     </div>
                                 </div>
                                 {% if is_wishlist %}
