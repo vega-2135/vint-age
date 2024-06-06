@@ -37,8 +37,9 @@ const deleteAnchor = document.getElementById("deleteConfirm");
 
 deleteAnchor.addEventListener('click', deleteProduct);
 
-function deleteProduct() {
+async function deleteProduct() {
     const deleteView = 'delete/' + productIdClicked;
-    window.open(deleteView);
     modal.style.display = "none";
+    await fetch(deleteView);
+    window.location.reload();
 }
