@@ -171,6 +171,15 @@ footer {
     color: black;
 }
 
+/* Product Page */
+.btn-edit {
+    padding: 6px 21px;
+}
+
+.product-name {
+    height: 10px;
+}
+
 /* Secure checkout btn */ 
 .secure-checkout, .complete-order {
     margin-left: 35px;
