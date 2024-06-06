@@ -89,6 +89,10 @@ footer {
 
 }
 
+.flex_row_gap {
+    row-gap: 30px;
+}
+
 .shop-bg {
     background-color: rgb(201, 237, 241); 
     height: 100%;
