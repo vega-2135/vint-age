@@ -1,35 +1,44 @@
-// Get the modal
+// Get the modal snippet
 const modal = document.getElementById("deleteModal");
 
-// Get the button that opens the modal
-const deleteBtn = document.querySelectorAll("[id='deleteProductBtn']");
+var productIdClicked = -1;
 
-// Get the button element that closes the modal
-const closeBtn = document.getElementById("close-confirmation-btn");
 
-// Get the button that confirms deletion of the product
-const confirmDeleteBtn = document.getElementById("deleteConfirm");
 
-// When the user clicks the button, open the modal 
-deleteBtn.onclick = function() {
-    modal.style.display = "block";
-}
+// Get all the delete buttons from the page
+const deleteButtons = document.querySelectorAll("[id='deleteProductBtn']");
 
-// When the user clicks on the close button, close the modal
-closeBtn.onclick = function() {
+// Add the deleteConfirmation function to each delete button
+deleteButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+
+        // Show it and make it modal
+        modal.style.display = "block";
+    
+        productIdClicked = button.getAttribute("data-product-id");
+    })
+
+});
+
+
+
+// Get the close and cancel confirmation window's buttons 
+const closeConfirmationButton = document.getElementById("close-confirmation-btn")
+const cancelConfirmationButton = document.getElementById("cancel-confirmation-btn")
+closeConfirmationButton.addEventListener('click', closeConfirmationWindow);
+cancelConfirmationButton.addEventListener('click', closeConfirmationWindow);
+
+function closeConfirmationWindow() {
     modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close the modal
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
-// When the user clicks the delete button the product is deleted
-confirmDeleteBtn.onclick = function() {
-    deleteConfirm.href = `delete_product/${product.Id}`;
-    alert("Item deleted.");
+const deleteAnchor = document.getElementById("deleteConfirm");
+
+deleteAnchor.addEventListener('click', deleteProduct);
+
+function deleteProduct() {
+    const deleteView = 'delete/' + productIdClicked;
+    window.open(deleteView);
     modal.style.display = "none";
 }
