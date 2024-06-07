@@ -114,6 +114,37 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="column">
+                {% if user.is_authenticated %}
+                    <div class="card-body">
+                        <h3 class="card-subtitle cust-review-h3" style="color: #351c75">Leave your review
+                        </h3>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Reviewing as:
+                                <span>{{ user.username }}
+                                </span>
+                            </p>
+                            <!---User feature to add product review  -->
+                            <form method="post" style="margin-top: 1.3em;">
+                                {{ review_form | crispy }} {% csrf_token %}
+                                <!---Button to submit product review -->
+                                <button type="submit" class="standard-btn">Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                {% else %}
+                <div class="leave-comment">
+                    <button class="btn btn-success btn-com-log">
+                      <a class="comment-login" href="{% url 'account_login' %}">
+                        <p>Log in to leave a comment</p>
+                      </a>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
 
