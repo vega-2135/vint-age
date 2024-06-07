@@ -115,34 +115,71 @@
                 </div>
             </div>
         </div>
+        <!--- Product comments -->
+        <!-- Displaying count of comments -->
         <div class="row">
+            <h3>Product Reviews</h3>
             <div class="column">
+                <!-- Creating new comments and rating recipe-->
                 {% if user.is_authenticated %}
+                <div class="card mb-4 mt-3 card-width card-border">
                     <div class="card-body">
-                        <h3 class="card-subtitle cust-review-h3" style="color: #351c75">Leave your review
+                        <form id="commentForm" method="POST" style="margin-top: 1.3em;">
+                        <h3 style="display: flex; align-items: center;">Rate and comment
+                            <div class="rating" style="margin-left: auto;">
+                            <input type="radio" name="rating" value="5" id="5"><label for="5">&#x2606;</label>
+                            <input type="radio" name="rating" value="4" id="4"><label for="4">&#x2606;</label>
+                            <input type="radio" name="rating" value="3" id="3"><label for="3">&#x2606;</label>
+                            <input type="radio" name="rating" value="2" id="2"><label for="2">&#x2606;</label>
+                            <input type="radio" name="rating" value="1" id="1"><label for="1">&#x2606;</label>
+                            </div>
                         </h3>
-                        <div class="card-body">
-                            <p class="card-text">
-                                Reviewing as:
-                                <span>{{ user.username }}
-                                </span>
-                            </p>
-                            <!---User feature to add product review  -->
-                            <form method="post" style="margin-top: 1.3em;">
-                                {{ review_form | crispy }} {% csrf_token %}
-                                <!---Button to submit product review -->
-                                <button type="submit" class="standard-btn">Submit
-                                </button>
-                            </form>
-                        </div>
+                        <p>Posting as: {{ user.username }}</p>
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button id="submitButton" type="submit" class="btn btn-success">Submit</button>
+                        </form>
                     </div>
+                </div>
                 {% else %}
                 <div class="leave-comment">
-                    <button class="btn btn-success btn-com-log">
-                      <a class="comment-login" href="{% url 'account_login' %}">
-                        <p>Log in to leave a comment</p>
-                      </a>
-                    </button>
+                    <h4>Would you like to leave a review of this product?</h4>
+                    <p>Please <a href=""></a>login or register first</p>
+                </div>
+                {% endif %}
+                <!-- Displaying Comments -->
+                <div class="card mb-4  mt-3 card-width card-border">
+                    <div class="card-header text-bg-light">
+                    <h3>Comments:</h3>
+                    </div>
+                    <div class="card-body">
+                    {% for comment in comments %}
+                    <div class="p-2 comments
+                            {% if not comment.approved and comment.author == user %}
+                            faded{% elif not comment.approved %} d-none{% endif %}">
+                        <p class="font-weight-bold">
+                        {{ comment.author }}
+                        <span class="font-weight-normal">
+                            {{ comment.created_on }}
+                        </span> wrote:
+                        </p>
+                        <div id="comment{{ comment.id }}">
+                        {{ comment.content | linebreaks }}
+                        </div>
+                        {% if not comment.approved and comment.author == user %}
+                        <p class="approval">
+                        This comment is awaiting approval
+                        </p>
+                        {% endif %}
+                        {% if user.is_authenticated and comment.author == user %}
+                        <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                        <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                        {% endif %}
+                    </div>
+                    {% empty %}
+                        <p>No comments yet, be the first to leave a comment.</p>
+                    {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
@@ -153,67 +190,3 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
-
-
-<!--- Product comments -->
-<div class="container-fluid mt-2 mb-4">
-    <div class="row">
-        <!-- Displaying count of comments -->
-        <div class="col-md-6 card mb-4 mt-3 border-0">
-            <div class="mt-5 comments-count">
-                <strong class="text-secondary">
-                <i class="fa-regular fa-comments"></i> {{ comment_count }}
-                </strong>
-                <hr class="card-width">
-            </div>
-        </div>
-        <!--- Displaying Comments  -->
-        <div class="col-md-6 card mb-4 mt-3 border-0">
-            <div class="card-body">
-                <h3 class="card-subtitle mb-2 cust-review-h3" style="color: #351c75">Customer Reviews
-                </h3>
-                {% for review in reviews %}
-                <div class="card-body mt-3 mb-3">
-                    <p class="card-text">{{ review.username }} said:
-                    </p>
-                    <p class="card-text"><i>
-                            {{ review.message | linebreaks }}</i></p>
-                    <span class="text-muted">
-                        {{ review.created_on }}
-                    </span>
-                </div>
-                {% endfor %}
-            </div>
-            <!-- Adding comments -->
-            <div class="card-body">
-                {% if user.is_authenticated %}
-                <div class="card-body">
-                    <h3 class="card-subtitle cust-review-h3" style="color: #351c75">Leave your review
-                    </h3>
-                    <div class="card-body">
-                        <p class="card-text">
-                            Reviewing as:
-                            <span>{{ user.username }}
-                            </span>
-                        </p>
-                        <form method="post" style="margin-top: 1.3em;">
-                            {{ comment_form | crispy }} {% csrf_token %}
-                            <!---Button to submit product review -->
-                            <button type="submit" class="standard-btn">Submit
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                {% else %}
-                <div class="leave-comment">
-                    <button class="btn btn-success btn-com-log">
-                      <a class="comment-login" href="{% url 'account_login' %}">
-                        <p>Log in to leave a comment</p>
-                      </a>
-                    </button>
-                </div>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</div>

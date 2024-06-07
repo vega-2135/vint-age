@@ -34,9 +34,9 @@ class Product(models.Model):
         return self.name
 
 
-class Comment(models.Model):
+class Review(models.Model):
     """
-    User comments on products
+    User reviews of products
     """
 
     product = models.ForeignKey(
