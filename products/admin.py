@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Category, Product, Wishlist
+from .models import Category, Product, Review, Wishlist
 
 # Register your models here.
 
@@ -23,6 +23,16 @@ class CategoryAdmin(admin.ModelAdmin):
         "friendly_name",
         "name",
     )
+
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    """
+    Displays fields and values
+    for Review model in admin panel.
+    """
+    list_display = ('author', 'content', 'product', 'created_on')
+    search_fields = ['author', 'created_on']
+    list_filter = ['created_on']
 
 
 admin.site.register(Product, ProductAdmin)
