@@ -4,8 +4,8 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from django.shortcuts import get_object_or_404, redirect, render, reverse
 
-from .forms import AddToWishlistForm, ProductForm
-from .models import Category, Product, Wishlist
+from .forms import AddToWishlistForm, ProductForm, CommentForm
+from .models import Product, Category, Comment, Wishlist
 
 # Create your views here.
 
@@ -69,8 +69,27 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    # Display only approved comments
+    comment = product.comment.order_by('-created_on')
+    comment_count = product.comments.filter(approved=True).count()
+
+    # Display a form to users, so they can add comments
+    if request.user.is_authenticated:
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+            comment.author = request.user
+            comment = comment_form.save(commit=False)
+            comment.product = product
+            comment.save()
+            messages.success(request, 'Thank you for taking \
+                the time to leave a comment')
+
     context = {
         "product": product,
+        "comment": comment,
+        "comment_count": comment_count,
+        "comment_form": comment_form,
     }
 
     return render(request, "products/product_detail.html", context)

@@ -23,13 +23,13 @@ class ProductForm(forms.ModelForm):
             field.widget.attrs["class"] = "border-black rounded-0"
 
 
-class ReviewForm(forms.ModelForm):
+class CommentForm(forms.ModelForm):
     """
     Review form for user to edit review
     """
     class Meta:
         model = Comment
-        fields = ('content')
+        fields = ('content',)
         labels = {
             'content': 'Your review:'
         }
