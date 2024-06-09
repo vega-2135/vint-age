@@ -2,10 +2,11 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect, render, reverse
 
 from .forms import AddToWishlistForm, ProductForm, ReviewForm
-from .models import Category, Product, Wishlist
+from .models import Category, Product, Review, Wishlist
 
 # Create your views here.
 
@@ -168,6 +169,48 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, "Product deleted!")
     return redirect(request.build_absolute_uri())
+
+
+@login_required
+def edit_review(request, product_id, review_id):
+    """
+    View to edit reviews
+    """
+    if request.method == "POST":
+        product = get_object_or_404(Product, pk=product_id)
+        review = get_object_or_404(Review, pk=review_id)
+        review_form = ReviewForm(data=request.POST, instance=review)
+
+        if review_form.is_valid() and review.author == request.user:
+            review = review_form.save(commit=False)
+            review.product = product
+            review.approved = False
+            review.save()
+            messages.add_message(request, messages.SUCCESS, "Review Updated!")
+        else:
+            messages.add_message(
+                request, messages.ERROR, "Error updating review!"
+            )
+
+    return HttpResponseRedirect(reverse("product_detail", args=[product_id]))
+
+
+@login_required
+def delete_review(request, product_id, review_id):
+    """
+    view to delete reviews
+    """
+    review = get_object_or_404(Review, pk=review_id)
+
+    if review.author == request.user:
+        review.delete()
+        messages.add_message(request, messages.SUCCESS, "Review deleted!")
+    else:
+        messages.add_message(
+            request, messages.ERROR, "You can only delete your own reviews!"
+        )
+
+    return HttpResponseRedirect(reverse("product_detail", args=[product_id]))
 
 
 @login_required

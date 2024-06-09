@@ -179,6 +179,8 @@
 {% endblock %}
 
 {% block postloadjs %}
+    <script type="text/javascript" src="{% static 'js/reviews.js' %}"></script>
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
+
