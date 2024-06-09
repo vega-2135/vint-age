@@ -24,15 +24,21 @@ class CategoryAdmin(admin.ModelAdmin):
         "name",
     )
 
+
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
     """
     Displays fields and values
     for Review model in admin panel.
     """
-    list_display = ('author', 'content', 'product', 'created_on')
-    search_fields = ['author', 'created_on']
-    list_filter = ['created_on']
+
+    list_display = ("author", "content", "product", "created_on", "approved")
+    search_fields = ["author", "created_on"]
+    list_filter = ["created_on"]
+    actions = ["approve_reviews"]
+
+    def approve_reviews(self, request, queryset):
+        queryset.update(approved=True)
 
 
 admin.site.register(Product, ProductAdmin)
