@@ -198,6 +198,14 @@ footer {
     border-radius: 10px;
 }
 
+.approved-comment{
+    color: black;
+}
+
+.faded {
+    color: rgb(172, 175, 175);
+}
+
 /* Products Page */
 .btn-edit {
     padding: 6px 21px;
