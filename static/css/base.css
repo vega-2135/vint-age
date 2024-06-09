@@ -609,6 +609,34 @@ input[name='q']::placeholder {
         margin-bottom: 45px;
         border: 0.5rem solid rgb(115, 190, 201) !important;
     }
+
+    .reviews-col {
+        margin-left: 18px;
+    }
+
+    .i-footer, .i-insta {
+        color: white;
+        font-size: 30px;
+    }
+
+    .i-facebook {
+        margin-right: 80px;
+    }
+
+    .i-twitter {
+        margin-right: 73px;
+    }
+
+    .footer-font {
+        font-size: 30px;
+    }
+
+    .social-media {
+        width: 25%;
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+    }
 }
 
 @media (max-width: 991px) {
@@ -672,24 +700,8 @@ input[name='q']::placeholder {
         width: 70%;
     }
 
-    .i-footer, .i-insta {
-        color: white;
-        font-size: 30px;
-    }
-
-    .i-footer {
-        margin-right: 80px;
-    }
-
-    .footer-font {
-        font-size: 30px;
-    }
-
-    .social-media {
-        width: 25%;
-        display: flex;
-        align-content: center;
-        justify-content: flex-end;
+    .footer-divs {
+        justify-content: space-between !important;
     }
 }
 
