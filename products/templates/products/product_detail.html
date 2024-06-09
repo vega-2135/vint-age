@@ -11,7 +11,6 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -115,56 +114,61 @@
                 </div>
             </div>
         </div>
-        <!--- Product Reviews -->
-        <div class="column">
-            <!-- Creating new comments and rating recipe-->
-            {% if user.is_authenticated %}
-            <div class="card mb-4 mt-3 card-width card-border">
-                <div class="card-body">
-                    <p>Posting as: {{ user.username }}</p>
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-success">Submit</button>
-                    </form>
-                </div>
-            </div>
-            {% else %}
-            <div class="leave-comment">
-                <h4>Would you like to leave a review for this product?</h4>
-                <p>Please <a class="comment-login" href="{% url 'account_login' %}">login or register</a> first</p>
-            </div>
-            {% endif %}
-            <!-- Displaying Reviews -->
-            <div class="mb-4  mt-3 card-width card-border">
-                <div class="card-header text-bg-light">
-                <h3>Product Reviews:</h3>
-                <div class="card-body">
-                {% for review in reviews %}
-                <div class="p-2 comments
-                        {% if not comment.approved and comment.author == user %}
-                        faded{% elif not comment.approved %} d-none{% endif %}">
-                    <p class="font-weight-bold">
-                    {{ review.author }}
-                    <span class="font-weight-normal">
-                        {{ review.created_on }}
-                    </span> wrote:
-                    </p>
-                    <div id="comment{{ comment.id }}">
-                    {{ review.content | linebreaks }}
+    </div>
+    <!--- Product Reviews -->
+    <div class="container-fluid reviews">
+        <div class="row">
+            <div class="col col-lg-4">
+                <!-- Creating new comments and rating recipe-->
+                {% if user.is_authenticated %}
+                <div class="card mb-4 mt-3 card-width card-border">
+                    <div class="card-body">
+                        <p>Posting as: {{ user.username }}</p>
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button id="submitButton" type="submit" class="btn btn-success">Submit</button>
+                        </form>
                     </div>
-                    {% if not review.approved and review.author == user %}
-                    <p class="approval">
-                    This comment is awaiting approval
-                    </p>
-                    {% endif %}
-                    {% if user.is_authenticated and review.author == user %}
-                    <button class="btn btn-edit" comment_id="{{ review.id }}">Edit</button>
-                    <button class="btn btn-delete" comment_id="{{ review.id }}">Delete</button>
-                    {% endif %}
                 </div>
-                {% empty %}
-                    <p>No reviews yet, be the first to leave a review.</p>
-                {% endfor %}
+                {% else %}
+                <div class="leave-comment mb-5">
+                    <h4 class="leave-review">Would you like to leave a review for this product?</h4>
+                    <p class="login-first">Please <a class="comment-login" href="{% url 'account_login' %}">login or register</a> first</p>
+                </div>
+                {% endif %}
+                <!-- Displaying Reviews -->
+                <div class="mb-4  mt-3 reviews-display">
+                    <div class="reviews-title mt-2 ml-2">
+                        <h3>Product Reviews:</h3>
+                    </div>
+                    <div class="ml-2 mt-2 mb-2">
+                        {% for review in reviews %}
+                        <div class="p-2 comments
+                                {% if not comment.approved and comment.author == user %}
+                                faded{% elif not comment.approved %} d-none{% endif %}">
+                            <p class="font-weight-bold">
+                            {{ review.author }}
+                            <span class="font-weight-normal">
+                                {{ review.created_on }}
+                            </span> wrote:
+                            </p>
+                            <div id="comment{{ comment.id }}">
+                            {{ review.content | linebreaks }}
+                            </div>
+                            {% if not review.approved and review.author == user %}
+                            <p class="approval">
+                            This comment is awaiting approval
+                            </p>
+                            {% endif %}
+                            {% if user.is_authenticated and review.author == user %}
+                            <button class="btn btn-edit" comment_id="{{ review.id }}">Edit</button>
+                            <button class="btn btn-delete" comment_id="{{ review.id }}">Delete</button>
+                            {% endif %}
+                        </div>
+                        {% empty %}
+                            <p>No reviews yet, be the first to leave a review.</p>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

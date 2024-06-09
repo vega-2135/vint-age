@@ -174,10 +174,30 @@ footer {
     color: black;
 }
 
-/* Product Page */
+/* Product detail page */
+.reviews {
+    margin: 50px 0 10px 0;
+}
+
+.leave-review {
+    color: rgb(104, 143, 149);
+    font-size: 1.7rem;
+}
+
+.login-first {
+    font-size: 1.4rem;
+}
+
+.reviews-display {
+    border: solid rgb(115, 190, 201);
+    border-radius: 10px;
+}
+
+/* Products Page */
 .btn-edit {
     padding: 6px 21px;
 }
+
 
 /* Used to override the flex used in .card-body class
 that is used in the product names */
