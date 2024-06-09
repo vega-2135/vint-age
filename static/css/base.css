@@ -176,7 +176,7 @@ footer {
 
 /* Product detail page */
 .reviews {
-    margin: 50px 0 10px 0;
+    margin: 150px 0 10px 0;
 }
 
 .leave-review {
@@ -190,6 +190,11 @@ footer {
 
 .reviews-display {
     border: solid rgb(115, 190, 201);
+    border-radius: 10px;
+}
+
+.card-border {
+    border: solid rgb(115, 190, 201) !important;
     border-radius: 10px;
 }
 

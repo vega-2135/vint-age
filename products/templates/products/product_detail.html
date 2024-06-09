@@ -118,13 +118,14 @@
     <!--- Product Reviews -->
     <div class="container-fluid reviews">
         <div class="row">
-            <div class="col col-lg-4 reviews-col">
+            <div class="col col-lg-6 reviews-col">
                 <!-- Creating new comments and rating recipe-->
                 {% if user.is_authenticated %}
                 <div class="card mb-4 mt-3 card-width card-border">
                     <div class="card-body">
+                        <h3>Leave a review</h3>
                         <p>Posting as: {{ user.username }}</p>
-                        {{ comment_form | crispy }}
+                        {{ review_form | crispy }}
                         {% csrf_token %}
                         <button id="submitButton" type="submit" class="btn btn-success">Submit</button>
                         </form>
