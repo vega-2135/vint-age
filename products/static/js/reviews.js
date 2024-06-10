@@ -1,11 +1,20 @@
-const editButtons = document.getElementsByClassName("btn-edit");
+const editButtons = document.getElementsByClassName("btn-review-edit");
 const reviewText = document.getElementById("id_content");
 const reviewForm = document.getElementById("reviewForm");
 const submitButton = document.getElementById("submitButton");
 
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
-const deleteButtons = document.getElementsByClassName("btn-delete");
+const deleteButtons = document.getElementsByClassName("btn-review-delete");
 const deleteConfirm = document.getElementById("deleteConfirm");
+
+// Get the close and cancel confirmation window's buttons 
+const closeModalButton = document.getElementById("close-review-modal")
+closeModalButton.addEventListener('click', closeConfirmationWindow);
+
+function closeConfirmationWindow() {
+  deleteModal.hide();
+}
+
 
 /**
 * Initializes edit functionality for the provided edit buttons.

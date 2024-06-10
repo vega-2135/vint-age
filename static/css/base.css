@@ -193,6 +193,27 @@ footer {
     border-radius: 10px;
 }
 
+.btn-review-edit, .btn-review-delete {
+    border: solid rgb(115, 190, 201);
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.btn-review-edit {
+    padding-right: 21px;
+    padding-left: 21px;
+}
+
+.box-modal {
+    border: solid 5px rgb(115, 190, 201);
+}
+
+.btn-close::before {
+    content: "X";
+    /* Additional styling for the first line of the X */
+}
+
+
 .card-border {
     border: solid rgb(115, 190, 201) !important;
     border-radius: 10px;

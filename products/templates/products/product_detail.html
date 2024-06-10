@@ -163,8 +163,8 @@
                             </p>
                             {% endif %}
                             {% if user.is_authenticated and review.author == user %}
-                            <button class="btn btn-edit" review_id="{{ review.id }}">Edit</button>
-                            <button class="btn btn-delete" review_id="{{ review.id }}">Delete</button>
+                            <button class="btn btn-review-edit mr-3" review_id="{{ review.id }}">Edit</button>
+                            <button class="btn btn-review-delete" review_id="{{ review.id }}">Delete</button>
                             {% endif %}
                             <hr>
                         </div>
@@ -180,10 +180,10 @@
 <!-- Delete confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content box-modal">
             <div class="modal-header">
                 <h5 class="modal-title" id="deleteModalLabel">Delete review?</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button id="close-review-modal" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 Are you sure you want to delete your review? This action cannot be undone.
