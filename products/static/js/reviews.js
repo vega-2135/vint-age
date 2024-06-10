@@ -1,6 +1,6 @@
 const editButtons = document.getElementsByClassName("btn-edit");
-const commentText = document.getElementById("id_content");
-const commentForm = document.getElementById("reviewForm");
+const reviewText = document.getElementById("id_content");
+const reviewForm = document.getElementById("reviewForm");
 const submitButton = document.getElementById("submitButton");
 
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
@@ -23,7 +23,7 @@ for (let button of editButtons) {
     let reviewContent = document.getElementById(`review${reviewId}`).innerText;
     reviewText.value = reviewContent;
     submitButton.innerText = "Update";
-    commentForm.setAttribute("action", `edit_review/${reviewId}`);
+    reviewForm.setAttribute("action", `edit_review/${reviewId}`);
   });
   console.log("Edited");
 }
@@ -32,9 +32,9 @@ for (let button of editButtons) {
 * Initializes deletion functionality for the provided delete buttons.
 * 
 * For each button in the `deleteButtons` collection:
-* - Retrieves the associated comment's ID upon click.
+* - Retrieves the associated review's ID upon click.
 * - Updates the `deleteConfirm` link's href to point to the 
-* deletion endpoint for the specific comment.
+* deletion endpoint for the specific review.
 * - Displays a confirmation modal (`deleteModal`) to prompt 
 * the user for confirmation before deletion.
 */
