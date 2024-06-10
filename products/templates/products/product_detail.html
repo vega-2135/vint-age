@@ -119,7 +119,7 @@
                 {% if user.is_authenticated %}
                 <div class="card mb-4 mt-3 card-width card-border">
                     <div class="card-body">
-                        <form id="reviewForm" method="POST" style="margin-top: 1.3em;">
+                        <form id="reviewForm" method="POST">
                             <h3>Leave a review</h3>
                             <p>Posting as: {{ user.username }}</p>
                             {{ review_form | crispy }}
@@ -136,10 +136,10 @@
                 {% endif %}
                 <!-- Displaying Reviews -->
                 <div class="mb-4  mt-3 reviews-display">
-                    <div class="reviews-title mt-2 ml-2">
+                    <div class="reviews-title mt-3 ml-3">
                         <h3>Product Reviews:</h3>
                     </div>
-                    <div class="ml-2 mt-2 mb-2">
+                    <div class="ml-3 mt-3 mb-2">
                         {% for review in reviews %}
                         <div class="p-2
                                 {% if not review.approved and review.author == user %}
