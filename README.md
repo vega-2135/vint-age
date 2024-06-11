@@ -140,7 +140,9 @@ This layout ensures that users can easily navigate through the website, explore 
 </details>
 
 - ### Footer
-The footer contains the copyright information and the icons for facebook, twitter and instagram pages.
+The footer contains the copyright information and the icons for facebook, twitter and instagram pages. 
+
+Social Media Icons Alignment: The Facebook and Twitter icons have slightly different right margins. This design choice ensures that the space between the Twitter and Instagram icons appears balanced with the space between the Facebook and Twitter icons, providing a visually appealing layout.
 
 
 <details>
