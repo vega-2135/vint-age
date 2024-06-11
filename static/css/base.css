@@ -165,7 +165,7 @@ footer {
     background-color: rgb(255, 255, 255);
     background-image: none;
     clear: left;
-    font: 1rem Open Sans, sans-serif;
+    font: 1rem "Open Sans", sans-serif;
     width: auto !important;
   }
 
@@ -282,7 +282,7 @@ that is used in the product names */
 
 .collections {
     background-color: rgba(0, 0, 0, 0.8);
-    border: solid, rgb(236, 249, 252);
+    border: solid rgb(236, 249, 252);
     border-radius: 30px;
     height: fit-content;
     width: fit-content;
@@ -539,17 +539,14 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     color: #fff;
     text-align: center;
     vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
-    background-color: #000;
+    background-color: #111;
     border: 1px solid #000;
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -562,8 +559,8 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
+    color: #fff;
+    background-color: #333;
     border-color: #222;
 }
 
@@ -595,7 +592,7 @@ input[name='q']::placeholder {
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
+    background-color: #dc3546;
     border-color: #dc3545;
     border-radius: 0;
 }
