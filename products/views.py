@@ -75,6 +75,12 @@ def product_detail(request, product_id):
 
     # Display a form to users, so they can add review
     skip_shopping_bag = False
+
+    req_context = request.session.get("context", None)
+    if req_context:
+        del request.session["context"]
+        skip_shopping_bag = req_context["skip_shopping_bag"]
+
     if request.user.is_authenticated:
         review_form = ReviewForm(data=request.POST)
 
@@ -229,13 +235,9 @@ def delete_review(request, product_id, review_id):
             request, messages.ERROR, "You can only delete your own reviews!"
         )
 
-    context = {
-        "product": product,
-        "reviews": reviews,
-        "review_form": ReviewForm(),
-        "skip_shopping_bag": True,
-    }
-    return render(request, "products/product_detail.html", context)
+    context = {"skip_shopping_bag": True }
+    request.session['context'] = context
+    return redirect(reverse("product_detail", args=[product_id]))
 
 
 @login_required
