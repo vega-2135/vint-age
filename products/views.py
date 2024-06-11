@@ -213,9 +213,9 @@ def edit_review(request, product_id, review_id):
             "review_form": ReviewForm(),
             "skip_shopping_bag": True,
         }
-        return render(request, "products/product_detail.html", context)
+        #return render(request, "products/product_detail.html", context)
 
-    return HttpResponseRedirect(reverse("product_detail", args=[product_id]))
+    return redirect(reverse("product_detail", args=[product_id]))
 
 
 @login_required
