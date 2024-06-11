@@ -1,7 +1,9 @@
+document.addEventListener('DOMContentLoaded', function() {
 const editButtons = document.getElementsByClassName("btn-review-edit");
 const reviewText = document.getElementById("id_content");
 const reviewForm = document.getElementById("reviewForm");
 const submitButton = document.getElementById("submitButton");
+const scrollTo = document.getElementById("scroll-here")
 
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteButtons = document.getElementsByClassName("btn-review-delete");
@@ -33,8 +35,8 @@ for (let button of editButtons) {
     reviewText.value = reviewContent;
     submitButton.innerText = "Update";
     reviewForm.setAttribute("action", `edit_review/${reviewId}`);
+    scrollTo.scrollIntoView({behavior: 'smooth'});
   });
-  console.log("Edited");
 }
 
 /**
@@ -54,3 +56,4 @@ for (let button of deleteButtons) {
     deleteModal.show();
   });
 }
+});

@@ -213,7 +213,6 @@ def edit_review(request, product_id, review_id):
             "review_form": ReviewForm(),
             "skip_shopping_bag": True,
         }
-        #return render(request, "products/product_detail.html", context)
 
     return redirect(reverse("product_detail", args=[product_id]))
 
