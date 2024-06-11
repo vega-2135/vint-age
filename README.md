@@ -2,7 +2,7 @@
 Welcome to VintAge, your ultimate destination for unique and timeless vintage products. Our online store offers a curated selection of high-quality vintage items, ranging from clothing and accessories to home decor and collectibles. Each piece is handpicked for its authenticity, charm, and character, ensuring that our customers receive only the finest vintage treasures.
 
 
-![Mockup Screenshots](docs_readme/)
+![Mockup Screenshots](docs_readme/images/mockup_vintage.png)
 
 
 [The deployed website can be found here](https://vint-age-f72b1a14d20f.herokuapp.com/)
