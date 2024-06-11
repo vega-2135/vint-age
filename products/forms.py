@@ -27,12 +27,11 @@ class ReviewForm(forms.ModelForm):
     """
     Review form for user to edit review
     """
+
     class Meta:
         model = Review
-        fields = ('content',)
-        labels = {
-            'content': 'Your review:'
-        }
+        fields = ("content",)
+        labels = {"content": "Your review:"}
 
 
 class AddToWishlistForm(forms.Form):

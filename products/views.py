@@ -233,8 +233,8 @@ def delete_review(request, product_id, review_id):
             request, messages.ERROR, "You can only delete your own reviews!"
         )
 
-    context = {"skip_shopping_bag": True }
-    request.session['context'] = context
+    context = {"skip_shopping_bag": True}
+    request.session["context"] = context
     return redirect(reverse("product_detail", args=[product_id]))
 
 
@@ -313,6 +313,6 @@ def remove_from_wishlist(request, product_id):
     messages.success(request, "Product deleted from Wishlist!")
     # Because I want to show the message but not the shopping bag
     # I'm using Django session framework to skip it in the templates ("base.html")
-    context = {'skip_shopping_bag': True}
-    request.session['context'] = context
+    context = {"skip_shopping_bag": True}
+    request.session["context"] = context
     return redirect(reverse("wishlist"))

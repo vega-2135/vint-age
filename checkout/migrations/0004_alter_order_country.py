@@ -5,7 +5,6 @@ import django_countries.fields
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("checkout", "0003_alter_order_grand_total_alter_order_order_total"),
     ]

@@ -5,7 +5,6 @@ import django.utils.timezone
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("contact", "0003_remove_contact_created_at_contact_updated_on"),
     ]

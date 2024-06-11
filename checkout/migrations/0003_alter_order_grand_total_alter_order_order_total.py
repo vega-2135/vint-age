@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("checkout", "0002_order_original_bag_order_stripe_pid"),
     ]
@@ -13,11 +12,15 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="order",
             name="grand_total",
-            field=models.DecimalField(decimal_places=2, default=0, max_digits=20),
+            field=models.DecimalField(
+                decimal_places=2, default=0, max_digits=20
+            ),
         ),
         migrations.AlterField(
             model_name="order",
             name="order_total",
-            field=models.DecimalField(decimal_places=2, default=0, max_digits=20),
+            field=models.DecimalField(
+                decimal_places=2, default=0, max_digits=20
+            ),
         ),
     ]

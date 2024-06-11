@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = []
@@ -42,7 +41,10 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("sku", models.CharField(blank=True, max_length=254, null=True)),
+                (
+                    "sku",
+                    models.CharField(blank=True, max_length=254, null=True),
+                ),
                 ("name", models.CharField(max_length=254)),
                 ("description", models.TextField()),
                 ("price", models.DecimalField(decimal_places=2, max_digits=6)),
@@ -52,7 +54,10 @@ class Migration(migrations.Migration):
                         blank=True, decimal_places=2, max_digits=6, null=True
                     ),
                 ),
-                ("image", models.ImageField(blank=True, null=True, upload_to="")),
+                (
+                    "image",
+                    models.ImageField(blank=True, null=True, upload_to=""),
+                ),
                 (
                     "category",
                     models.ForeignKey(

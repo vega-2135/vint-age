@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = []
@@ -42,7 +41,8 @@ class Migration(migrations.Migration):
                 (
                     "question",
                     models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="faq.question"
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="faq.question",
                     ),
                 ),
             ],

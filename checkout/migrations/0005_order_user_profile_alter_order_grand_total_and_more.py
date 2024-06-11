@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("profiles", "0001_initial"),
         ("checkout", "0004_alter_order_country"),
@@ -26,11 +25,15 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="order",
             name="grand_total",
-            field=models.DecimalField(decimal_places=2, default=0, max_digits=10),
+            field=models.DecimalField(
+                decimal_places=2, default=0, max_digits=10
+            ),
         ),
         migrations.AlterField(
             model_name="order",
             name="order_total",
-            field=models.DecimalField(decimal_places=2, default=0, max_digits=10),
+            field=models.DecimalField(
+                decimal_places=2, default=0, max_digits=10
+            ),
         ),
     ]

@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("contact", "0004_remove_contact_updated_on_contact_created_at"),
     ]
