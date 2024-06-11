@@ -693,6 +693,8 @@ Due to the large size of the results tables, I have decided display them in a se
 - ### Code
 Much of the coding and testing relies heavily on the Code Institutes walkthrough project "Boutique Ado" in the Code Institue Building an E-Commerce Platform module.
 
+Additionaly most of the javaSctipt code for editing and deleting reviews was taken from the "I think Therefore I Blog" Code Institute Walkthrough Project.
+
 I used several online resources to implement an idea into code, including:
 
 - [Django Documentation](https://docs.djangoproject.com/en/4.0/): Frequently referenced to refresh old concepts and explore new topics and functionalities.
