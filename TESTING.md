@@ -293,26 +293,26 @@ To perform the test I used a Firefox browser, and validated each page from a mob
 
 File path                                                                                    | Features working | Links active
 -------------------------------------------------------------------------------------------- | ---------------- | ------------
-bag/templates/bag/bag.html                                                                   | PASS             | PASS        
-checkout/templates/checkout/checkout\_success.html                                           | PASS             | PASS        
-checkout/templates/checkout/checkout.html                                                    | PASS             | PASS               
-contact/templates/contact.html                                                               | PASS             | PASS        
-faq/templates/faq.html                                                                       | PASS             | PASS        
-home/templates/index.html                                                                    | PASS             | PASS              
-products/templates/products/add\_product.html                                                | PASS             | PASS           
-products/templates/products/edit\_product.html                                               | PASS             | PASS        
-products/templates/products/product\_detail.html                                             | PASS             | PASS        
-products/templates/products/products.html                                                    | PASS             | PASS        
+bag/templates/bag/bag.html                                                                   | PASS             | PASS
+checkout/templates/checkout/checkout\_success.html                                           | PASS             | PASS
+checkout/templates/checkout/checkout.html                                                    | PASS             | PASS
+contact/templates/contact.html                                                               | PASS             | PASS
+faq/templates/faq.html                                                                       | PASS             | PASS
+home/templates/index.html                                                                    | PASS             | PASS
+products/templates/products/add\_product.html                                                | PASS             | PASS
+products/templates/products/edit\_product.html                                               | PASS             | PASS
+products/templates/products/product\_detail.html                                             | PASS             | PASS
+products/templates/products/products.html                                                    | PASS             | PASS
 products/templates/products/wishlist.html                                                    | PASS             | PASS
-profiles/templates/profiles/profile.html                                                     | PASS             | PASS        
-templates/allauth/account/confirm-email.html                                                 | PASS             | PASS        
-templates/allauth/account/login.html                                                         | PASS             | PASS        
-templates/allauth/account/logout.html                                                        | PASS             | PASS        
+profiles/templates/profiles/profile.html                                                     | PASS             | PASS
+templates/allauth/account/confirm-email.html                                                 | PASS             | PASS
+templates/allauth/account/login.html                                                         | PASS             | PASS
+templates/allauth/account/logout.html                                                        | PASS             | PASS
 templates/allauth/account/signup.html                                                        | PASS             | PASS
-templates/errors/400.html                                                                    | PASS             | PASS        
-templates/errors/403.html                                                                    | PASS             | PASS        
-templates/errors/404.html                                                                    | PASS             | PASS        
-templates/errors/500.html                                                                    | PASS             | PASS        
+templates/errors/400.html                                                                    | PASS             | PASS
+templates/errors/403.html                                                                    | PASS             | PASS
+templates/errors/404.html                                                                    | PASS             | PASS
+templates/errors/500.html                                                                    | PASS             | PASS
 
 <br>
 
@@ -360,9 +360,9 @@ File path                                                                       
 bag/templates/bag/bag.html                                                                   | PASS             | PASS        
 checkout/templates/checkout/checkout\_success.html                                           | PASS             | PASS        
 checkout/templates/checkout/checkout.html                                                    | PASS             | PASS               
-contact/templates/contact/contact.html                                                               | PASS             | PASS        
-faq/templates/faq/faq.html                                                                       | PASS             | PASS        
-home/templates/home/index.html                                                                    | PASS             | PASS              
+contact/templates/contact/contact.html                                                       | PASS             | PASS        
+faq/templates/faq/faq.html                                                                   | PASS             | PASS        
+home/templates/home/index.html                                                               | PASS             | PASS              
 products/templates/products/add\_product.html                                                | PASS             | PASS           
 products/templates/products/edit\_product.html                                               | PASS             | PASS        
 products/templates/products/product\_detail.html                                             | PASS             | PASS        
