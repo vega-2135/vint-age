@@ -70,10 +70,11 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    # Display only approved comments
+    # Display only approved reviews
     reviews = product.reviews.order_by("-created_on")
 
-    # Display a form to users, so they can add comments
+    # Display a form to users, so they can add review
+    skip_shopping_bag = False
     if request.user.is_authenticated:
         review_form = ReviewForm(data=request.POST)
 
@@ -87,11 +88,13 @@ def product_detail(request, product_id):
                 "Thank you for taking \
                 the time to leave a review of this product",
             )
+            skip_shopping_bag = True
 
     context = {
         "product": product,
         "reviews": reviews,
         "review_form": ReviewForm(),
+        "skip_shopping_bag": skip_shopping_bag,
     }
 
     return render(request, "products/product_detail.html", context)
@@ -150,6 +153,7 @@ def edit_product(request, product_id):
         messages.info(request, f"You are editing {product.name}")
 
     template = "products/edit_product.html"
+
     context = {
         "form": form,
         "product": product,
@@ -176,11 +180,16 @@ def edit_review(request, product_id, review_id):
     """
     View to edit reviews
     """
+    # Display only approved reviews
+    product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.order_by("-created_on")
+
     if request.method == "POST":
-        product = get_object_or_404(Product, pk=product_id)
         review = get_object_or_404(Review, pk=review_id)
         review_form = ReviewForm(data=request.POST, instance=review)
 
+        # If the form is invalid or someone other than the author tries to edit
+        # the review then that's not allowed an a error message is shown
         if review_form.is_valid() and review.author == request.user:
             review = review_form.save(commit=False)
             review.product = product
@@ -192,6 +201,14 @@ def edit_review(request, product_id, review_id):
                 request, messages.ERROR, "Error updating review!"
             )
 
+        context = {
+            "product": product,
+            "reviews": reviews,
+            "review_form": ReviewForm(),
+            "skip_shopping_bag": True,
+        }
+        return render(request, "products/product_detail.html", context)
+
     return HttpResponseRedirect(reverse("product_detail", args=[product_id]))
 
 
@@ -201,6 +218,8 @@ def delete_review(request, product_id, review_id):
     view to delete reviews
     """
     review = get_object_or_404(Review, pk=review_id)
+    product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.order_by("-created_on")
 
     if review.author == request.user:
         review.delete()
@@ -210,7 +229,13 @@ def delete_review(request, product_id, review_id):
             request, messages.ERROR, "You can only delete your own reviews!"
         )
 
-    return HttpResponseRedirect(reverse("product_detail", args=[product_id]))
+    context = {
+        "product": product,
+        "reviews": reviews,
+        "review_form": ReviewForm(),
+        "skip_shopping_bag": True,
+    }
+    return render(request, "products/product_detail.html", context)
 
 
 @login_required
@@ -223,16 +248,30 @@ def wishlist(request):
         wishlist = Wishlist.objects.create(user=request.user)
 
     wishlist_items = wishlist.items.all()
+
+    # Get the context in case it comes from remove_from_wishlist
+    req_context = request.session.get("context", None)
+    skip_shopping_bag = False
+    # Delete the context from the request in case it keeps getting redirected
+    if req_context:
+        del request.session["context"]
+        skip_shopping_bag = req_context["skip_shopping_bag"]
+    context = {
+        "products": wishlist_items,
+        "is_wishlist": True,
+        "skip_shopping_bag": skip_shopping_bag,
+    }
     return render(
         request,
         "products/wish_list.html",
-        {"products": wishlist_items, "is_wishlist": True},
+        context,
     )
 
 
 @login_required
 def add_to_wishlist(request, product_id):
     product = Product.objects.get(pk=product_id)
+    reviews = product.reviews.order_by("-created_on")
     if request.method == "POST":
         form = AddToWishlistForm(request.POST)
         if form.is_valid():
@@ -252,10 +291,17 @@ def add_to_wishlist(request, product_id):
     else:
         form = AddToWishlistForm()  # Initialize the form for GET requests
 
+    context = {
+        "form": form,
+        "product": product,
+        "reviews": reviews,
+        "review_form": ReviewForm(),
+        "skip_shopping_bag": True,
+    }
     return render(
         request,
         "products/product_detail.html",
-        {"form": form, "product": product},
+        context,
     )
 
 
@@ -265,4 +311,8 @@ def remove_from_wishlist(request, product_id):
     wishlist = request.user.wishlist
     wishlist.items.remove(product)
     messages.success(request, "Product deleted from Wishlist!")
+    # Because I want to show the message but not the shopping bag
+    # I'm using Django session framework to skip it in the templates ("base.html")
+    context = {'skip_shopping_bag': True}
+    request.session['context'] = context
     return redirect(reverse("wishlist"))
