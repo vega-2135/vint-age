@@ -109,6 +109,8 @@ LibreOffice spreadsheet was used for designing the models, followed by integrati
 
 ![Q&A Models](docs_readme/db_design/qa_db.png)
 
+</details>
+
 ## 6. Features
 
 - ### Home Page
@@ -188,14 +190,38 @@ The Product Detail Page displays an image of the product. To the right of the pr
 - A quantity box where users can specify the number of items they wish to purchase
 - Buttons to keep shopping, add to bag, and add to wishlist.
 
-Upon clicking the "Add To Bag" button, a message pops out informing the user that the product has been added to the shopping bag.
+Add to Bag: When the "Add to Bag" button is clicked, a message appears to inform the user that the product has been added to the shopping bag.
+
+Keep Shopping: Clicking the "Keep Shopping" button redirects the user to the page displaying all products in the online store.
+
+Add to Wishlist: Clicking the "Add to Wishlist" button adds the product to the user's wishlist and displays a message confirming the addition. If the product is already in the wishlist, the message will inform the user that the product is already on the list.
+
+Reviews Section: Below the product image and description, there is a reviews section that displays all approved reviews for the product.
+
+- Guest Users: If the user is not registered or logged in, a welcoming message is displayed above the reviews, along with a link to register or log in.
+- Logged-in Users: If the user is logged in, a review form is displayed, allowing the user to submit a review for the product.
+
+Review Management:
+
+- Edit and Delete: Users can edit or delete their previously submitted reviews.
+- Submission Confirmation: When a new review is submitted or an existing review is edited, a confirmation message appears, informing the user that the review was successfully submitted or updated.
+- Pending Approval: Newly submitted or edited reviews will initially be visible only to the user who submitted them, displayed with a faded style and a message indicating that the review is awaiting approval.
+- Admin Approval: Once approved by an admin, the review will become public, visible to all visitors of the website, and will be displayed in a standard black color without the faded style.
+
+<br>
 
 <details>
 <summary>Product Detail Page Screenshots</summary>
 
 ![Product Detail Page](/docs_readme/features/product_detail_page.png)
-![Success Message](/docs_readme/features/bag1.png)
-
+![Success Message](/docs_readme/features/add_to_bag.png)
+![Success Message](/docs_readme/features/add_to_wishlist.png)
+![Success Message](/docs_readme/features/already_added.png)
+![Success Message](/docs_readme/features/review.png)
+![Success Message](/docs_readme/features/review_edit.png)
+![Success Message](/docs_readme/features/review_updated.png)
+![Success Message](/docs_readme/features/review_deleted.png)
+![Success Message](/docs_readme/features/success_deletion.png)
 </details>
 
 - ### Shopping Bag Page
