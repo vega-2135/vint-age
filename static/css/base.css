@@ -13,7 +13,7 @@ body {
 main {
     position: relative;
     margin-bottom: 1rem;
-    min-height: 72vh;
+    min-height: 100vh;
 }
 
 footer {
