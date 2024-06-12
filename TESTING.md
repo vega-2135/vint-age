@@ -270,12 +270,36 @@ All tests were performed using the live environment deployed from Heroku.
 
 ### Acceptance Criteria
 
-- Given a loged-in shopper, when they view a product on the product detail page, upon clicking the "Add to Wishlist" button, 
+- Given a logged-in shopper, when they view a product on the product detail page, upon clicking the "Add to Wishlist" button,
 the product is added to their wishlist, and a message pops out stating that the product was added to their Wishlist.
     
 - Given a logged in shopper, when they navigate to their wishlist from the "My Account" menu option, they see a list of all the products they have added to their wishlist and each product display the name, price, a remove from wishlist button and an image thumbnail.
 
 - Given a logged in shopper viewing their wishlist, when they click the "Remove from Wishlist" button in the product thumbnail, the product is removed from the wishlist and a confirmation message pops out stating that the product was removed from their wishlist.
+
+
+**Result:** ✅ Pass
+</details>
+
+<details>
+<summary>As a user, I can view reviews of a product so that I can see what other people think about this product.</summary>
+
+### Acceptance Criteria
+
+- Given one or more review any logged or non logged in user can view them.
+
+**Result:** ✅ Pass
+</details>
+
+
+<details>
+
+<summary>As a registered user, i can edit and/or delete product reviews done by me, so that I can give and update my opinion about a particular product.</summary>
+
+### Acceptance Criteria
+
+- Given a logged in user, they can edit their review.
+- Given a logged in user, they can delete their review.
 
 
 **Result:** ✅ Pass
