@@ -137,7 +137,6 @@ This layout ensures that users can easily navigate through the website, explore 
 <details>
 <summary>Nav Bar Screenshots</summary>
 
-![Navigation Bar Unlogged](/docs_readme/features/navbar1.png)
 ![Account Navigation Menu](/docs_readme/features/account_menu.png)
 
 </details>
