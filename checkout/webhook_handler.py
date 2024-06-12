@@ -108,7 +108,7 @@ class StripeWH_Handler:
             self._send_confirmation_email(order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} |'
-                    + ' SUCCESS: Verified order already in database',
+                + ' SUCCESS: Verified order already in database',
                 status=200,
             )
         else:
@@ -158,7 +158,7 @@ class StripeWH_Handler:
         self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} |'
-                + ' SUCCESS: Created order in webhook',
+            + ' SUCCESS: Created order in webhook',
             status=200,
         )
 
