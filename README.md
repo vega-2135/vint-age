@@ -83,7 +83,7 @@ The wireframes for the main pages of the VintAge website were created using the 
 
 - [Home Page](docs_readme/wireframes/homepage.png)
 - [Products Page](docs_readme/wireframes/products_page.png)
-- [Product Detail Page](docs_readme/wireframes/product_detail_page.png)
+- [Product Detail Page](docs_readme/wireframes/product_detail_reviews_page.png)
 - [Contact Us](docs_readme/wireframes/contact_us_page.png)
 - [FAQs Page](docs_readme/wireframes/faq_page.png)
 - [Shopping Bag Page](docs_readme/wireframes/shopping_bag_page.png)
