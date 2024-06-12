@@ -54,9 +54,9 @@ Furthermore, GitHub milestones were employed to group related user stories, enha
 
 ![Github Issues](docs_readme/images/issues_page.png)
 
-![Github Issues](docs_readme/images/issues_closed_page.png)
+![Github Issues](docs_readme/images/issues_closed.png)
 
-![Kanban Board](docs_readme/images/project_kanban.png)
+![Kanban Board](docs_readme/images/kanban.png)
 
 ## 4. Design
 
@@ -72,6 +72,8 @@ The color Pale Blue Lilly (rgb(201, 237, 241)) was chosen as the background colo
 The color white was chosen as the background color of the rest of the website and also as the font color of the free delivey message at the homepage.
 
 The color black was chosen as the font color for all text on the website, as it provides the best contrast with the white background of the website.
+
+
 
 ### Typography
 
