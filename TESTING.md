@@ -468,6 +468,13 @@ Writing well-structured, quality code is essential for the future development of
 * JS Hint for JavaScript
 * CI Python Linter for Python
 
+There were two errors find while validating some files from the project:
+- In env.py file - E501 as line breached 79 characters, however when I tried to split these lines over two lines it not longer functioned. As a result I have chosen to allow this exceptions for the MVP.
+- In settings.py I had the same E501 error in the section "AUTH_PASSWORD_VALIDATORS" as the value of one of the "Name" keys breached 79 characters. Again I tried to split that line into two in different ways and either the line was still too long or that line didn't worked. This I chose again to allow this exception for the MVP.
+- During the validation of the html code from the register page, there was an error presumably located in a form code from the Allauth library thus I decided to allow this error as I don't know how a change in that line could affect the functionality of that code.
+
+![Sign Up HTML validator error](docs_readme/images/accounts_signup_html_validation)
+
 <br>
 
 | File path                                                                                    | File Type | HTML | CSS  | JavaScript | Python | 
