@@ -187,7 +187,6 @@ def edit_review(request, product_id, review_id):
     """
     # Display only approved reviews
     product = get_object_or_404(Product, pk=product_id)
-    reviews = product.reviews.order_by("-created_on")
 
     if request.method == "POST":
         review = get_object_or_404(Review, pk=review_id)
@@ -206,13 +205,6 @@ def edit_review(request, product_id, review_id):
                 request, messages.ERROR, "Error updating review!"
             )
 
-        context = {
-            "product": product,
-            "reviews": reviews,
-            "review_form": ReviewForm(),
-            "skip_shopping_bag": True,
-        }
-
     return redirect(reverse("product_detail", args=[product_id]))
 
 
@@ -222,8 +214,6 @@ def delete_review(request, product_id, review_id):
     view to delete reviews
     """
     review = get_object_or_404(Review, pk=review_id)
-    product = get_object_or_404(Product, pk=product_id)
-    reviews = product.reviews.order_by("-created_on")
 
     if review.author == request.user:
         review.delete()
@@ -312,7 +302,8 @@ def remove_from_wishlist(request, product_id):
     wishlist.items.remove(product)
     messages.success(request, "Product deleted from Wishlist!")
     # Because I want to show the message but not the shopping bag
-    # I'm using Django session framework to skip it in the templates ("base.html")
+    # I'm using Django session framework to skip it in the templates
+    # ("base.html")
     context = {"skip_shopping_bag": True}
     request.session["context"] = context
     return redirect(reverse("wishlist"))
