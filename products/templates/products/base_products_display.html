@@ -86,7 +86,7 @@
                                         {% if request.user.is_superuser %}
                                         <small class="ml-3">
                                             <a class="btn btn-warning btn-edit" href="{% url 'edit_product' product.id %}">Edit</a>
-                                            <button id="deleteProductBtn" class="btn btn-danger" data-product-id="{{ product.id }}">Delete</button>
+                                            <button id="deleteProductBtn" class="btn btn-danger" aria-label="Delete" data-product-id="{{ product.id }}">Delete</button>
                                         </small>
                                         {% endif %}
                                     </div>
@@ -94,8 +94,9 @@
                                 {% if is_wishlist %}
                                     <form method="post" action="{% url 'remove_from_wishlist' product.id %}">
                                         {% csrf_token %}
-                                        <input type="hidden" name="product_id" value="{{ product.id }}">
-                                        <button type="submit" class="btn btn-danger btn-sm ml-3">
+                                        <label for="product_id" class="sr-only">Remove From Wishlist</label>
+                                        <input type="hidden" name="product_id" id="product_id" value="{{ product.id }}">
+                                        <button type="submit" class="btn btn-danger btn-sm ml-3" aria-label="RemoveFromWishlist">
                                             Remove from Wishlist
                                         </button>
                                     </form>
@@ -126,7 +127,7 @@
             This action cannot be undone.
             </div>
             <div class="modal-footer">
-            <button id="cancel-confirmation-btn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button id="cancel-confirmation-btn" type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Cancel">Cancel</button>
             <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
             </div>
         </div>
