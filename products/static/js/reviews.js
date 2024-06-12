@@ -1,16 +1,17 @@
+/*jshint esversion: 6 */ 
 document.addEventListener('DOMContentLoaded', function() {
 const editButtons = document.getElementsByClassName("btn-review-edit");
 const reviewText = document.getElementById("id_content");
 const reviewForm = document.getElementById("reviewForm");
 const submitButton = document.getElementById("submitButton");
-const scrollTo = document.getElementById("scroll-here")
+const scrollTo = document.getElementById("scroll-here");
 
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteButtons = document.getElementsByClassName("btn-review-delete");
 const deleteConfirm = document.getElementById("deleteConfirm");
 
 // Get the close and cancel confirmation window's buttons 
-const closeModalButton = document.getElementById("close-review-modal")
+const closeModalButton = document.getElementById("close-review-modal");
 closeModalButton.addEventListener('click', closeConfirmationWindow);
 
 function closeConfirmationWindow() {

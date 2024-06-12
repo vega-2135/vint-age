@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */ 
+/*jshint esversion: 8 */ 
 // Get the modal snippet
 const modal = document.getElementById("deleteModal");
 
@@ -16,7 +18,7 @@ deleteButtons.forEach(function(button) {
         modal.style.display = "block";
     
         productIdClicked = button.getAttribute("data-product-id");
-    })
+    });
 
 });
 
@@ -25,11 +27,11 @@ window.onclick = function(event) {
     if (event.target == modal) {
         deleteModal.show();
     }
-}
+};
 
 // Get the close and cancel confirmation window's buttons 
-const closeConfirmationButton = document.getElementById("close-confirmation-btn")
-const cancelConfirmationButton = document.getElementById("cancel-confirmation-btn")
+const closeConfirmationButton = document.getElementById("close-confirmation-btn");
+const cancelConfirmationButton = document.getElementById("cancel-confirmation-btn");
 closeConfirmationButton.addEventListener('click', closeConfirmationWindow);
 cancelConfirmationButton.addEventListener('click', closeConfirmationWindow);
 
