@@ -65,14 +65,13 @@ The VintAge app boasts a straightforward layout, prioritizing user-friendliness 
 
 ### Colour Scheme
 
-The color Greyish Teal (rgb(109, 154, 156)) was chosen as the background color for the message below the navigation bar stating "Free Delivery on Orders over 50$". This color was also chosen for the border of the subscription box.
+The color Greyish Teal (rgb(115, 190, 201)) was chosen as the background color for the message below the navigation bar stating "Free Delivery on Orders over 50$". This color was also chosen for the border of the subscription box as well as the footer.
 
-The color Pale Blue Lilly (rgb(201, 237, 241)) was chosen as the background color of the div containing the text "The New Accessories are Here" and the Shop Now button.
+The color Pale Blue Lilly (rgb(201, 237, 241)) was chosen as the background color of the div containing the text "The New Accessories are Here", the Shop Now button and About Us section.
 
 The color white was chosen as the background color of the rest of the website and also as the font color of the free delivey message at the homepage.
 
 The color black was chosen as the font color for all text on the website, as it provides the best contrast with the white background of the website.
-
 
 
 ### Typography
