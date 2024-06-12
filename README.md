@@ -148,7 +148,7 @@ Social Media Icons Alignment: The Facebook and Twitter icons have slightly diffe
 
 
 <details>
-<summary>Search Recipes Screenshot</summary>
+<summary>Footer Screenshot</summary>
 
 ![Footer](/docs_readme/features/footer.png)
 
@@ -157,14 +157,6 @@ Social Media Icons Alignment: The Facebook and Twitter icons have slightly diffe
 - ### User Authentication
 The VintAge website employs the Django Allauth package to manage user authentication and grant authenticated users access to CRUD functionalities. This package furnishes a suite of views and templates dedicated to user registration, login, and logout processes. Throughout the website, defensive programming techniques have been implemented to safeguard against unauthorized access to pages lacking appropriate permissions. Django's LoginRequired mixin is utilized to restrict access to anonymous users, redirecting them to the login page when attempting to view restricted content, for example only the original author of a recipe can make edits of comments or submitted recipes. Unauthorized attempts trigger redirection to a 403 error page, notifying users of their lack of permission to execute the action. Furthermore, for access to the admin panel, users must hold either 'superuser' or 'staff status' permissions.
 
-<details>
-<summary>User Authentication Screenshots</summary>
-
-![Login Page](/docs_readme/features/login.png)
-![Logout Page](/docs_readme/features/logout.png)
-![Register Page](/docs_readme/features/register.png)
-
-</details>
 
 - ### Products Page
 The Product Page displays all the products that belong to a given category. At the top right of this page, there is a link that redirects users to a page showing all products and a number that represents the total number of products available for a given category. Additionally, there is a dropdown menu to sort the products by price, rating, name, and category.
