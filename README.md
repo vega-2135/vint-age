@@ -39,7 +39,7 @@ VintAge is an e-commerce platform dedicated to providing a seamless shopping exp
 
 User stories were generated through GitHub Issues, with story points assigned based on estimated task completion times. Milestones and appropriate tags were also applied for organization.
 
-Explore the user stories below in the section labeled [User Story Testing](### User Story Testing), and delve deeper into comprehensive details, including screenshots, story points, milestones, and tags, by visiting [GitHub Issues](https://github.com/vega-2135/the_pancake_palace/issues).
+Explore the user stories below in the section labeled [User Story Testing](TESTING.md#user-story-testing), and delve deeper into comprehensive details, including screenshots, story points, milestones, and tags, by visiting [GitHub Issues](https://github.com/vega-2135/the_pancake_palace/issues).
 
 ## 3. Agile Development
 
